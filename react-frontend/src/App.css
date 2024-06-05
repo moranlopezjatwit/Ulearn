@@ -8,8 +8,9 @@
     color: white;
     font-size: 20px;
     font-style: oblique;
+    /*
     display: flex;
-    justify-content: center;
+    */
 }
 
 .Mainpage-body {
@@ -29,12 +30,13 @@
 }
 
 .Dropdown-menu {
-    align-content: baseline;
+    /*align-content: center;*/
+    text-align: center;
+    vertical-align: middle;
     display: flex;
-    justify-content: flex-start;
-    width: 50px;
-    height: 50px;
-    background-color: gray;
+    width: 40px;
+    height: 40px;
+    background-color: aliceblue;
     color: black;
 }
 
@@ -55,16 +57,21 @@
 }
 
 .App-header {
-  background-color: #1ba3f7;
-  min-height: 15vh;
-  max-height: 20vh;
-  display: flex;
-  flex-direction: column;
-  align-items: initial;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #1ba3f7;
+    min-height: 15vh;
+    max-height: 20vh;
+    align-items: initial;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    padding-left: 5px;
+    padding-top: 5px;
+    /*
+    display: flex;
+    justify-content: flex-start;
+    */
 }
+
 
 .App-link {
   color: #61dafb;
