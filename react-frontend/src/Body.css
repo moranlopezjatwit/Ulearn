@@ -1,0 +1,13 @@
+﻿h1, h2{
+    padding-left: 10px;
+    text-align: left;
+}
+
+p{
+    padding-left: 10px;
+    text-align: left;
+}
+
+.paragraph {
+    width: 100px;
+}

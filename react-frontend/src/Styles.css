@@ -42,7 +42,7 @@ code {
     height: 100%;
     display: flex;
     align-items: center;
-    padding: 0.25rem;
+    padding: 1rem;
 }
 
 .nav li.active {
@@ -52,6 +52,29 @@ code {
 .nav li:hover {
     background-color: #2f3c94;
 }
+
+.languages {
+    align-content:center;
+}
+
+
+
+.Sidebar-nav {
+    background-color: #0f1c24;
+    color: white;
+    font: Monaco;
+    font-style: oblique;
+    text-align: left;
+    padding-left: 5px;
+    width: 10%;
+    height: 100rem;
+    float: left;
+}
+
+.sidebar-references {
+    text-decoration: none;
+}
+
 /*
 *{
     box-sizing: border-box
@@ -144,17 +167,7 @@ body {
     background-color: white;
 }
 
-.Sidebar-nav {
-    background-color: #0f1c24;
-    color: white;
-    font: Monaco;
-    font-style: oblique;
-    text-align: left;
-    padding-left: 5px;
-    width: 10%;
-    height: 500px;
-    float: left;
-}
+
 
 .Section-header {
     text-align: left;

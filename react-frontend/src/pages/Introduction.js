@@ -7,25 +7,21 @@ function Introduction() {
 
   return (
     <div className="App">
-      <div className="Top-banner">
-        <header className="App-header">
-          <h1 className="Homepage-title">HOMEPAGE</h1>
-        </header>
-      </div>
-      <aside className="Sidebar-nav">
+
+          <aside className="Sidebar-nav">
+      <div classname="Sidebar-references">
         <p><a href="/">Home</a></p>
         <p><a href="/introduction">Introduction</a></p>
         <p><a href="/python-modules">Python Modules</a></p>
         <p><a href="/java-modules">Java Modules</a></p>
         <p><a href="/cpp-modules">C++ Modules</a></p>
         <p className="Credit"><a href="/about">About</a></p>
+      </div>
       </aside>
-      <section className="Mainpage-body">
-        <h1 className="Section-header">What is ULearn?</h1>
-        <p>ULearn is a web-based platform designed to offer personalized educational resources for individuals interested in programming.</p>
+
         <h2 className="Section-header">Programming Languages and Modules</h2>
         {languages.map((language, index) => (
-          <div key={index}>
+          <div classname="languages" key={index}>
             <h3>{language.name}</h3>
             <ul>
               {language.modules.map((module, index) => (
@@ -34,7 +30,7 @@ function Introduction() {
             </ul>
           </div>
         ))}
-      </section>
+
     </div>
   );
 }
