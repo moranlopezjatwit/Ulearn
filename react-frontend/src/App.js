@@ -6,6 +6,9 @@ import Home from './pages/Home';
 import Introduction from './pages/Introduction';
 import Navbar from './Controls/Navbar';
 import { LanguageProvider } from './LanguageContext';
+import PythonModules from './pages/PythonModules';
+import JavaModules from './pages/JavaModules';
+import CppModules from './pages/CppModules';
 
 export default function App() {
   return (
@@ -15,11 +18,15 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/introduction" element={<Introduction />} />
+          <Route path="/python-modules" element={<PythonModules />} />
+          <Route path="/java-modules" element={<JavaModules />} />
+          <Route path="/cpp-modules" element={<CppModules />} />
         </Routes>
       </Router>
     </LanguageProvider>
   );
 }
+
 
 /*
 import './App.css';
