@@ -26,9 +26,12 @@ export default function Introduction() {
           <li>User-friendly interface</li>
         </ul>
         <h2 className="Section-header">How It Works</h2>
-        <p>ULearn analyzes user data to understand their learning preferences and proficiency levels. Based on this analysis, it recommends the most relevant content to enhance learning efficiency and engagement.</        <h2 className="Section-header">Get Started</h2>
+        <p>ULearn analyzes user data to understand their learning preferences and proficiency levels. Based on this analysis, it recommends the most relevant content to enhance learning efficiency and engagement.</p>
+        <h2 className="Section-header">Get Started</h2>
         <p>To begin using ULearn, simply register for an account and start exploring our vast library of programming resources tailored just for you.</p>
       </section>
     </div>
   );
+}
+
 }
