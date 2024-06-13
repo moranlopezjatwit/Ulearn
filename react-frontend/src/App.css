@@ -2,94 +2,27 @@
   text-align: center;
 }
 
-.Homepage-title {
-    text-align: center;
-    vertical-align: text-top;
-    color: white;
-    font-size: 20px;
-    font-style: oblique;
-
-    display: inline-block;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-.Banner-right {
-    display: inline-block;
-    align-content: end;
-}
-
-.Dropdown-button {
-    /*align-content: center;*/
-    text-align: center;
-    position: absolute;
-    left:5px;
-    vertical-align: middle;
-    display: flex;
-    width: 50px;
-    height: 50px;
-    background-color: aliceblue;
-    color: black;
-
-    display: inline-block;
-}
-
-.Top-banner {
-    width: 100%;
-}
-
-.Mainpage-body {
-    background-color: white;
-}
-
-.Sidebar-nav {
-    background-color: #0f1c24;
-    color: white;
-    font: Monaco;
-    font-style: oblique;
-    text-align: left;
-    padding-left: 5px;
-    width: 10%;
-    height: 500px;
-    float:left;
-}
-
-.Section-header {
-    text-align: left;
-    padding-left: 10px;
-}
-
-
-.Credit {
-    display: block;
-    position: absolute;
-    vertical-align: bottom;
-}
-
-/*remnant css from rotating react logo; could be repurposed?*/
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
-}
-
 .App-header {
-    background-color: #1ba3f7;
-    min-height: 10vh;
-    max-height: 15vh;
-    align-items: initial;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-    padding-left: 5px;
-    padding-top: 5px;
-
-    justify-content: flex-start;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
-
 
 .App-link {
   color: #61dafb;

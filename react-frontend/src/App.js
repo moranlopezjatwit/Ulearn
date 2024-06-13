@@ -1,7 +1,5 @@
-//import './App.css';
+import './App.css';
 import './Styles.css';
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route, Navigate, Link, } from "react-router-dom";
 import Home from "./pages/Home";
 import Introduction from "./pages/Introduction";
 import Navbar from "./Controls/Navbar";
@@ -22,13 +20,12 @@ import Navbar from "./Controls/Navbar";
             break
     }
 
-    return (
-
-          <>
-            <Navbar />
-                {component}
-          </>
-  )
+     return (
+         <>
+             <Navbar />
+             {component}
+         </>
+     );
 }
 
 export default App
