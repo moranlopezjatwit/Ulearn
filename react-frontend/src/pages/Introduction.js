@@ -1,7 +1,10 @@
 
-import React from 'react';
+import React, { useContext } from 'react';
+import { LanguageContext } from '../LanguageContext';
 
 function Introduction() {
+  const { languages } = useContext(LanguageContext);
+
   return (
     <div className="App">
       <div className="Top-banner">
@@ -19,18 +22,18 @@ function Introduction() {
       </aside>
       <section className="Mainpage-body">
         <h1 className="Section-header">What is ULearn?</h1>
-        <p>ULearn is a web-based platform designed to offer personalized educational resources for individuals interested in programming. By leveraging advanced predictive algorithms, ULearn provides tailored learning materials that align with users' coding interests and proficiency levels.</p>
-        <h2 className="Section-header">Features</h2>
-        <ul>
-          <li>Personalized content recommendations</li>
-          <li>Progress tracking</li>
-          <li>Wide range of programming languages and modules</li>
-          <li>User-friendly interface</li>
-        </ul>
-        <h2 className="Section-header">How It Works</h2>
-        <p>ULearn analyzes user data to understand their learning preferences and proficiency levels. Based on this analysis, it recommends the most relevant content to enhance learning efficiency and engagement.</p>
-        <h2 className="Section-header">Get Started</h2>
-        <p>To begin using ULearn, simply register for an account and start exploring our vast library of programming resources tailored just for you.</p>
+        <p>ULearn is a web-based platform designed to offer personalized educational resources for individuals interested in programming.</p>
+        <h2 className="Section-header">Programming Languages and Modules</h2>
+        {languages.map((language, index) => (
+          <div key={index}>
+            <h3>{language.name}</h3>
+            <ul>
+              {language.modules.map((module, index) => (
+                <li key={index}>{module}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </section>
     </div>
   );
