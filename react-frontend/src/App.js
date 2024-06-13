@@ -4,23 +4,27 @@ import Home from "./pages/Home";
 import Introduction from "./pages/Introduction";
 import Navbar from "./Controls/Navbar";
 
-function App() {
-  return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/introduction" element={<Introduction />} />
-      </Routes>
-    </Router>
-  );
-}
+export default function App() {
+    let component
+    switch (window.location.pathname) {
+        case "/":
+            component = <App />
+            break
+        case "/Home":
+            component = <Home />
+            break
+        case "/Introduction":
+            component = <Introduction />
+            break
+        default:
+            break
+    }
 
-     return (
-         <>
-             <Navbar />
-             {component}
-         </>
-     );
+    return (
+        <>
+            <Navbar />
+            {component}
+        </>
+    );
 }
 
