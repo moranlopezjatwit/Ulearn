@@ -5,16 +5,19 @@ import './Styles.css';
 import Home from './pages/Home';
 import Introduction from './pages/Introduction';
 import Navbar from './Controls/Navbar';
+import { LanguageProvider } from './LanguageContext';
 
 export default function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/introduction" element={<Introduction />} />
-      </Routes>
-    </Router>
+    <LanguageProvider>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/introduction" element={<Introduction />} />
+        </Routes>
+      </Router>
+    </LanguageProvider>
   );
 }
 
