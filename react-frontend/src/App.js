@@ -6,9 +6,9 @@ import Home from './pages/Home';
 import Introduction from './pages/Introduction';
 import Navbar from './Controls/Navbar';
 import { LanguageProvider } from './LanguageContext';
-import PythonModules from './pages/PythonModules';
-import JavaModules from './pages/JavaModules';
-import CppModules from './pages/CppModules';
+import PythonModules from './pages/modules/PythonModules';
+import JavaModules from './pages/modules/JavaModules';
+import CppModules from './pages/modules/CppModules';
 
 export default function App() {
   return (
@@ -26,6 +26,7 @@ export default function App() {
     </LanguageProvider>
   );
 }
+
 
 
 /*
