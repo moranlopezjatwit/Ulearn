@@ -9,6 +9,7 @@ import { LanguageProvider } from './LanguageContext';
 import PythonModules from './pages/modules/PythonModules';
 import JavaModules from './pages/modules/JavaModules';
 import CppModules from './pages/modules/CppModules';
+import About from './pages/About';
 
 export default function App() {
   return (
@@ -17,7 +18,8 @@ export default function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/introduction" element={<Introduction />} />
+          <Route path="/Introduction" element={<Introduction />} />
+          <Route path="/About" element={<About  />}/>
           <Route path="/python-modules" element={<PythonModules />} />
           <Route path="/java-modules" element={<JavaModules />} />
           <Route path="/cpp-modules" element={<CppModules />} />

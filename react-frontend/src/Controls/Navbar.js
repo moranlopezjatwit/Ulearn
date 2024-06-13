@@ -8,7 +8,10 @@ function Navbar() {
       <div className="site-title">ULearn</div>
       <ul>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/introduction">Introduction</Link></li>
+        <li><Link to="/Introduction">Introduction</Link></li>
+        <li><Link to="/Python-Modules">Python Modules</Link></li>
+        <li><Link to="/Java-Modules">Java Modules</Link></li>
+        <li><Link to="/CPP-Modules">C++ Modules</Link></li>
         <li><Link to="/About">About</Link></li>
         <li><Link to="/Signup">Sign Up</Link></li>
       </ul>
