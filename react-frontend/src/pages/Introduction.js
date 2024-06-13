@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-export default function Introduction() {
+function Introduction() {
   return (
     <div className="App">
       <div className="Top-banner">
@@ -36,3 +36,4 @@ export default function Introduction() {
   );
 }
 
+export default Introduction;
