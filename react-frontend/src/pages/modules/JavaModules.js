@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { LanguageContext } from '../LanguageContext';
+import { LanguageContext } from '../../LanguageContext'; // Corrected path
 
 function JavaModules() {
   const { languages } = useContext(LanguageContext);
