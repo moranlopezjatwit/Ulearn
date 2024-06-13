@@ -1,16 +1,15 @@
-export default function Navbar() {
-    return <nav className="nav">
-        <a href="/" className="site-title">ULearn</a>
-        <ul>
-            <li> 
-                <a href="/Home">Home</a>
-            </li>
-            <li>
-                <a href="/Introduction">Introduction</a>
-            </li>
-            <li>
-                <a href="/Login">Login</a>
-            </li>
-        </ul>
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+function Navbar() {
+  return (
+    <nav>
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/introduction">Introduction</Link></li>
+      </ul>
     </nav>
+  );
 }
+
+export default Navbar;
