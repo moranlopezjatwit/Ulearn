@@ -1,3 +1,24 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
+import './Styles.css';
+import Home from './pages/Home';
+import Introduction from './pages/Introduction';
+import Navbar from './Controls/Navbar';
+
+export default function App() {
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/introduction" element={<Introduction />} />
+      </Routes>
+    </Router>
+  );
+}
+
+/*
 import './App.css';
 import './Styles.css';
 import Home from "./pages/Home";
@@ -27,4 +48,4 @@ export default function App() {
         </>
     );
 }
-
+*/
