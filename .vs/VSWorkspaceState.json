@@ -1,7 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\react-frontend",
+    "\\react-frontend\\src",
+    "\\react-frontend\\src\\Assets",
+    "\\react-frontend\\src\\Controls",
+    "\\react-frontend\\src\\pages",
+    "\\react-frontend\\src\\pages\\modules"
   ],
-  "SelectedNode": "\\C:\\Users\\norrisb1\\Source\\Repos\\Ulearn",
+  "SelectedNode": "\\react-frontend\\src\\Assets",
   "PreviewInSolutionExplorer": false
 }

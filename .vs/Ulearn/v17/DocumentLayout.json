@@ -1,7 +1,40 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\Styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-frontend\\src\\Styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\norrisb1\\Source\\Repos\\Ulearn\\react-frontend\\src\\pages\\Signup.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-frontend\\src\\pages\\Signup.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\App.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-frontend\\src\\App.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\Controls\\Navbar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-frontend\\src\\Controls\\Navbar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\Home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-frontend\\src\\pages\\Home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\Introduction.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-frontend\\src\\pages\\Introduction.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\App.test.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-frontend\\src\\App.test.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\About.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-frontend\\src\\pages\\About.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,6 +59,110 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "App.test.js",
+              "DocumentMoniker": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\App.test.js",
+              "RelativeDocumentMoniker": "react-frontend\\src\\App.test.js",
+              "ToolTip": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\App.test.js",
+              "RelativeToolTip": "react-frontend\\src\\App.test.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-06-13T20:51:15.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "About.js",
+              "DocumentMoniker": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\About.js",
+              "RelativeDocumentMoniker": "react-frontend\\src\\pages\\About.js",
+              "ToolTip": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\About.js",
+              "RelativeToolTip": "react-frontend\\src\\pages\\About.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-06-13T20:47:42.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Signup.js",
+              "DocumentMoniker": "C:\\Users\\norrisb1\\Source\\Repos\\Ulearn\\react-frontend\\src\\pages\\Signup.js",
+              "RelativeDocumentMoniker": "react-frontend\\src\\pages\\Signup.js",
+              "ToolTip": "C:\\Users\\norrisb1\\Source\\Repos\\Ulearn\\react-frontend\\src\\pages\\Signup.js",
+              "RelativeToolTip": "react-frontend\\src\\pages\\Signup.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-06-13T19:57:43.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Styles.css",
+              "DocumentMoniker": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\Styles.css",
+              "RelativeDocumentMoniker": "react-frontend\\src\\Styles.css",
+              "ToolTip": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\Styles.css",
+              "RelativeToolTip": "react-frontend\\src\\Styles.css",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAD4AAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-06-13T19:04:09.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Introduction.js",
+              "DocumentMoniker": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\Introduction.js",
+              "RelativeDocumentMoniker": "react-frontend\\src\\pages\\Introduction.js",
+              "ToolTip": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\Introduction.js",
+              "RelativeToolTip": "react-frontend\\src\\pages\\Introduction.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-06-13T19:01:01.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Home.js",
+              "DocumentMoniker": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\Home.js",
+              "RelativeDocumentMoniker": "react-frontend\\src\\pages\\Home.js",
+              "ToolTip": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\Home.js",
+              "RelativeToolTip": "react-frontend\\src\\pages\\Home.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-06-13T18:44:44.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Navbar.js",
+              "DocumentMoniker": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\Controls\\Navbar.js",
+              "RelativeDocumentMoniker": "react-frontend\\src\\Controls\\Navbar.js",
+              "ToolTip": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\Controls\\Navbar.js",
+              "RelativeToolTip": "react-frontend\\src\\Controls\\Navbar.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-06-13T18:45:15.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.js",
+              "DocumentMoniker": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\App.js",
+              "RelativeDocumentMoniker": "react-frontend\\src\\App.js",
+              "ToolTip": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\App.js",
+              "RelativeToolTip": "react-frontend\\src\\App.js",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABoAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-06-13T18:36:08.479Z",
+              "EditorCaption": ""
             }
           ]
         }

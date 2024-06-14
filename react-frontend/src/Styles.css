@@ -57,6 +57,19 @@ code {
     align-content:center;
 }
 
+.Info-entry {
+    display: flex;
+    align-content: center;
+    margin: auto;
+}
+
+.Body {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+}
+
 
 /*
 .Sidebar-nav {
