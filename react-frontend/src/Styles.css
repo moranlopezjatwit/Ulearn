@@ -54,7 +54,7 @@ code {
 }
 
 .languages {
-    align-content:center;
+    align-content: start;
 }
 
 .Info-entry {
@@ -64,10 +64,49 @@ code {
 }
 
 .Body {
-    padding-left: 10px;
+    padding-left: 15px;
     padding-right: 10px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 25vh;
+}
+
+.FILLER {
+    padding-left: 10px;
+    text-align: left;
+}
+
+.sign-up {
+    margin-right: 5px;
+}
+
+.login {
+    margin-left: 10px;
+}
+
+p {
+    padding-left: 10px;
+    text-align: left;
+}
+
+.Paragraph-box {
+    width: 200px;
+    height: 300px;
+    overflow-wrap: break-word;
+}
+
+.Container {
+    height: 200px;
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.Item {
+    width: 10em;
 }
 
 
@@ -87,6 +126,15 @@ code {
 
 .sidebar-references {
     text-decoration: none;
+}
+
+.Section-header {
+    padding-left: 10px;
+}
+
+.Page-header {
+    align-content: center;
+    text-align: center;
 }
 
 /*

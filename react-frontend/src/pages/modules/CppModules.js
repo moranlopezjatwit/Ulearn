@@ -7,7 +7,7 @@ function CppModules() {
 
   return (
     <div>
-      <h1>C++ Modules</h1>
+          <h1 class="Section-header">C++ Modules</h1>
       <ul>
         {cppModules.map((module, index) => (
           <li key={index}>{module}</li>

@@ -4,13 +4,15 @@
 export default function Signup() {
     return (
         <>
-        <div classname="Body">
+        <div align="center" classname="Container">
             <h1>Sign up for ULearn today!</h1>
-            <div classname="Info-entry">
-                <label>Username: <input type="text" /></label>
+                <label>Username: <input type="text" classname="Item" /></label>
                 <br/>
-                    <label>Passcode: <input type="text" /></label>
-                </div>
+                <label>Passcode: <input type="text" classname="Item" /></label>
+                <br/>
+
+                <button class="sign-up">Create Profile</button>
+                <a href="" class="login">Sign In</a>
         </div>
         </>
     );

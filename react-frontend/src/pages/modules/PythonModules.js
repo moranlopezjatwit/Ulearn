@@ -7,7 +7,7 @@ function PythonModules() {
 
   return (
     <div>
-      <h1>Python Modules</h1>
+          <h1 class="Section-header">Python Modules</h1>
       <ul>
         {pythonModules.map((module, index) => (
           <li key={index}>{module}</li>

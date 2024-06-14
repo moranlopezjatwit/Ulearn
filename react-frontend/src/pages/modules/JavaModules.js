@@ -7,7 +7,7 @@ function JavaModules() {
 
   return (
     <div>
-      <h1>Java Modules</h1>
+          <h1 class="Section-header">Java Modules</h1>
       <ul>
         {javaModules.map((module, index) => (
           <li key={index}>{module}</li>
