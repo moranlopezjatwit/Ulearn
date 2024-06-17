@@ -7,7 +7,7 @@ function Navbar() {
     <nav className="nav">
       <div className="site-title">ULearn</div>
       <ul>
-        <li><Link to="/">Home</Link></li>
+        <li><Link to="/Home">Home</Link></li>
         <li><Link to="/Introduction">Introduction</Link></li>
         <li><Link to="/Python-Modules">Python Modules</Link></li>
         <li><Link to="/Java-Modules">Java Modules</Link></li>

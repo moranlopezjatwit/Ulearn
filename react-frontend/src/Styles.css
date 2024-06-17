@@ -136,9 +136,11 @@ p {
     text-align: center;
 }
 
-.Landing-page {
-    width: 100%;
-    height: 100%;
+.Landing {
+    min-width: 100%;
+    min-height: 2833px;
+    background-image: url("./Assets/Landing-page-background.png");
+    background-color: #050505;
 }
 
 .Page-header {

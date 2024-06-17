@@ -11,6 +11,7 @@ import JavaModules from './pages/modules/JavaModules';
 import CppModules from './pages/modules/CppModules';
 import About from './pages/About';
 import Signup from './pages/Signup';
+import Landing from './pages/Landing';
 
 export default function App() {
   return (
@@ -18,7 +19,8 @@ export default function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Landing />} />
+          <Route path="/Home" element={<Home />} />
           <Route path="/Introduction" element={<Introduction />} />
           <Route path="/About" element={<About  />}/>
           <Route path="/python-modules" element={<PythonModules />} />
