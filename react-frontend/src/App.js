@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 import './Styles.css';
 import Home from './pages/Home';
@@ -14,10 +14,12 @@ import Signup from './pages/Signup';
 import Landing from './pages/Landing';
 
 export default function App() {
-  return (
-    <LanguageProvider>
-      <Router>
-        <Navbar />
+    return (
+        <>
+        <title>ULearn</title>
+      <LanguageProvider>
+            <Router>
+            <Navbar />
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/Home" element={<Home />} />
@@ -29,7 +31,8 @@ export default function App() {
           <Route path="/Signup" element={<Signup />} />
         </Routes>
       </Router>
-    </LanguageProvider>
+            </LanguageProvider>
+        </>
   );
 }
 

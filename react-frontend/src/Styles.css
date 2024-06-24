@@ -1,11 +1,19 @@
 * {
-    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -14,6 +22,11 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+.site-title {
+    font-size: 2rem;
+}
+
+/*navbar div properties, applies to all navbar elements*/
 .nav {
     background-color: #0f1c74;
     color: white;
@@ -23,11 +36,7 @@ code {
     gap: 2rem;
     padding: 0 1rem;
 }
-
-.site-title {
-    font-size: 2rem;
-}
-
+/*navbar list element properties*/
 .nav ul {
     padding: 0;
     margin: 0;
@@ -42,7 +51,9 @@ code {
     height: 100%;
     display: flex;
     align-items: center;
-    padding: 1rem;
+    padding-left: .25rem;
+    padding-right: .25rem;
+    padding-bottom: .7rem;
 }
 
 .nav li.active {
@@ -109,21 +120,6 @@ p {
     width: 10em;
 }
 
-
-/*
-.Sidebar-nav {
-    background-color: #0f1c24;
-    color: white;
-    font: Monaco;
-    font-style: oblique;
-    text-align: left;
-    padding-left: 5px;
-    width: 10%;
-    height: 100rem;
-    float: left;
-}
-*/
-
 .sidebar-references {
     text-decoration: none;
 }
@@ -132,15 +128,71 @@ p {
     padding-left: 10px;
 }
 
-.Landing-header {
-    text-align: center;
+/*landing page div, applies to all landing page elements*/
+.Landing {
+    position: relative;
+    color: #ffffff;
+    background-image: url("./Assets/Landing-page-background.png");
+    background-size: 100% 100%;
+    width: 99vw;
+    height: 120vh;
+    background-color: #050505;
+    display: flex;
 }
 
-.Landing {
-    min-width: 100%;
-    min-height: 2833px;
-    background-image: url("./Assets/Landing-page-background.png");
-    background-color: #050505;
+/*landing page header*/
+.Landing-header {
+    text-align: center;
+    width: 180%;
+    margin: auto;
+    padding-top: 5px;
+    padding-bottom: 70px;
+}
+
+.Landing-title {
+    font-size:35px;
+}
+
+/*First bold word of each landing page paragraphs*/
+.Bold-word {
+    font-weight: bold;
+    display: inline-flex;
+}
+
+/*landing page paragraphs*/
+.Landing-text {
+    width: 180%;
+    text-align: center;
+    margin:auto;
+    font-family: "Inter", sans-serif;
+    padding-bottom: 60px;
+}
+
+
+
+/*landing page entry button*/
+.Landing-entry {
+    align-content: center;
+    background-color: #0f1c74;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    align-self: flex-end;
+    text-decoration: none;
+    padding: 10px 30px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 180px;
+    right: 380px;
+}
+
+/*landing page entry button hover properties*/
+.Landing-entry:hover {
+        background-color: #ffffff;
+        color: #0f1c74;
 }
 
 .Page-header {
@@ -148,152 +200,6 @@ p {
     text-align: center;
 }
 
-/*
-*{
-    box-sizing: border-box
+.Container {
+
 }
-
-body {
-    margin: 
-}
-
-.nav {
-    background-color: #0f1c74;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 2rem;
-    padding: 0 1rem;
-}
-
-.site-title {
-    font-size: 2rem;
-}
-
-.nav ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-}
-
-.nav a {
-    color: inherit;
-    text-decoration: none;
-    height: 100%;
-    display:flex;
-    align-items: center;
-    padding: .25rem;
-}
-
-
-
-.nav li.active {
-    background-color: #555;
-}
-.nav li:hover {
-    background-color: #2f3c94;
-}
-
-
-/*original app css
-.App {
-    text-align: center;
-}
-.Homepage-title {
-    text-align: center;
-    vertical-align: text-top;
-    color: white;
-    font-size: 20px;
-    font-style: oblique;
-    display: inline-block;
-}
-
-.Banner-right {
-    display: inline-block;
-    align-content: end;
-}
-*/
-
-/*
-.Dropdown-button {
-    align-content: center;
-    text-align: center;
-    position: absolute;
-    left: 5px;
-    vertical-align: middle;
-    display: flex;
-    width: 50px;
-    height: 50px;
-    background-color: aliceblue;
-    color: black;
-    display: inline-block;
-}
-
-.Top-banner {
-    width: 100%;
-}
-
-.Mainpage-body {
-    background-color: white;
-}
-
-
-
-.Section-header {
-    text-align: left;
-    padding-left: 10px;
-}
-
-
-.Credit {
-    display: block;
-    position: absolute;
-    vertical-align: bottom;
-}
-*/
-
-
-/*remnant css from rotating react logo; could be repurposed?*/
-/*
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
-}
-
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
-}
-
-.App-header {
-    background-color: #1ba3f7;
-    min-height: 10vh;
-    max-height: 15vh;
-    align-items: initial;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-    padding-left: 5px;
-    padding-top: 5px;
-    justify-content: flex-start;
-}
-
-
-.App-link {
-    color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-*/
