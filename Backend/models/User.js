@@ -5,11 +5,9 @@ const jwt = require('jsonwebtoken');
 const userSchema = new mongoose.Schema({
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
-  password: { type: String, required: true },
-  preferences: [String]
+  password: { type: String, required: true }
 });
 
-// Hash password before saving user
 userSchema.pre('save', async function (next) {
   if (!this.isModified('password')) {
     return next();
@@ -19,9 +17,8 @@ userSchema.pre('save', async function (next) {
   next();
 });
 
-// Generate JWT token
 userSchema.methods.generateAuthToken = function () {
-  return jwt.sign({ _id: this._id, email: this.email }, 'your_jwt_secret', { expiresIn: '1h' });
+  return jwt.sign({ _id: this._id, email: this.email }, process.env.JWT_SECRET, { expiresIn: '1h' });
 };
 
 const User = mongoose.model('User', userSchema);
