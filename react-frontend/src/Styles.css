@@ -107,14 +107,6 @@ p {
     overflow-wrap: break-word;
 }
 
-.Container {
-    height: 200px;
-    width: 300px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
 
 .Item {
     width: 10em;
@@ -128,17 +120,40 @@ p {
     padding-left: 10px;
 }
 
-/*landing page div, applies to all landing page elements*/
+/*landing page div, applies to all landing page elements & used for setting background*/
 .Landing {
     position: relative;
     color: #ffffff;
     background-image: url("./Assets/Landing-page-background.png");
     background-size: 100% 100%;
-    width: 99vw;
+    width: 100vw;
     height: 120vh;
     background-color: #050505;
     display: flex;
+    max-width: 100%;
+    overflow-x: hidden;
 }
+
+/*primary content div for landing page*/
+.Landing-body {
+    margin-right: 1rem;
+    flex-shrink: 0;
+    height: 40vh;
+    width: 100vw;
+    display: block;
+    justify-content: center;
+    text-align: center;
+}
+
+/*Containers landing header & paragraph elements*/
+.Landing-text-container {
+    height: 200px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 
 /*landing page header*/
 .Landing-header {
@@ -149,6 +164,7 @@ p {
     padding-bottom: 70px;
 }
 
+/*large-scale portion of landing header*/
 .Landing-title {
     font-size:35px;
 }
@@ -168,29 +184,25 @@ p {
     padding-bottom: 60px;
 }
 
-
-
 /*landing page entry button*/
-.Landing-entry {
-    align-content: center;
-    background-color: #0f1c74;
+.Landing-button {
+    background-color: #2f3c94;
     color: #ffffff;
-    border: 2px solid #ffffff;
+    border: 0.5px solid #ffffff;
     font-family: "Inter", sans-serif;
-    font-size: 20px;
-    align-self: flex-end;
+    font-size: 15px;
     text-decoration: none;
     padding: 10px 30px;
     cursor: pointer;
     transition-duration: 0.2s;
     border-radius: 10px;
-    position: absolute;
-    bottom: 180px;
-    right: 380px;
+    position: relative;
+    top: 240px;
+    left: 130px;
 }
 
 /*landing page entry button hover properties*/
-.Landing-entry:hover {
+.Landing-button:hover {
         background-color: #ffffff;
         color: #0f1c74;
 }
@@ -198,8 +210,4 @@ p {
 .Page-header {
     align-content: center;
     text-align: center;
-}
-
-.Container {
-
 }

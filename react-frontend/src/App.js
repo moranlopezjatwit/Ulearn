@@ -19,16 +19,16 @@ export default function App() {
         <title>ULearn</title>
       <LanguageProvider>
             <Router>
-            <Navbar />
+            
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="/Home" element={<Home />} />
-          <Route path="/Introduction" element={<Introduction />} />
-          <Route path="/About" element={<About  />}/>
-          <Route path="/python-modules" element={<PythonModules />} />
-          <Route path="/java-modules" element={<JavaModules />} />
-          <Route path="/cpp-modules" element={<CppModules />} />
-          <Route path="/Signup" element={<Signup />} />
+                        <Route path="/Home" element={<><Navbar /><Home /></>} />
+                        <Route path="/Introduction" element={<><Navbar /><Introduction /></>} />
+                        <Route path="/About" element={<><Navbar /><About /></>}/>
+                        <Route path="/python-modules" element={<><Navbar /><PythonModules /></>} />
+                        <Route path="/java-modules" element={<><Navbar /><JavaModules /></>} />
+                        <Route path="/cpp-modules" element={<><Navbar /><CppModules /></>} />
+                        <Route path="/Signup" element={<><Navbar /><Signup /></>} />
         </Routes>
       </Router>
             </LanguageProvider>
