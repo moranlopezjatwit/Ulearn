@@ -1,3 +1,7 @@
+/*Google fonts import*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/*Default configs for all elements before formatting*/
 * {
     margin: 0;
     padding: 0;
@@ -8,9 +12,7 @@
     background: transparent;
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
+/*Default body configs & imports*/
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -22,10 +24,9 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-.site-title {
-    font-size: 2rem;
-}
 
+
+/*Navbar Section*/
 /*navbar div properties, applies to all navbar elements*/
 .nav {
     background-color: #0f1c74;
@@ -36,6 +37,7 @@ code {
     gap: 2rem;
     padding: 0 1rem;
 } 
+
 /*navbar list element properties*/
 .nav ul {
     padding: 0;
@@ -63,6 +65,86 @@ code {
 .nav li:hover {
     background-color: #2f3c94;
 }
+
+.site-title {
+    font-size: 2rem;
+}
+/*End Navbar Section*/
+
+/*Side Navbar Section*/
+
+.Side-nav {
+    margin: 0;
+    padding: 5px;
+    justify-content: space-between;
+}
+
+.Side-nav a {
+    text-decoration: none;
+    color: #0f1c74;
+}
+
+.Side-nav ul {
+    list-style: none;
+}
+
+.Side-nav li {
+    padding-bottom: 8px;
+}
+
+.Side-nav-align {
+    border: solid #000000;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 1px;
+    padding-left: 0px;
+    max-width: 12vw;
+    min-height: 100vh;
+}
+
+.Side-header {
+    padding-bottom: 10px;
+}
+
+/*End Side Navbar section*/
+
+
+/*Footer Section*/
+
+.Footer-body {
+    display: flex;
+    background-color: #eeeeff;
+    justify-content: start;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 10px 1rem;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#Footer-title {
+    display: flex;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-style: italic;
+    color: #222233;
+}
+
+.Footer-nav {
+    display: flex;
+    margin-top: auto;
+    min-height: 20vh;
+}
+
+.Footer-nav ul {
+    list-style: none;
+}
+
+/*End Footer Section*/
+
 
 .languages {
     align-content: start;
@@ -210,4 +292,22 @@ p {
 .Page-header {
     align-content: center;
     text-align: center;
+}
+
+
+/*Introduction page configurations*/
+
+.Introduction-body {
+    font-family: "Inter", sans-serif;
+    display: flex;
+}
+
+#Introduction-header {
+    font-size: 20px;
+    padding-top: 40px;
+    padding-left: 15px;
+}
+
+#Introduction-paragraph {
+    padding-left: 15px;
 }

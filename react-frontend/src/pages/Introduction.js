@@ -1,26 +1,16 @@
 
 import React, { useContext } from 'react';
 import { LanguageContext } from '../LanguageContext';
+import IntroSidenav from '../Controls/IntroSidenav';
 
 function Introduction() {
   const { languages } = useContext(LanguageContext);
 
   return (
-    <div className="">
-
-
-
-        <h2 class="Page-header">Programming Languages and Modules</h2>
-        {languages.map((language, index) => (
-          <div class="Body" key={index}>
-            <h3>{language.name}</h3>
-            <ul>
-              {language.modules.map((module, index) => (
-                <li key={index}>{module}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
+    <div class="Introduction-body">
+        <IntroSidenav />
+        <h2 id="Introduction-header">Getting Started</h2>
+        <p className="Introduction-paragraph"></p>
 
     </div>
   );
