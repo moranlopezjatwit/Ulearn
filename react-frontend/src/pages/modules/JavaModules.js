@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { LanguageContext } from '../../LanguageContext'; // Corrected path
+import JavaSidenav from '../../Controls/JavaSidenav';
 
 function JavaModules() {
   const { languages } = useContext(LanguageContext);
@@ -7,6 +8,7 @@ function JavaModules() {
 
   return (
       <div id="App-container">
+          <JavaSidenav />
           <h1 class="Section-header">Java Modules</h1>
       <ul>
         {javaModules.map((module, index) => (

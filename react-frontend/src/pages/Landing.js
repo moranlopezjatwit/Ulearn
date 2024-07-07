@@ -10,10 +10,9 @@ export default function Landing() {
                     <p class="Landing-text"> <div class="Bold-word">Learn</div> the most popular high-level programming languages, including Java, Python, C++, and more to come</p>
                     <p class="Landing-text"> <div class="Bold-word">Review</div> your knowledge and brush up on core programming concepts</p>
                     <p class="Landing-text"> <div class="Bold-word">Experiment</div> with new and exciting coding concepts using our interactive coding environment</p>
+                
+                    <a href="/Home"><button class="Landing-button">Begin Your Coding Journey</button></a>
                 </div>
-                <a href="/Home">
-                    <button class="Landing-button">Begin Your Coding Journey</button>
-                </a>
             </div>
         </div>
     );

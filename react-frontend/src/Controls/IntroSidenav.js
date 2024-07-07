@@ -10,7 +10,7 @@ export default function IntroSidenav() {
             <ul>
                 <li><Link to="/Python-Modules">Python Modules</Link></li>
                 <li><Link to="/Java-Modules">Java Modules</Link></li>
-                <li><Link to="/CPP-Modules">C++ Modules</Link></li>
+                <li><Link to="/Cpp-Modules">C++ Modules</Link></li>
 
             </ul>
             </nav>

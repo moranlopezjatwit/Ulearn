@@ -16,7 +16,7 @@ import Landing from './pages/Landing';
 
 export default function App() {
     return (
-        <div id="App-container">
+        <div>
         <title>ULearn</title>
       <LanguageProvider>
           <Router> 

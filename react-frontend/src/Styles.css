@@ -106,6 +106,22 @@ code {
 
 .Side-header {
     padding-bottom: 10px;
+    padding-top: 5px;
+    font-family: "Inter", sans-serif;
+    font-style: oblique;
+}
+
+.Side-back {
+    font-size: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    background-color: #2f3c94;
+    color: #ffffff;
+    border: 0.5px solid #ffffff;
+    font-family: "Inter", sans-serif;
+    margin: auto;
+    padding: 2px 4px;
+    border-radius: 5px;
 }
 
 /*End Side Navbar section*/
@@ -152,6 +168,7 @@ code {
 
 #App-container {
     min-height: calc(100vh - 34px);
+    display: flex;
 }
 /*End Footer Section*/
 
@@ -251,16 +268,17 @@ p {
     text-align: center;
     width: 180%;
     margin: auto;
-    padding-top: 5px;
-    padding-bottom: 70px;
+    padding-top: 10vh;
+    padding-bottom: 60px;
 }
 
 /*large-scale portion of landing header*/
 .Landing-title {
     font-size:35px;
+    padding-top: 15px;
 }
 
-/*First bold word of each landing page paragraphs*/
+/*first bold word of each landing page paragraphs*/
 .Bold-word {
     font-weight: bold;
     display: inline-flex;
@@ -272,7 +290,8 @@ p {
     text-align: center;
     margin:auto;
     font-family: "Inter", sans-serif;
-    padding-bottom: 60px;
+    font-style: italic;
+    padding-bottom: 40px;
 }
 
 /*landing page entry button*/
@@ -288,7 +307,6 @@ p {
     transition-duration: 0.2s;
     border-radius: 10px;
     position: relative;
-    top: 240px;
     left: 130px;
 }
 
@@ -306,22 +324,22 @@ p {
 
 /*Introduction page configurations*/
 
-#Introduction-page {
+.Introduction-page {
     display: flex;
 }
 
-#Introduction-body {
+.Introduction-body {
     font-family: "Inter", sans-serif;
     display: block;
 }
 
-#Introduction-header {
+.Introduction-header {
     font-size: 20px;
     padding-top: 40px;
     padding-left: 15px;
 }
 
-#Introduction-paragraph {
+.Introduction-paragraph {
     position: relative;
     padding-left: 15px;
     padding-right: 60px;
