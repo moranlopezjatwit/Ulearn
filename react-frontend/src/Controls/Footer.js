@@ -15,9 +15,9 @@ export default function footer() {
 
             <nav className="Footer-nav">
                 <ul>
-                    <li>Temp Text</li>
-                    <li>Temp Text</li>
-                    <li>Temp Text</li>
+                    <li>Feedback</li>
+                    <li>Report A Bug</li>
+                    <li>Contact Us</li>
                 </ul>
             </nav>
         </div>

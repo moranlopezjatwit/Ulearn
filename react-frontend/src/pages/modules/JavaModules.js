@@ -6,7 +6,7 @@ function JavaModules() {
   const javaModules = languages.find(lang => lang.name === 'Java').modules;
 
   return (
-    <div>
+      <div id="App-container">
           <h1 class="Section-header">Java Modules</h1>
       <ul>
         {javaModules.map((module, index) => (

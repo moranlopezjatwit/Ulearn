@@ -1,7 +1,7 @@
 import React from 'react';
 export default function About() {
     return (<>
-        <div>
+        <div id="App-container">
         <p>The demand for personalized educational resources in the field of computer science is on the rise, reflecting the
         broader trend towards online learning. ULearn aims to address this need by providing a platform that utilizes 
         predictive algorithms to deliver tailored learning materials to users based on their coding interests and 

@@ -6,7 +6,7 @@ function CppModules() {
   const cppModules = languages.find(lang => lang.name === 'C++').modules;
 
   return (
-    <div>
+      <div id="App-container">
           <h1 class="Section-header">C++ Modules</h1>
       <ul>
         {cppModules.map((module, index) => (
