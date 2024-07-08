@@ -331,6 +331,7 @@ p {
 .Introduction-body {
     font-family: "Inter", sans-serif;
     display: block;
+    background-color: #c0c4de;
 }
 
 .Introduction-header {
@@ -344,3 +345,116 @@ p {
     padding-left: 15px;
     padding-right: 60px;
 }
+
+
+
+/*Homepage starts here */
+
+#App-container {
+    display: block; /* Ensure default block layout */
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #c0c4de; /* Set background color */
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+    opacity: 0; /* Initial state for animation */
+    animation: fadeIn 2s forwards; /* Apply animation */
+}
+
+    .hero h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+.features {
+    margin-bottom: 40px;
+}
+
+    .features h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .features .feature {
+        margin-bottom: 20px;
+    }
+
+        .features .feature h3 {
+            font-size: 24px;
+        }
+
+        .features .feature p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+.testimonials {
+    margin-bottom: 40px;
+}
+
+    .testimonials h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .testimonials blockquote {
+        margin: 20px 0;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-left: 5px solid #2f3c94;
+    }
+
+    .testimonials cite {
+        display: block;
+        margin-top: 10px;
+        font-size: 14px;
+        color: #555;
+    }
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+
+/*Homepage ends here */
+
+
+/*About page starts here */
+
+#App-container {
+    background-color: #c0c4de; /* Light gray background color */
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000; /* Dark gray color for heading */
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    color: #000000;
+}
+
+.credits {
+    margin-top: 40px;
+    font-style: italic;
+    color: #000000;
+}
+/*About page ends here */
