@@ -2,7 +2,18 @@ import React from 'react';
 export default function About() {
     return (<>
         <div id="App-container">
-        
+
+
+        <style>
+                {`
+        h1 {
+          font-size: 40px;
+        }
+      `}
+        </style>
+          
+
+        <h1>About Us</h1>
 
         <p>The demand for personalized educational resources in the field of computer science is on the rise, reflecting the
         broader trend towards online learning.
