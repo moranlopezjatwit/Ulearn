@@ -12,7 +12,9 @@ export default function PythonModules() {
           <PythonSidenav />
           <div>
               <h1 class="Section-header">Python Modules</h1>
-              
+
+              <p>Python is a versatile programming language known for its ease of use and readability. It is widely used in various fields such as web development, data science, artificial intelligence, scientific computing, and automation. Python's extensive standard library and thriving ecosystem of third-party packages make it a popular choice for developers and researchers alike.</p>
+
 
           </div>
     </div>
