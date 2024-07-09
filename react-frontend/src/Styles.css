@@ -226,6 +226,7 @@ p {
 
 .Section-header {
     padding-left: 10px;
+
 }
 
 /*landing page div, applies to all landing page elements & used for setting background*/
@@ -270,28 +271,33 @@ p {
     margin: auto;
     padding-top: 10vh;
     padding-bottom: 60px;
+    color: white;
+    font-size: 30px;
 }
 
 /*large-scale portion of landing header*/
 .Landing-title {
-    font-size:35px;
+    font-size: 35px;
     padding-top: 15px;
+    color: white;
 }
 
 /*first bold word of each landing page paragraphs*/
 .Bold-word {
     font-weight: bold;
     display: inline-flex;
+
 }
 
 /*landing page paragraphs*/
 .Landing-text {
     width: 180%;
     text-align: center;
-    margin:auto;
+    margin: auto;
     font-family: "Inter", sans-serif;
     font-style: italic;
     padding-bottom: 40px;
+    color: white;
 }
 
 /*landing page entry button*/
@@ -335,7 +341,7 @@ p {
 }
 
 .Introduction-header {
-    font-size: 20px;
+    font-size: 30px;
     padding-top: 40px;
     padding-left: 15px;
 }
@@ -456,5 +462,12 @@ p {
     margin-top: 40px;
     font-style: italic;
     color: #000000;
+}
+
+h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000; /* Dark gray color for heading */
 }
 /*About page ends here */

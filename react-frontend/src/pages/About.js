@@ -17,8 +17,17 @@ function About() {
             <p className="credits">
                 ULearn was created by Juan Moran Lopez, Nathaniel Simms, and Brandon Norris. Credits for any imagery, media, and references used will eventually go here.
             </p>
+
+            <br />
+            <h2>Contact Us</h2>
+            <p>
+                Address: 550 Huntington Ave, Boston, MA 02115<br />
+                Email: <a href="mailto:student@wit.edu">student@wit.edu</a><br />
+                Phone: 123-456-7890
+            </p>
         </div>
     );
 }
 
 export default About;
+
