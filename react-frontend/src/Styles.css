@@ -226,6 +226,7 @@ p {
 
 .Section-header {
     padding-left: 10px;
+
 }
 
 /*landing page div, applies to all landing page elements & used for setting background*/
@@ -270,28 +271,33 @@ p {
     margin: auto;
     padding-top: 10vh;
     padding-bottom: 60px;
+    color: white;
+    font-size: 30px;
 }
 
 /*large-scale portion of landing header*/
 .Landing-title {
-    font-size:35px;
+    font-size: 35px;
     padding-top: 15px;
+    color: white;
 }
 
 /*first bold word of each landing page paragraphs*/
 .Bold-word {
     font-weight: bold;
     display: inline-flex;
+
 }
 
 /*landing page paragraphs*/
 .Landing-text {
     width: 180%;
     text-align: center;
-    margin:auto;
+    margin: auto;
     font-family: "Inter", sans-serif;
     font-style: italic;
     padding-bottom: 40px;
+    color: white;
 }
 
 /*landing page entry button*/
@@ -331,10 +337,11 @@ p {
 .Introduction-body {
     font-family: "Inter", sans-serif;
     display: block;
+    background-color: #c0c4de;
 }
 
 .Introduction-header {
-    font-size: 20px;
+    font-size: 30px;
     padding-top: 40px;
     padding-left: 15px;
 }
@@ -344,3 +351,200 @@ p {
     padding-left: 15px;
     padding-right: 60px;
 }
+
+
+
+/*Homepage starts here */
+
+#App-container {
+    display: block; /* Ensure default block layout */
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #c0c4de; /* Set background color */
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+    opacity: 0; /* Initial state for animation */
+    animation: fadeIn 2s forwards; /* Apply animation */
+}
+
+    .hero h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+.features {
+    margin-bottom: 40px;
+}
+
+    .features h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .features .feature {
+        margin-bottom: 20px;
+    }
+
+        .features .feature h3 {
+            font-size: 24px;
+        }
+
+        .features .feature p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+.testimonials {
+    margin-bottom: 40px;
+}
+
+    .testimonials h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .testimonials blockquote {
+        margin: 20px 0;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-left: 5px solid #2f3c94;
+    }
+
+    .testimonials cite {
+        display: block;
+        margin-top: 10px;
+        font-size: 14px;
+        color: #555;
+    }
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+
+/*Homepage ends here */
+
+
+/*About page starts here */
+
+#App-container {
+    background-color: #c0c4de; /* Light gray background color */
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000; /* Dark gray color for heading */
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    color: #000000;
+}
+
+.credits {
+    margin-top: 40px;
+    font-style: italic;
+    color: #000000;
+}
+
+h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000; /* Dark gray color for heading */
+}
+/*About page ends here */
+
+/*Python module page starts here */
+
+#App-container {
+    display: flex;
+    flex-direction: row;
+}
+
+    #App-container > div {
+        flex: 1;
+    }
+
+.Section-header {
+    margin-top: 0;
+    padding: 20px;
+}
+/*Python module page ends here */
+
+
+
+/*Java module page starts here */
+#App-container {
+    display: flex;
+    flex-direction: row;
+}
+
+    #App-container > div {
+        flex: 1;
+        padding: 20px;
+    }
+
+.Section-header {
+    margin-top: 0;
+    padding: 20px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 25px;
+   }
+/*Java module page starts here */
+
+
+/*CPP module page starts here */
+#App-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.Section-header {
+    margin-top: 0;
+    padding-bottom: 10px;
+}
+
+.cpp-details {
+    margin-bottom: 20px;
+}
+
+    .cpp-details h2 {
+        margin-top: 0;
+    }
+/*CPP module page ends here */
+
+
