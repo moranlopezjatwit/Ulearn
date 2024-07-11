@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 import './Styles.css';
@@ -33,5 +33,48 @@ export default function App() {
           </Router>
       </LanguageProvider>
         </div>
+  );
+}*/
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
+import './Styles.css';
+import Home from './pages/Home';
+import Introduction from './pages/Introduction';
+import Navbar from './Controls/Navbar';
+import Footer from './Controls/Footer';
+import { LanguageProvider } from './LanguageContext';
+import PythonModules from './pages/modules/PythonModules';
+import JavaModules from './pages/modules/JavaModules';
+import CppModules from './pages/modules/CppModules';
+import About from './pages/About';
+import Signup from './pages/Signup';
+import Landing from './pages/Landing';
+import Register from './pages/Register';
+import Login from './pages/Login';
+import Protected from './pages/Protected';
+
+export default function App() {
+  return (
+    <div>
+      <title>ULearn</title>
+      <LanguageProvider>
+        <Router> 
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/Home" element={<><Navbar /><Home /><Footer /></>} />
+            <Route path="/Introduction" element={<><Navbar /><Introduction /><Footer /></>} />
+            <Route path="/About" element={<><Navbar /><About /><Footer /></>}/>
+            <Route path="/python-modules" element={<><Navbar /><PythonModules /><Footer /></>} />
+            <Route path="/java-modules" element={<><Navbar /><JavaModules /><Footer /></>} />
+            <Route path="/cpp-modules" element={<><Navbar /><CppModules /><Footer /></>} />
+            <Route path="/Signup" element={<><Navbar /><Signup /><Footer /></>} />
+            <Route path="/register" element={<><Navbar /><Register /><Footer /></>} />
+            <Route path="/login" element={<><Navbar /><Login /><Footer /></>} />
+            <Route path="/protected" element={<><Navbar /><Protected /><Footer /></>} />
+          </Routes>
+        </Router>
+      </LanguageProvider>
+    </div>
   );
 }
