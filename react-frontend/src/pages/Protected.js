@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getProtectedData } from './api';
+import { getProtectedData } from '../api';
 
 const Protected = () => {
   const [data, setData] = useState(null);
