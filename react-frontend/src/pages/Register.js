@@ -23,29 +23,30 @@ const Register = () => {
   };
 
   return (
-    <div>
+    <div style={styles.container}>
       <h2>Register</h2>
       <input
         type="text"
         placeholder="Username"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
+        style={styles.input}
       />
       <input
         type="password"
         placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
+        style={styles.input}
       />
       <input
         type="email"
         placeholder="Email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
+        style={styles.input}
       />
-      <button onClick={registerUser}>Register</button>
+      <button onClick={registerUser} style={styles.button}>Register</button>
     </div>
   );
 };
-
-export default Register;
