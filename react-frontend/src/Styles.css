@@ -130,31 +130,35 @@ code {
 /*Footer Section*/
 
 .Footer-body {
-    display: flex;
-    background-color: #eeeeff;
-    justify-content: start;
-    align-items: stretch;
+    display: block;
+    background-color: #101015;
     gap: 2rem;
     padding: 10px 1rem;
     max-width: 100%;
     overflow-x: hidden;
     position: relative;
+    font-family: "Inter", sans-serif;
+    min-height: 20vh;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #Footer-title {
-    display: flex;
-    padding-left: 20px;
+    margin: auto;
+    width: 230px;
+    height: 20px;
     padding-top: 20px;
     font-family: "Inter", sans-serif;
     font-size: 15px;
     font-style: italic;
-    color: #222233;
+    color: #eeeeff;
 }
 
 .Footer-nav {
     display: flex;
-    margin-top: auto;
-    min-height: 20vh;
+    width: 350px;
+    margin: auto;
+    color: #eeeeff;
 }
 
 .Footer-nav li:hover {
@@ -164,6 +168,9 @@ code {
 
 .Footer-nav ul {
     list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding-top: 7px;
 }
 
 #App-container {
@@ -218,6 +225,7 @@ p {
 
 .Item {
     width: 10em;
+    background: #f9f9f9;
 }
 
 .sidebar-references {
@@ -360,8 +368,10 @@ p {
     display: block; /* Ensure default block layout */
     font-family: Arial, sans-serif;
     padding: 20px;
-    background-color: #c0c4de; /* Set background color */
+    background-color: #efefef; /* Set background color */
 }
+
+/*#c0c4de*/
 
 .hero {
     text-align: center;
@@ -473,7 +483,6 @@ h2 {
 /*About page ends here */
 
 /*Python module page starts here */
-
 #App-container {
     display: flex;
     flex-direction: row;
