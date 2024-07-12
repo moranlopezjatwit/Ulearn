@@ -5,7 +5,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 
 const app = express();
-const port = 5000; // You can choose any port you prefer
+const port = 5000;
 
 // Middleware
 app.use(cors());
@@ -36,6 +36,7 @@ const User = mongoose.model('User', UserSchema);
 app.post('/api/auth/register', async (req, res) => {
   console.log('Received request:', req.body);
   const { username, password, email } = req.body;
+
   if (!username || !password || !email) {
     console.error('Validation error: All fields are required');
     return res.status(400).json({ error: 'All fields are required' });
@@ -54,4 +55,3 @@ app.post('/api/auth/register', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
-
