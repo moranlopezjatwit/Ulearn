@@ -54,3 +54,4 @@ app.post('/api/auth/register', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
+
