@@ -3,63 +3,47 @@ import { register } from '../api';
 import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', password: '' });
-  const navigate = useNavigate();
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const registerUser = async () => {
+    const userData = { username, password, email };
+    console.log('Sending user data:', userData);
     try {
-      const { data } = await register(formData);
-      localStorage.setItem('token', data.token);
-      navigate('/protected');
+      const response = await axios.post('http://localhost:5000/api/auth/register', userData, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      console.log('Response:', response.data);
     } catch (error) {
-      console.error('Error registering', error);
+      console.error('Error registering user:', error.response?.data || error.message);
     }
   };
 
   return (
-    <div className="register-container">
+    <div>
       <h2>Register</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Name</label>
-          <input
-            type="text"
-            name="name"
-            onChange={handleChange}
-            value={formData.name}
-            placeholder="Name"
-            required
-          />
-        </div>
-        <div>
-          <label>Email</label>
-          <input
-            type="email"
-            name="email"
-            onChange={handleChange}
-            value={formData.email}
-            placeholder="Email"
-            required
-          />
-        </div>
-        <div>
-          <label>Password</label>
-          <input
-            type="password"
-            name="password"
-            onChange={handleChange}
-            value={formData.password}
-            placeholder="Password"
-            required
-          />
-        </div>
-        <button type="submit">Submit</button>
-      </form>
+      <input
+        type="text"
+        placeholder="Username"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+      <input
+        type="email"
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <button onClick={registerUser}>Register</button>
     </div>
   );
 };
