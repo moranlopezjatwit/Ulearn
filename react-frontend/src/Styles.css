@@ -87,10 +87,12 @@ code {
 
 .Side-nav ul {
     list-style: none;
+    left: 0px;
 }
 
 .Side-nav li {
     padding-bottom: 8px;
+    left: 5px;
 }
 
 .Side-nav-align {
@@ -229,7 +231,6 @@ p {
     height: 300px;
     overflow-wrap: break-word;
 }
-
 
 .Item {
     width: 10em;
