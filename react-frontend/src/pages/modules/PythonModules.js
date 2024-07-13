@@ -13,9 +13,14 @@ export default function PythonModules() {
           <div>
               <h1 class="Section-header">Python Modules</h1>
 
-              <p>Python is a versatile programming language known for its ease of use and readability. It is widely used in various fields such as web development, data science, artificial intelligence, scientific computing, and automation. Python's extensive standard library and thriving ecosystem of third-party packages make it a popular choice for developers and researchers alike.</p>
-
-
+              <p class="Section-content">Python is a versatile high-level programming language known for its ease of use and readability. Its straightforward
+                  syntax makes it popular among various fields such as web development, data science, artificial intelligence, scientific computing, and
+                  automation. What's more, its high level of compatibility with various operating systems allows users to easily create and maintain
+                  cross-platform applications. Python's extensive standard library, thriving ecosystem of third-party packages, and vast network of support
+                  make it a popular choice for novice and expert programmers alike!</p>
+             <br/>
+              <p class="Section-content"> The lessons included in this module represent your first step toward becoming a seasoned python programmer. Begin
+                  with the variables lesson, and you will be able to steadily progress through the provided material at whatever pace is comfortable to you.</p>
           </div>
     </div>
   );

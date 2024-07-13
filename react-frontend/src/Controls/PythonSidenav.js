@@ -10,9 +10,9 @@ export default function PythonSidenav() {
                 <div className="Side-header">Lessons</div>
                 <ul>
                     <li><Link to="/Python-Modules">Introduction</Link></li>
-                    <li><Link to="">Variables</Link></li>
-                    <li><Link to="">Conditionals/Loops</Link></li>
-                    <li><Link to="">Functions</Link></li>
+                    <li><Link to="/Python-Variables">Variables</Link></li>
+                    <li><Link to="/Python-Loops">Conditionals/Loops</Link></li>
+                    <li><Link to="/Python-Functions">Functions</Link></li>
 
                 </ul>
             </nav>

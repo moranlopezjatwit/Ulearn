@@ -17,7 +17,8 @@ function Introduction() {
 
         <h2 class="Introduction-header">Tracking Progress</h2>
         <br />
-        <p class="Introduction-paragraph">If you have an account with us, module completion will be tracked and can be reviewed at a later time on your profile. Additionally, </p>
+                <p class="Introduction-paragraph">If you have an account with us, module completion will be tracked and can be reviewed at a later time on your profile.
+                    Additionally, </p>
     </div>
     </div>
     );

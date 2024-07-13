@@ -45,6 +45,9 @@ import Navbar from './Controls/Navbar';
 import Footer from './Controls/Footer';
 import { LanguageProvider } from './LanguageContext';
 import PythonModules from './pages/modules/PythonModules';
+import PythonVariables from './pages/modules/PythonVariables';
+import PythonLoops from './pages/modules/PythonLoops';
+import PythonFunctions from './pages/modules/PythonFunctions';
 import JavaModules from './pages/modules/JavaModules';
 import CppModules from './pages/modules/CppModules';
 import About from './pages/About';
@@ -65,7 +68,12 @@ export default function App() {
             <Route path="/Home" element={<><Navbar /><Home /><Footer /></>} />
             <Route path="/Introduction" element={<><Navbar /><Introduction /><Footer /></>} />
             <Route path="/About" element={<><Navbar /><About /><Footer /></>}/>
-            <Route path="/python-modules" element={<><Navbar /><PythonModules /><Footer /></>} />
+
+            <Route path="/Python-Modules" element={<><Navbar /><PythonModules /><Footer /></>} />
+            <Route path="/Python-Variables" element={<><Navbar /><PythonVariables /><Footer /></>} />
+            <Route path="/Python-Loops" element={<><Navbar /><PythonLoops /><Footer /></>} />
+            <Route path="/Python-Functions" element={<><Navbar /><PythonFunctions /><Footer /></>} />
+
             <Route path="/java-modules" element={<><Navbar /><JavaModules /><Footer /></>} />
             <Route path="/cpp-modules" element={<><Navbar /><CppModules /><Footer /></>} />
             <Route path="/Signup" element={<><Navbar /><Signup /><Footer /></>} />

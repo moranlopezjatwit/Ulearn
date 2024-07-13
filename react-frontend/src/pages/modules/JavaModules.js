@@ -16,7 +16,7 @@ function JavaModules() {
                 <br />
                 <p>Some common uses of Java include:</p>
                 <br />
-                <ul>
+                <ul className="Java-lessons">
                     <li>Web Development</li>
                     <li>Android App Development</li>
                     <li>Enterprise Applications</li>

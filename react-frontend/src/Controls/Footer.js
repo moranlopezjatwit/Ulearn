@@ -12,7 +12,7 @@ export default function footer() {
                 </ul>
             </nav>
             <div id="Footer-title">Improve the way ULearn today!</div>
-            <div id="Footer copyright"> </div>
+            <div id="Footer-version">v0.8.0</div>
         </div>
     );
 }
