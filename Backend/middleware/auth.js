@@ -1,19 +1,33 @@
 const jwt = require('jsonwebtoken');
+const expressJwt = require('express-jwt');
+const User = require('../models/user'); // Adjust the path to your User model
 
-const auth = (req, res, next) => {
-  const token = req.header('Authorization').replace('Bearer ', '');
+const secret = process.env.JWT_SECRET; // Use a secure key from environment variable
 
-  if (!token) {
-    return res.status(401).json({ message: 'Access denied. No token provided.' });
-  }
+// Middleware to require login/auth
+const requireSignin = expressJwt({
+  secret: secret,
+  algorithms: ['HS256'],
+  userProperty: 'auth'
+});
 
-  try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    req.user = decoded;
+// Middleware to check if the user has admin role
+const isAdmin = (req, res, next) => {
+  const userId = req.auth._id;
+  User.findById(userId).exec((err, user) => {
+    if (err || !user) {
+      return res.status(400).json({
+        error: 'User not found'
+      });
+    }
+    if (user.role !== 'admin') {
+      return res.status(403).json({
+        error: 'Admin resource! Access denied'
+      });
+    }
+    req.profile = user;
     next();
-  } catch (error) {
-    res.status(400).json({ message: 'Invalid token' });
-  }
+  });
 };
 
-module.exports = auth;
+module.exports = { requireSignin, isAdmin };
