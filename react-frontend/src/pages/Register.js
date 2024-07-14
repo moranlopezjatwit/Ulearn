@@ -23,7 +23,7 @@ const Register = () => {
     }
   };
 
-  return (
+    return (
     <div style={styles.container}>
       <h2>Register</h2>
       <input
@@ -47,8 +47,8 @@ const Register = () => {
         onChange={(e) => setEmail(e.target.value)}
         style={styles.input}
       />
-      <button onClick={registerUser} style={styles.button}>Register</button>
-    </div>
+        <button onClick={registerUser} style={styles.button}>Register</button>
+      </div>
   );
 };
 
