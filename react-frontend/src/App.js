@@ -13,7 +13,6 @@ import CppModules from './pages/modules/CppModules';
 import About from './pages/About';
 import Signup from './pages/Signup';
 import Landing from './pages/Landing';
-import MyComponent from './components/MyComponent';
 
 export default function App() {
     return (
@@ -57,6 +56,7 @@ import Landing from './pages/Landing';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Protected from './pages/Protected';
+import MyComponent from './components/MyComponent';
 
 export default function App() {
   return (
