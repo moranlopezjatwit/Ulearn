@@ -31,7 +31,7 @@ const MyComponent = () => {
           onChange={(e) => setValue(e.target.value)}
           placeholder="Value"
         />
-        <button type="submit">Submit</button>
+        <button onClick={registerUser} style={styles.button}>Register</button>
       </form>
     </div>
   );
