@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const authRoutes = require('./routes/auth'); // Adjust the path to your auth routes
+require('dotenv').config(); // To load environment variables from .env file
 
 // Create an Express application
 const app = express();
