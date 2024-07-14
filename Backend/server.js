@@ -73,6 +73,9 @@ app.post('/api/data', async (req, res) => {
   }
 });
 
+// Routes
+app.use('/api/auth', authRoutes);
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
