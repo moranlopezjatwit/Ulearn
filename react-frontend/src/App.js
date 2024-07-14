@@ -81,6 +81,7 @@ export default function App() {
             <Route path="/register" element={<><Navbar /><Register /><Footer /></>} />
             <Route path="/login" element={<><Navbar /><Login /><Footer /></>} />
             <Route path="/protected" element={<><Navbar /><Protected /><Footer /></>} />
+            <Route path="/my-component" element={<><Navbar /><MyComponent /><Footer /></>} />
           </Routes>
         </Router>
       </LanguageProvider>
