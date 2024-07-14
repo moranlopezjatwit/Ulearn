@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../models/User');
+const User = require('../models/user'); // Ensure the correct path to the user model
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+require('dotenv').config(); // To load environment variables from .env file
 
 router.post('/register', async (req, res) => {
   console.log('Register endpoint hit'); // Add this line
@@ -28,3 +29,4 @@ router.post('/register', async (req, res) => {
 });
 
 module.exports = router;
+
