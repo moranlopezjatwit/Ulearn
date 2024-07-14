@@ -1,9 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/mydatabase', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect('mongodb://localhost:27017/mydatabase');
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -19,9 +16,14 @@ db.once('open', () => {
 
   const newUser = new User({ username: 'testuser', password: 'testpass', email: 'test@example.com' });
 
-  newUser.save((err, user) => {
-    if (err) return console.error('Error saving user:', err);
-    console.log('User saved:', user);
-    db.close();
-  });
+  newUser.save()
+    .then(user => {
+      console.log('User saved:', user);
+      db.close();
+    })
+    .catch(err => {
+      console.error('Error saving user:', err);
+      db.close();
+    });
 });
+
