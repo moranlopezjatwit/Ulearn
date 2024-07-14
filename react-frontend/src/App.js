@@ -13,6 +13,7 @@ import CppModules from './pages/modules/CppModules';
 import About from './pages/About';
 import Signup from './pages/Signup';
 import Landing from './pages/Landing';
+import MyComponent from './components/MyComponent';
 
 export default function App() {
     return (
