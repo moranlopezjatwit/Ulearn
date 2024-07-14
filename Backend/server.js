@@ -1,11 +1,11 @@
-// server.js
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
+// Create an Express application
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors());
@@ -32,6 +32,13 @@ const UserSchema = new Schema({
 });
 const User = mongoose.model('User', UserSchema);
 
+// Data schema and model
+const dataSchema = new mongoose.Schema({
+  name: String,
+  value: String,
+});
+const Data = mongoose.model('Data', dataSchema);
+
 // Register endpoint
 app.post('/api/auth/register', async (req, res) => {
   console.log('Received request:', req.body);
@@ -52,6 +59,16 @@ app.post('/api/auth/register', async (req, res) => {
   }
 });
 
+// Data insertion endpoint
+app.post('/api/data', (req, res) => {
+  const newData = new Data(req.body);
+  newData.save((err) => {
+    if (err) return res.status(500).send(err);
+    return res.status(200).send('Data saved successfully');
+  });
+});
+
+// Start the server
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
