@@ -12,10 +12,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost:27017/mydatabase', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect('mongodb://localhost:27017/mydatabase');
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -61,17 +58,17 @@ app.post('/api/auth/register', async (req, res) => {
 });
 
 // Data insertion endpoint
-app.post('/api/data', (req, res) => {
+app.post('/api/data', async (req, res) => {
   console.log('Received data request:', req.body);
   const newData = new Data(req.body);
-  newData.save((err, data) => {
-    if (err) {
-      console.error('Error saving data:', err);
-      return res.status(500).send(err);
-    }
-    console.log('Data saved:', data);
-    return res.status(200).send('Data saved successfully');
-  });
+  try {
+    await newData.save();
+    console.log('Data saved:', newData);
+    res.status(200).send('Data saved successfully');
+  } catch (err) {
+    console.error('Error saving data:', err);
+    res.status(500).send(err);
+  }
 });
 
 // Start the server
