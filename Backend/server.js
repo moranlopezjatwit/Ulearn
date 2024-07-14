@@ -52,6 +52,7 @@ app.post('/api/auth/register', async (req, res) => {
   const newUser = new User({ username, password, email });
   try {
     await newUser.save();
+    console.log('User saved:', newUser);
     res.status(201).json(newUser);
   } catch (error) {
     console.error('Error saving user:', error);
@@ -61,9 +62,14 @@ app.post('/api/auth/register', async (req, res) => {
 
 // Data insertion endpoint
 app.post('/api/data', (req, res) => {
+  console.log('Received data request:', req.body);
   const newData = new Data(req.body);
   newData.save((err) => {
-    if (err) return res.status(500).send(err);
+    if (err) {
+      console.error('Error saving data:', err);
+      return res.status(500).send(err);
+    }
+    console.log('Data saved:', newData);
     return res.status(200).send('Data saved successfully');
   });
 });
