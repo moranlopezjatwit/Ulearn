@@ -64,12 +64,12 @@ app.post('/api/auth/register', async (req, res) => {
 app.post('/api/data', (req, res) => {
   console.log('Received data request:', req.body);
   const newData = new Data(req.body);
-  newData.save((err) => {
+  newData.save((err, data) => {
     if (err) {
       console.error('Error saving data:', err);
       return res.status(500).send(err);
     }
-    console.log('Data saved:', newData);
+    console.log('Data saved:', data);
     return res.status(200).send('Data saved successfully');
   });
 });
@@ -78,4 +78,3 @@ app.post('/api/data', (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
-
