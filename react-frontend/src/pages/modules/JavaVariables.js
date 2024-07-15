@@ -38,8 +38,6 @@ System.out.println("Amount: " + amount)`}
                     </ul>
                     <br/>
                     <p>Additionally, the final lines of this snippet print these variables, and display the values they're currently storing, as shown below.</p>
-
-
                     <h2>Result:</h2>
                     <pre>
                         <code>
@@ -48,7 +46,22 @@ Amount: 5`}
                         </code>
                     </pre>
                     <p>The process of creating a variable is known as variable <div className="Bold-word">declaration</div>. When a variable is given a value for
-                    the firs time, it is known as <div className="Bold-word">initialization</div>.</p>
+                        the firs time, it is known as <div className="Bold-word">initialization</div>.</p>
+                    <br/>
+                    <p>There are many different variable types depending on what kind of data needs to be stored. Reference the table
+                        below to know what type of data each one can be used for:</p>
+                    <table className="Var-table">
+                        <tr>
+                            <th>Variable Type</th>
+                            <th>Usage</th>
+                        </tr>
+                        <tr></tr>
+                            <td>int</td>
+                            <td>can store whole values between -2,147,483,648 & 2,147,483,647</td>
+                        <tr></tr>
+                        <td>boolean</td>
+                        <td>True / False</td>
+                    </table>
                 </div>
             </div>
         </div>
