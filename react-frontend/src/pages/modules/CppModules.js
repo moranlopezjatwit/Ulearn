@@ -15,7 +15,7 @@ function CppModules() {
             <div className="content">
                 <h1 className="Section-header">C++ Modules</h1>
                 <div className="cpp-details">
-                    <h2>About C++</h2>
+                   <br/>
                     <p>
                         C++ is a general-purpose programming language created as an extension of the C programming language. It is known for its performance, efficiency, and flexibility. C++ supports both procedural and object-oriented programming paradigms, making it a versatile language for various types of software development.
                     </p>
