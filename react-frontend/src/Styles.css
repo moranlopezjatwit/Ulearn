@@ -374,7 +374,7 @@ p {
 
 
 
-/*Homepage starts here */
+/* Homepage styles */
 
 .Homepage {
     display: block;
@@ -408,7 +408,7 @@ p {
     .Features h2 {
         font-size: 32px;
         margin-bottom: 20px;
-        text-align: left; 
+        text-align: left;
     }
 
     .Features .Feature {
@@ -432,7 +432,7 @@ p {
     .Testimonials h2 {
         font-size: 32px;
         margin-bottom: 20px;
-        text-align: left; 
+        text-align: left;
     }
 
     .Testimonials blockquote {
@@ -440,13 +440,8 @@ p {
         padding: 10px;
         background-color: #f9f9f9;
         border-left: 5px solid #2f3c94;
-    }
-
-    .Testimonials cite {
-        display: block;
-        margin-top: 10px;
-        font-size: 14px;
-        color: #555;
+        opacity: 0; /* Initial state for animation */
+        animation: swoopIn 3.0s forwards;
     }
 
 @keyframes fadeIn {
@@ -454,7 +449,19 @@ p {
         opacity: 1;
     }
 }
-/*Homepage ends here */
+
+@keyframes swoopIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 
 
 /*About page starts here */

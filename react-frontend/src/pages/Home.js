@@ -1,7 +1,5 @@
 // Home.js
-
 import React from 'react';
-
 
 function Home() {
     return (
@@ -49,7 +47,7 @@ function Home() {
                 <h2>What Our Users Say</h2>
                 <blockquote>
                     <p>"ULearn has transformed the way I approach learning. The personalized content is spot on!"</p>
-                    <cite>- Happy User</cite> 
+                    <cite>- Happy User</cite>
                 </blockquote>
                 <blockquote>
                     <p>"The community support is amazing. I never feel stuck because there's always resources to help."</p>
