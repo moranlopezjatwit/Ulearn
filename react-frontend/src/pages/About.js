@@ -3,10 +3,10 @@ import React from 'react';
 function About() {
     return (
         <div className="aboutpage">
+            <br />
             <h1>About Us</h1>
             <br />
-            <br />
-            <p>
+            <p className="Section-content">
                 The demand for personalized educational resources in the field of computer science is on the rise, reflecting the
                 broader trend towards online learning. ULearn aims to address this need by providing a platform that utilizes predictive
                 algorithms to deliver tailored learning materials to users based on their coding interests and proficiency levels.
@@ -17,7 +17,7 @@ function About() {
             <br />
            
 
-            <p>
+            <p className="Section-content">
                 At ULearn, our mission is to democratize computer science education by offering personalized learning experiences that
                 empower learners to achieve their full potential. We believe in the power of tailored education to transform lives and
                 are dedicated to providing resources that cater to the unique needs and goals of each individual learner.
@@ -25,7 +25,7 @@ function About() {
 
             <br />
 
-            <p>
+            <p className="Section-content">
                 ULearn's main goal is to provide individualized learning materials to people who are interested in programming. The platform
                 will suggest relevant content, including readings, coding exercises, and tutorials, based on an analysis of user profiles and
                 preferences. In contrast to current solutions, ULearn will feature sophisticated predictive algorithms to improve the precision

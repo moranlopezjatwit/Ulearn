@@ -117,6 +117,7 @@ code {
     list-style: none;
     left: 0px;
     font-weight: 500;
+    padding: 0px;
 }
 
 .Side-nav li:hover {
@@ -226,6 +227,33 @@ code {
 }
 /*End Footer Section*/
 
+/*Example Class Section*/
+.Example {
+    margin-top: 20px;
+}
+
+    .Example h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+    }
+
+    .Example p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .Example pre {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+    }
+
+    .Example code {
+        font-family: 'Courier New', Courier, monospace;
+    }
+/*End Example Class Section*/
 .languages {
     align-content: start;
 }
@@ -280,10 +308,16 @@ p {
 
 .Section-header {
     padding-left: 10px;
+    margin-top: 0;
+    padding: 20px;
+    font-size: 30px;
 }
 
 .Section-content {
     text-indent: 2em;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
 }
 
 /*landing page div, applies to all landing page elements & used for setting background*/
@@ -548,7 +582,7 @@ p {
 
         /*About page ends here */
         /*Python module page starts here */
-        .pythonmodule {
+.pythonmodule {
     display: flex;
     flex-direction: row;
     background-color: #c0c4de; /* Added background color */
@@ -557,12 +591,14 @@ p {
     .pythonmodule > div {
         flex: 1;
     }
-
+/*
     .pythonmodule .Section-header {
         margin-top: 0;
         padding: 20px;
         font-size: 30px;
     }
+*/
+
 /*Python module page ends here */
 
 /*Python variables starts here*/
@@ -576,7 +612,7 @@ p {
         flex: 1;
         padding: 20px;
     }
-
+/*
     .pythonvariables .Section-header {
         margin-top: 0;
         padding: 20px;
@@ -588,7 +624,7 @@ p {
         line-height: 1.6;
         color: #333;
     }
-
+*/
     .pythonvariables .Example {
         margin-top: 20px;
     }
@@ -613,6 +649,7 @@ p {
         .pythonvariables .Example code {
             font-family: 'Courier New', Courier, monospace;
         }
+
 /*Python Loop starts here*/
 .pythonloop {
     display: flex;
@@ -624,7 +661,7 @@ p {
         flex: 1;
         padding: 20px;
     }
-
+/*
     .pythonloop .Section-header {
         margin-top: 0;
         padding: 20px;
@@ -636,7 +673,7 @@ p {
         line-height: 1.6;
         color: #333;
     }
-
+*/
     .pythonloop .Example {
         margin-top: 20px;
     }
@@ -675,7 +712,7 @@ p {
         flex: 1;
         padding: 20px;
     }
-
+/*
     .python-functions .Section-header {
         margin-top: 0;
         padding: 20px;
@@ -687,7 +724,7 @@ p {
         line-height: 1.6;
         color: #333;
     }
-
+*/
     .python-functions .Example {
         margin-top: 20px;
     }
@@ -724,29 +761,15 @@ p {
 
     .java-module > div {
         flex: 1;
+        padding: 20px;
     }
-
+/*
     .java-module .Section-header {
         margin-top: 0;
         padding: 5px;
         font-size: 30px;
     }
-
-.java-variables {
-    display: flex;
-    background-color: #c0c4de;
-}
-
-.java-loops {
-    display: flex;
-    background-color: #c0c4de;
-}
-
-.java-functions {
-    display: flex;
-    background-color: #c0c4de;
-}
-
+*/
 
 .Java-lessons {
     margin-bottom: 10px;
@@ -759,6 +782,42 @@ h2 {
 }
 /*Java module page ends here */
 
+/*Java Variables Page*/
+.java-variables {
+    display: flex;
+    background-color: #c0c4de;
+}
+
+.java-variables > div {
+    padding: 20px;
+}
+
+/*End Java Variables Page*/
+
+
+/*Java Loops Page*/
+.java-loops {
+    display: flex;
+    background-color: #c0c4de;
+}
+
+.java-loops > div {
+    padding: 20px;
+}
+
+/*End Java Loops Page*/
+
+/*Java Functions Page*/
+.java-functions {
+    display: flex;
+    background-color: #c0c4de;
+}
+
+.java-functions > div {
+    padding: 20px;
+}
+
+/*End Java Functions Page*/
 
 /*CPP module page starts here */
 .cpp-module {

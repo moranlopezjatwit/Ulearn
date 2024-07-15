@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import CppSidenav from '../../Controls/CppSidenav';
 
 
-export default function PythonVariables() {
+export default function CppVariables() {
     return (
         <div className="cpp-variables"> {/* Replace id with className */}
             <CppSidenav />

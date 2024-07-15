@@ -15,7 +15,7 @@ function JavaModules() {
             <JavaSidenav />
             <div>
                 <h1 className="Section-header">Java Modules</h1>
-                <p>Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is widely used for building enterprise-scale applications, Android apps, web applications, and more.</p>
+                <p className="Section-content">Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is widely used for building enterprise-scale applications, Android apps, web applications, and more.</p>
                 <br />
                 <p>Some common uses of Java include:</p>
                 <br />
