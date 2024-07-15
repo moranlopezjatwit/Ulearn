@@ -1,6 +1,9 @@
+// JavaModules.js
+
 import React, { useContext } from 'react';
 import { LanguageContext } from '../../LanguageContext'; // Corrected path
 import JavaSidenav from '../../Controls/JavaSidenav';
+
 
 function JavaModules() {
     const { languages } = useContext(LanguageContext);
@@ -8,7 +11,7 @@ function JavaModules() {
     const javaModules = javaLanguage.modules;
 
     return (
-        <div id="App-container">
+        <div className="java-module"> {/* Replace id with className */}
             <JavaSidenav />
             <div>
                 <h1 className="Section-header">Java Modules</h1>
@@ -24,11 +27,12 @@ function JavaModules() {
                     <li>Big Data Technologies</li>
                     <li>Embedded Systems</li>
                 </ul>
-                
+
             </div>
         </div>
     );
 }
 
 export default JavaModules;
+
 

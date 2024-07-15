@@ -1,3 +1,5 @@
+// CppModules.js
+
 import React, { useContext } from 'react';
 import { LanguageContext } from '../../LanguageContext'; // Corrected path
 import CppSidenav from '../../Controls/CppSidenav';
@@ -8,7 +10,7 @@ function CppModules() {
     const cppModules = cppLanguage.modules;
 
     return (
-        <div id="App-container">
+        <div className="cpp-module"> {/* Replace id with className */}
             <CppSidenav />
             <div className="content">
                 <h1 className="Section-header">C++ Modules</h1>
@@ -27,14 +29,11 @@ function CppModules() {
                         <li>Application Software: Desktop applications, web browsers, and database management systems.</li>
                         <li>High-Performance Applications: Financial modeling, simulations, and scientific computing.</li>
                     </ul>
-                    <br/>
+                    <br />
                 </div>
-               
-               
             </div>
         </div>
     );
 }
 
 export default CppModules;
-

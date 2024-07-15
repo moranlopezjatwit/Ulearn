@@ -1,21 +1,22 @@
+// Home.js
+
 import React from 'react';
+
 
 function Home() {
     return (
-        <div id="App-container">
-    
-
-            <div class="hero">
+        <div className="Homepage">
+            <div className="Hero">
                 <h1>Welcome to ULearn</h1>
-                <p style={{ textAlign: 'center' }}>
+                <p>
                     <em>Your personalized gateway to mastering computer science.</em>
                 </p>
             </div>
             <br />
 
-            <div className="features">
+            <div className="Features">
                 <h2>Why Choose ULearn?</h2>
-                <div class="feature">
+                <div className="Feature">
                     <h3>Personalized Learning</h3>
                     <p>
                         - Get tailored learning materials based on your interests and proficiency levels.
@@ -24,7 +25,7 @@ function Home() {
                         <br />
                     </p>
                 </div>
-                <div class="feature">
+                <div className="Feature">
                     <h3>Expert Content</h3>
                     <p>
                         - Access to high-quality resources trusted by industry professionals.
@@ -33,7 +34,7 @@ function Home() {
                         <br />
                     </p>
                 </div>
-                <div class="feature">
+                <div className="Feature">
                     <h3>Community Support</h3>
                     <p>
                         - Join a community of learners and get support from peers and mentors.
@@ -44,7 +45,7 @@ function Home() {
                 </div>
             </div>
 
-            <div class="testimonials">
+            <div className="Testimonials">
                 <h2>What Our Users Say</h2>
                 <blockquote>
                     <p>"ULearn has transformed the way I approach learning. The personalized content is spot on!"</p>

@@ -1,8 +1,11 @@
+// About.js
+
 import React from 'react';
+
 
 function About() {
     return (
-        <div id="App-container">
+        <div className="aboutpage">
 
             <h1>About Us</h1>
 
