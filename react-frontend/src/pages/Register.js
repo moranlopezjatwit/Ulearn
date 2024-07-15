@@ -62,6 +62,7 @@ const styles = {
     padding: '20px',
     border: '1px solid #ccc',
     borderRadius: '10px',
+        
   },
   input: {
     width: '100%',

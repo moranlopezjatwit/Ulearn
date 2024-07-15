@@ -37,40 +37,68 @@ code {
     align-items: stretch;
     gap: 2rem;
     padding: 0 1rem;
-} 
-
-/*navbar list element properties*/
-.nav ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    gap: 1rem;
 }
 
-.nav a {
-    color: inherit;
-    text-decoration: none;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding-left: .25rem;
-    padding-right: .25rem;
-    padding-bottom: .7rem;
-}
+    .nav ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+    }
 
-.nav li.active {
-    background-color: #555;
-}
+    .nav a {
+        color: inherit;
+        text-decoration: none;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: .25rem;
+        padding-right: .25rem;
+        padding-bottom: .7rem;
+    }
 
-.nav li:hover {
-    background-color: #2f3c94;
-}
+    .nav li.active {
+        background-color: #555;
+    }
+
+    .nav li:hover {
+        background-color: #2f3c94;
+    }
 
 .site-title {
     font-size: 2rem;
 }
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0f1c74;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    width: 200px;
+    padding: 12px 16px;
+}
+
+    .dropdown-menu li:hover {
+        background-color: #2f3c94;
+    }
+
 /*End Navbar Section*/
+
 
 /*Side Navbar Section*/
 .Side-nav {
@@ -407,6 +435,12 @@ p {
         text-align: center;
     }
 
+
+    .Hero .Logo {
+        max-width: 150px; /* Adjust size as necessary */
+        margin-bottom: 20px;
+    }
+
 .Features {
     margin-bottom: 40px;
 }
@@ -414,7 +448,7 @@ p {
     .Features h2 {
         font-size: 32px;
         margin-bottom: 20px;
-        text-align: left;
+        text-align: center;
     }
 
     .Features .Feature {
@@ -423,12 +457,14 @@ p {
 
         .Features .Feature h3 {
             font-size: 24px;
+            text-align: center;
         }
 
         .Features .Feature p {
             font-size: 18px;
             line-height: 1.6;
             margin-bottom: 10px;
+            text-align: center;
         }
 
 .Testimonials {
@@ -467,12 +503,11 @@ p {
         opacity: 1;
     }
 }
+/* Homepage styles ends */
 
 
 
 /*About page starts here */
-
-/* styles.css */
 
 .aboutpage {
     background-color: #c0c4de; /* Light gray background color */
@@ -480,37 +515,37 @@ p {
     padding: 20px;
 }
 
-.aboutpage h1 {
-    font-size: 40px;
-    text-align:center;
-    margin-bottom: 20px;
-    color: #000000; /* Dark gray color for heading */
-}
+    .aboutpage h1 {
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #000000; /* Dark gray color for heading */
+    }
 
-.aboutpage p {
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: justify;
-    color: #000000;
-}
+    .aboutpage p {
+        font-size: 18px;
+        line-height: 1.6;
+        text-align: justify;
+        color: #000000;
+    }
 
-.aboutpage .credits {
-    margin-top: 40px;
-    font-style: italic;
-    color: #000000;
-}
-
-.aboutpage h2 {
-    font-size: 30px;
-    text-align: left;
-    margin-bottom: 20px;
-    color: #000000; /* Dark gray color for heading */
-}
-/*About page ends here */
+    .aboutpage .credits {
+        margin-top: 40px;
+        font-style: italic;
+        color: #000000;
+    }
 
 
-/*Python module page starts here */
-.pythonmodule {
+    .aboutpage h2 {
+        font-size: 30px;
+        text-align: left;
+        margin-bottom: 20px;
+        color: #000000; /* Dark gray color for heading */
+    }
+
+        /*About page ends here */
+        /*Python module page starts here */
+        .pythonmodule {
     display: flex;
     flex-direction: row;
     background-color: #c0c4de; /* Added background color */
@@ -700,14 +735,14 @@ h2 {
 
 
 
-/*Sign Up Page */
+/*Register */
 .register-container {
-  width: 300px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -728,6 +763,7 @@ h2 {
   width: 100%;
   padding: 8px;
   box-sizing: border-box;
+
 }
 
 .register-container button {
@@ -742,6 +778,6 @@ h2 {
 .register-container button:hover {
   background-color: #218838;
 }
-/*Sign Up Page ends*/
+/*Register ends*/
 
 
