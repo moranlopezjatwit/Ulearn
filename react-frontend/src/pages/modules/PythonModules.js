@@ -1,5 +1,3 @@
-// PythonModules.js
-
 import React, { useContext } from 'react';
 import { LanguageContext } from '../../LanguageContext'; // Corrected path
 import PythonSidenav from '../../Controls/PythonSidenav';

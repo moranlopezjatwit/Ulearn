@@ -10,6 +10,7 @@
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
+    font-family: "Inter", sans-serif;
 }
 
 /*Default body configs & imports*/
@@ -72,7 +73,6 @@ code {
 /*End Navbar Section*/
 
 /*Side Navbar Section*/
-
 .Side-nav {
     margin: 0;
     padding: 5px;
@@ -88,6 +88,11 @@ code {
 .Side-nav ul {
     list-style: none;
     left: 0px;
+    font-weight: 500;
+}
+
+.Side-nav li:hover {
+    color: #eeeeee;
 }
 
 .Side-nav li {
@@ -96,13 +101,14 @@ code {
 }
 
 .Side-nav-align {
+    background-color: #eeeeee;
     border: solid #000000;
     border-top-width: 0px;
     border-bottom-width: 0px;
     border-left-width: 0px;
     border-right-width: 1px;
     padding-left: 0px;
-    max-width: 12vw;
+    max-width: 14vw;
     min-height: 100vh;
 }
 
@@ -512,6 +518,7 @@ p {
 
     .pythonmodule > div {
         flex: 1;
+        padding: 5px;
     }
 
     .pythonmodule .Section-header {
@@ -530,7 +537,7 @@ p {
 
     .pythonvariables > div {
         flex: 1;
-        padding: 20px;
+        padding: 5px;
     }
 
     .pythonvariables .Section-header {
@@ -556,7 +563,7 @@ p {
 
     .pythonloop > div {
         flex: 1;
-        padding: 20px;
+        padding: 5px;
     }
 
     .pythonloop .Section-header {
@@ -582,7 +589,7 @@ p {
 
     .python-functions > div {
         flex: 1;
-        padding: 20px;
+        padding: 5px;
     }
 
     .python-functions .Section-header {
@@ -608,22 +615,35 @@ p {
 
     .java-module > div {
         flex: 1;
-        padding: 20px;
+        padding: 5px;
     }
 
     .java-module .Section-header {
         margin-top: 0;
-        padding: 20px;
+        padding: 5px;
         font-size: 30px;
     }
 
-ul {
-    list-style-type: disc;
-    padding-left: 20px;
+.java-variables {
+    display: flex;
+    background-color: #c0c4de;
 }
+
+.java-loops {
+    display: flex;
+    background-color: #c0c4de;
+}
+
+.java-functions {
+    display: flex;
+    background-color: #c0c4de;
+}
+
 
 .Java-lessons {
     margin-bottom: 10px;
+    list-style-type: disc;
+    padding-left: 20px;
 }
 
 h2 {
@@ -657,6 +677,25 @@ h2 {
     .cpp-details h2 {
         margin-top: 0;
     }
+
+.cpp-variables {
+    display: flex;
+    flex-direction: row;
+    background-color: #c0c4de;
+}
+
+.cpp-loops {
+    display: flex;
+    flex-direction: row;
+    background-color: #c0c4de;
+}
+
+.cpp-functions {
+    display: flex;
+    flex-direction: row;
+    background-color: #c0c4de;
+}
+
 /*CPP module page ends here */
 
 

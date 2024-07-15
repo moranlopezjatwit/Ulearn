@@ -10,9 +10,9 @@ export default function CppSidenav() {
                 <div className="Side-header">Lessons</div>
                 <ul>
                     <li><Link to="/Cpp-Modules">Introduction</Link></li>
-                    <li><Link to="">Variables</Link></li>
-                    <li><Link to="">Conditionals/Loops</Link></li>
-                    <li><Link to="">Functions</Link></li>
+                    <li><Link to="/Cpp-Variables">Variables</Link></li>
+                    <li><Link to="/Cpp-Loops">Conditionals/Loops</Link></li>
+                    <li><Link to="/Cpp-Functions">Functions</Link></li>
 
                 </ul>
             </nav>

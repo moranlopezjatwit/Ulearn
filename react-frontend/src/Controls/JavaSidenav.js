@@ -10,9 +10,9 @@ export default function JavaSidenav() {
                 <div className="Side-header">Lessons</div>
                 <ul>
                     <li><Link to="/Java-Modules">Introduction</Link></li>
-                    <li><Link to="">Variables</Link></li>
-                    <li><Link to="">Conditionals/Loops</Link></li>
-                    <li><Link to="">Functions</Link></li>
+                    <li><Link to="/Java-Variables">Variables</Link></li>
+                    <li><Link to="/Java-Loops">Conditionals/Loops</Link></li>
+                    <li><Link to="/Java-Functions">Functions</Link></li>
 
                 </ul>
             </nav>
