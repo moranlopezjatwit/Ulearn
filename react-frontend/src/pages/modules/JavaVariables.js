@@ -47,7 +47,8 @@ System.out.println("Amount: " + amount)`}
 Amount: 5`}
                         </code>
                     </pre>
-
+                    <p>The process of creating a variable is known as variable <div className="Bold-word">declaration</div>. When a variable is given a value for
+                    the firs time, it is known as <div className="Bold-word">initialization</div>.</p>
                 </div>
             </div>
         </div>
