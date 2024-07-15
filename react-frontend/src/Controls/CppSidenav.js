@@ -6,8 +6,10 @@ export default function CppSidenav() {
     return (
         <div className="Side-nav-align">
             <nav className="Side-nav">
-                <a href="/Introduction"><button class="Side-back">Return</button></a>
-                <div className="Side-header">Lessons</div>
+                <div className="Side-header">
+                    <p>Lessons</p>
+                    <a href="/Introduction"><button class="Side-back">Return</button></a>
+                </div>
                 <ul>
                     <li><Link to="/Cpp-Modules">Introduction</Link></li>
                     <li><Link to="/Cpp-Variables">Variables</Link></li>

@@ -17,8 +17,11 @@ function Introduction() {
 
         <h2 class="Introduction-header">Tracking Progress</h2>
         <br />
-                <p class="Introduction-paragraph">If you have an account with us, module completion will be tracked and can be reviewed at a later time on your profile.
-                     </p>
+                <p class="Introduction-paragraph"> Account registration is not required to review and learn from the modules we provide. However, if
+                    you're signed in as you complete lessons, module completion will be tracked and can be reviewed at a later time on your profile.
+                    Additionally, every lesson completed will grant a certain number of points to your total learning score, which is also viewable
+                    from your profile.
+                </p>
     </div>
     </div>
     );
