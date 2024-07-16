@@ -12,7 +12,7 @@ export default function PythonFunctions() {
                     Python functions are reusable blocks of code that perform a specific task. They help in organizing code into manageable pieces, promote code reuse, and make it easier to debug and maintain your program. Functions in Python are defined using the <code>def</code> keyword, and they can accept parameters and return values.
                 </p>
                 <br />
-                <p>Explore how to define, call, and use Python functions effectively to modularize your code and improve its readability and maintainability.</p>
+                <p className="Section-subcontent">Explore how to define, call, and use Python functions effectively to modularize your code and improve its readability and maintainability.</p>
 
                 <div className="Example">
                     <h2>Defining a Function</h2>
