@@ -31,6 +31,11 @@ export default function PythonModules() {
                         <li>Explore Python's standard library and its extensive ecosystem of third-party packages.</li>
                         <li>Gain practical experience through hands-on coding exercises and projects.</li>
                     </ul>
+                    <div className="Centered-container">
+                        <div className="Centered">
+                            <a href="/Python-variables"><button class="PModule-next"><span>Begin Lessons </span></button></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
