@@ -15,8 +15,11 @@ function JavaModules() {
             <JavaSidenav />
             <div>
                 <h1 className="Section-header">Java Modules</h1>
-                <p className="Section-content">Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is widely used for building enterprise-scale applications, Android apps, web applications, and more.</p>
+                <p className="Section-content">Java is a high-level object-oriented programming language that is designed to
+                    have as few implementation dependencies as possible. It is known for its robustness and high level of portability,
+                    making it popular for building enterprise-scale applications, Android apps, web applications, and more!</p>
                 <br />
+
                 <p>Some common uses of Java include:</p>
                 <br />
                 <ul className="Java-lessons">
@@ -28,6 +31,16 @@ function JavaModules() {
                     <li>Embedded Systems</li>
                 </ul>
 
+                <br/>
+                <p className="Section-content">Java is currently one of the most popular programming languages in the world, and for good reason.
+                    It is open-source, simple to learn, intuitive to use, and has highly active developer community. By the time you complete these lessons, you
+                    will have the foundational programming knowledge to begin creating your own Java applications.</p>
+                <br /><br />
+                <div className="Centered-container">
+                <div className="Centered">
+                        <a href="/Java-variables"><button class="JModule-next"><span>Begin Lessons </span></button></a>
+                </div>
+                </div>
             </div>
         </div>
     );
