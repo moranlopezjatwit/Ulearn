@@ -42,10 +42,38 @@ while count <= 5:
                     </pre>
                     <p>In this example, the loop will run until <code>count</code> is greater than 5, printing the current value of <code>count</code> each time.</p>
                 </div>
+
+                <div className="Example">
+                    <h2>Example 3: For Loop with Range</h2>
+                    <p>You can use the <code>range()</code> function with a <code>for</code> loop to iterate over a sequence of numbers. Here's an example:</p>
+                    <pre>
+                        <code>
+                            {`# For loop with range example
+for i in range(5):
+    print("Iteration:", i)`}
+                        </code>
+                    </pre>
+                    <p>In this example, the loop will iterate from 0 to 4, printing the current iteration number each time.</p>
+                </div>
+
+                <div className="Example">
+                    <h2>Example 4: Nested For Loop</h2>
+                    <p>A nested <code>for</code> loop is a loop inside another loop. Here's an example:</p>
+                    <pre>
+                        <code>
+                            {`# Nested for loop example
+for i in range(3):
+    for j in range(2):
+        print(f"i: {i}, j: {j}")`}
+                        </code>
+                    </pre>
+                    <p>In this example, the outer loop runs three times, and for each iteration of the outer loop, the inner loop runs twice, printing the values of <code>i</code> and <code>j</code>.</p>
+                </div>
             </div>
         </div>
     );
 }
+
 
 /*export default function PythonLoops() {
     return (

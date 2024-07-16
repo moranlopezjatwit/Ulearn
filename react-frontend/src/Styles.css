@@ -598,19 +598,53 @@ p {
         margin-bottom: 20px;
         color: #000000; /* Dark gray color for heading */
     }
-
         /*About page ends here */
+
+
         /*Python module page starts here */
 .pythonmodule {
     display: flex;
     flex-direction: row;
-    background-color: #c0c4de; /* Added background color */
+    background-color: #c0c4de;
 }
 
     .pythonmodule > div {
         flex: 1;
+        padding: 20px;
     }
-/*
+
+    .pythonmodule .Section-header {
+        margin-top: 0;
+        padding: 20px;
+        font-size: 30px;
+    }
+
+    .pythonmodule .Section-content {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #333;
+    }
+
+    .pythonmodule .Additional-content {
+        margin-top: 40px;
+    }
+
+        .pythonmodule .Additional-content h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .pythonmodule .Additional-content ul {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            padding-left: 20px;
+        }
+
+            .pythonmodule .Additional-content ul li {
+                margin-bottom: 10px;
+            }
+
     .pythonmodule .Section-header {
         margin-top: 0;
         padding: 20px;
@@ -656,6 +690,13 @@ p {
         .pythonvariables .Example p {
             font-size: 18px;
             line-height: 1.6;
+
+        }
+
+        .pythonvariables .Example ul {
+            font-size: 18px;
+            line-height: 1.6;
+            padding-left: 20px;
         }
 
         .pythonvariables .Example pre {
@@ -693,6 +734,29 @@ p {
         color: #333;
     }
 */
+.pythonloop {
+    display: flex;
+    flex-direction: row;
+    background-color: #c0c4de;
+}
+
+    .pythonloop > div {
+        flex: 1;
+        padding: 20px;
+    }
+
+    .pythonloop .Section-header {
+        margin-top: 0;
+        padding: 20px;
+        font-size: 30px;
+    }
+
+    .pythonloop .Section-content {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #333;
+    }
+
     .pythonloop .Example {
         margin-top: 20px;
     }
@@ -717,6 +781,7 @@ p {
         .pythonloop .Example code {
             font-family: 'Courier New', Courier, monospace;
         }
+
 /*Python Loop ends here*/
 
 
@@ -729,28 +794,40 @@ p {
 
     .python-functions > div {
         flex: 1;
-        padding: 20px;
+        pcdadding: 20px;
     }
-/*
+
     .python-functions .Section-header {
         margin-top: 0;
         padding: 20px;
         font-size: 30px;
+
     }
 
     .python-functions .Section-content {
         font-size: 18px;
         line-height: 1.6;
         color: #333;
+        padding-left: 30px;
     }
-*/
+
+.python-functions .Section-subcontent {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    padding-left: 30px;
+}
+
+
     .python-functions .Example {
         margin-top: 20px;
-    }
+        padding-left: 20px;
+            }
 
         .python-functions .Example h2 {
             font-size: 24px;
             margin-bottom: 10px;
+
         }
 
         .python-functions .Example p {
