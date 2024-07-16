@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PythonSidenav from '../../Controls/PythonSidenav';
 
 export default function PythonVariables() {
@@ -98,3 +97,5 @@ print("Is Student:", is_student, "Type:", type(is_student))`}
         </div>
     );
 }
+
+

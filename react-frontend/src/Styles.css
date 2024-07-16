@@ -630,22 +630,24 @@ p {
         padding: 20px;
         font-size: 30px;
     }
-*/
 
 /*Python module page ends here */
 
 /*Python variables starts here*/
+
+
 .pythonvariables {
     display: flex;
     flex-direction: row;
     background-color: #c0c4de;
+    padding: 20px; /* Added padding to the main container */
 }
 
     .pythonvariables > div {
         flex: 1;
         padding: 20px;
     }
-/*
+
     .pythonvariables .Section-header {
         margin-top: 0;
         padding: 20px;
@@ -657,7 +659,7 @@ p {
         line-height: 1.6;
         color: #333;
     }
-*/
+
     .pythonvariables .Example {
         margin-top: 20px;
     }
@@ -670,7 +672,6 @@ p {
         .pythonvariables .Example p {
             font-size: 18px;
             line-height: 1.6;
-
         }
 
         .pythonvariables .Example ul {
@@ -689,6 +690,10 @@ p {
         .pythonvariables .Example code {
             font-family: 'Courier New', Courier, monospace;
         }
+
+/*Python variables ends here*/
+
+
 
 /*Python Loop starts here*/
 .pythonloop {
