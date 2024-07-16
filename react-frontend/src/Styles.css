@@ -234,7 +234,8 @@ code {
 
     .Example h2 {
         font-size: 24px;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
+        margin-top: 10px;
         padding-left: 10px;
     }
 
@@ -317,6 +318,25 @@ p {
     font-size: 18px;
     line-height: 1.6;
     color: #333;
+}
+
+.Centered-container {
+    position: relative;
+    height: 50px;
+}
+
+.Centered {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.Bottom-buttons {
+    display: flex;
+    gap: 50vw;
 }
 
 /*landing page div, applies to all landing page elements & used for setting background*/
@@ -844,18 +864,53 @@ p {
         flex: 1;
         padding: 20px;
     }
-/*
-    .java-module .Section-header {
-        margin-top: 0;
-        padding: 5px;
-        font-size: 30px;
-    }
-*/
+
+/*Java Module Introduction Transition Button*/
+.JModule-next {
+    font-size: 20px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    background-color: #2f3c94;
+    color: #ffffff;
+    border: 1.5px solid #111122;
+    font-family: "Inter", sans-serif;
+    padding: 4px 8px;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+.JModule-next span {
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
+}
+
+.JModule-next span:after {
+content: '\00bb';
+position:absolute;
+opacity: 0;
+top: 0;
+right: -20px;
+transition: 0.5s;
+}
+
+.JModule-next:hover span {
+    padding-right: 25px;
+}
+
+.JModule-next:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+/*End Transition Button*/
+
 
 .Java-lessons {
     margin-bottom: 10px;
     list-style-type: disc;
     padding-left: 20px;
+    list-style-position: inside;
 }
 
 h2 {
@@ -948,22 +1003,16 @@ h2 {
 
 .Var-table {
     font-family: Arial, sans-serif;
-    background: #dddddd;
     border-collapse: collapse;
-    width: 50vw;
+    width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.Var-table > td {
-    border: 1px solid #cccccc;
-    text-align: center;
-    padding: 5px
-}
-
-.Var-table > th {
-    border: 1px solid #cccccc;
+td, th {
+    border: 1.5px solid #2f3c94;
     text-align: center;
     padding: 5px;
-    font-weight: 300;
 }
 
 .Var-table > tr {
