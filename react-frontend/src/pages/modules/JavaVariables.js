@@ -21,11 +21,11 @@ export default function JavaVariables() {
                     <h2>Example 1: Declaring & Printing</h2>
                     <pre>
                         <code>
-                            {`# Variable declaration
+                            {`//Variable declaration
 String fruit = "Apples";
 int amount = 5;
 
-# Printing variables
+//Printing variables
 System.out.println("Fruit: " + fruit);
 System.out.println("Amount: " + amount);`}
                         </code>
@@ -37,6 +37,7 @@ System.out.println("Amount: " + amount);`}
 Amount: 5`}
                         </code>
                     </pre>
+                </div>
                     <br />
                     <p className="Section-content">In Java, there are three main components that make up a variables: <div className="Bold-word">Type</div>, <div className="Bold-word">Name</div>,
                         and <div className="Bold-word">Value</div>. In this example, two variables of two different types were created:</p>
@@ -102,15 +103,16 @@ Amount: 5`}
                     <br />
                     <p className="Section-content">Let's look at some examples of these data types in use.</p>
 
+                    <div className="Example">
                     <h2>Example 2: Integer Addition</h2>
                     <pre>
                         <code>
-                            {`# Variable declaration
+                            {`//Variable declaration
 short firstVal = 32000;
 short secondVal = 12000;
 int thirdVal = firstVal + secondVal;
 
-# Printing variables
+//Printing variables
 System.out.println("thirdVal: " + thirdVal);`}
                         </code>
                     </pre>
@@ -120,17 +122,18 @@ System.out.println("thirdVal: " + thirdVal);`}
                             {`thirdVal: 44000`}
                         </code>
                     </pre>
+                </div>
                     <br />
                     <p className="Section-content"> In this example, three variables were created. The first two are shorts that are given discrete values. 
                         The third is an int that adds the values of the previous two variables to get its value. Notice how thirdVal was given the type int.
                         This is because combining the values of firstVal and secondVal results in a value too great to be stored in a variable of the short data type.
                         Now let's look at an example with non-numeric arithmetic.</p>
                     <br />
-
+                    <div className="Example">
                     <h2>Example 3: String Addition</h2>
                     <pre>
                         <code>
-                            {`# Variable declaration
+                            {`//Variable declaration
 char c1 = 'H';
 char c2 = 'e';
 char c3 = 'l';
@@ -142,7 +145,7 @@ char c7 = 'd';
 String word1 = c1 + c2 + c3 + c3 + c4; 
 String word2 = c5 + c4 + c6 + c3 + c7;
 
-# Printing variables
+//Printing variables
 System.out.println(word1 + " " + word2 + "!");`}
                         </code>
                     </pre>
@@ -152,7 +155,7 @@ System.out.println(word1 + " " + word2 + "!");`}
                             {`Hello World!`}
                         </code>
                     </pre>
-                    
+                </div>
                     <br />
                     <p className="Section-content">Notice how the chars are being added to the string variables. In many cases, arithmetic cannot be done on variables with different
                         types. For example, adding a String to an int is not possible under normal circumstances. However, this addition is valid due to the way Strings
@@ -169,6 +172,5 @@ System.out.println(word1 + " " + word2 + "!");`}
                     </div>
                 </div>
             </div>
-        </div>
     );
 }

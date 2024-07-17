@@ -25,7 +25,7 @@ export default function PythonLoops() {
                     <h2>Example 1: If / Else</h2>
                     <pre>
                         <code>
-                            {`# Variable declaration
+                            {`//Variable declaration
 int numPeople = 5;
 int numApples  = 7;
 
@@ -39,7 +39,7 @@ else {
     enoughApples = false;
 }
 
-# Printing variables
+//Printing variables
 System.out.println(enoughApples);`}
                         </code>
                     </pre>
@@ -94,7 +94,7 @@ System.out.println(enoughApples);`}
                     <h2>Example 2: Using &&</h2>
                     <pre>
                         <code>
-                            {`# Variable declaration
+                            {`//Variable declaration
 int temperature = 95;
 bool rainy = false;
 
@@ -109,7 +109,7 @@ else {
     beachDay = false;
 }
 
-# Printing variables
+//Printing variables
 System.out.println(beachDay);`}
                         </code>
                     </pre>
@@ -134,10 +134,10 @@ System.out.println(beachDay);`}
                             {`# Variable Declaration                       
 int numLoops = 5;
 
-# Loop Execution
+//Loop Execution
 for(int i = 0; i < numLoops; i++) {
 
-# Printing Values
+//Printing Values
 System.out.println(i);
 }`}
                         </code>
@@ -168,20 +168,20 @@ System.out.println(i);
                     <h2>Example 4: While Loops</h2>
                     <pre>
                         <code>
-                            {`# Variable Declaration         
+                            {`//Variable Declaration         
 int apples = 10;
 int applesEaten = 0;
 
 bool hungry = true;
 
-# Loop Execution
+//Loop Execution
 while(hungry) {
     apples--;
     applesEaten++;
     if(applesEaten >= 5){
         hungry = false;
     }
-# Printing Values
+//Printing Values
 System.out.println("Apples Remaining: " + apples);
 }`}
                         </code>
