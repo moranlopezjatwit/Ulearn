@@ -68,6 +68,14 @@ for i in range(3):
                         </code>
                     </pre>
                     <p>In this example, the outer loop runs three times, and for each iteration of the outer loop, the inner loop runs twice, printing the values of <code>i</code> and <code>j</code>.</p>
+                    <div class="Centered-container">
+                        <div class="Centered">
+                            <div class="Bottom-buttons">
+                                <a href="/Python-Variables"><button class="PModule-next">Prev</button></a>
+                                <a href="/Python-Functions"><button class="PModule-next">Next</button></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

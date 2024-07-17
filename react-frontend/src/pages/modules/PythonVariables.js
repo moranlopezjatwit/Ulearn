@@ -83,6 +83,14 @@ print(message)`}
                         <li>We concatenate these strings to form a greeting message.</li>
                         <li>The final message is printed using <code>print()</code>.</li>
                     </ul>
+                    <div class="Centered-container">
+                        <div class="Centered">
+                            <div class="Bottom-buttons">
+                                <a href="/Python-Modules"><button class="PModule-next">Prev</button></a>
+                                <a href="/Python-Loops"><button class="PModule-next">Next</button></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
