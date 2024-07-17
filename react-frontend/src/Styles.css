@@ -650,22 +650,65 @@ p {
         padding: 20px;
         font-size: 30px;
     }
-*/
 
 /*Python module page ends here */
 
+
+/*Python Module Introduction Transition Button*/
+.PModule-next {
+    font-size: 20px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    background-color: #2f3c94;
+    color: #ffffff;
+    border: 1.5px solid #111122;
+    font-family: "Inter", sans-serif;
+    padding: 4px 8px;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+    .PModule-next span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+        .PModule-next span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+    .PModule-next:hover span {
+        padding-right: 25px;
+    }
+
+        .PModule-next:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+/*End Transition Button*/
+
+
 /*Python variables starts here*/
+
 .pythonvariables {
     display: flex;
     flex-direction: row;
     background-color: #c0c4de;
+    
 }
 
     .pythonvariables > div {
         flex: 1;
         padding: 20px;
     }
-/*
+
     .pythonvariables .Section-header {
         margin-top: 0;
         padding: 20px;
@@ -677,7 +720,7 @@ p {
         line-height: 1.6;
         color: #333;
     }
-*/
+
     .pythonvariables .Example {
         margin-top: 20px;
     }
@@ -690,13 +733,13 @@ p {
         .pythonvariables .Example p {
             font-size: 18px;
             line-height: 1.6;
-
         }
 
         .pythonvariables .Example ul {
             font-size: 18px;
             line-height: 1.6;
-            padding-left: 20px;
+            padding-left: 40px; /* Adjusted padding for indentation */
+            margin-top: 10px;
         }
 
         .pythonvariables .Example pre {
@@ -709,6 +752,19 @@ p {
         .pythonvariables .Example code {
             font-family: 'Courier New', Courier, monospace;
         }
+
+.pythonsidenav {
+    flex: 0 0 250px;
+    background-color: #fff;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+
+/*Python variables ends here*/
+
+
 
 /*Python Loop starts here*/
 .pythonloop {
@@ -794,7 +850,7 @@ p {
 
     .python-functions > div {
         flex: 1;
-        pcdadding: 20px;
+        padding: 20px;
     }
 
     .python-functions .Section-header {
