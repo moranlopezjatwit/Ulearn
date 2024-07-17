@@ -117,7 +117,7 @@ System.out.println("thirdVal: " + thirdVal);`}
                     <h2>Result:</h2>
                     <pre>
                         <code>
-                            {`Value3: 44000`}
+                            {`thirdVal: 44000`}
                         </code>
                     </pre>
                     <br />
@@ -153,22 +153,20 @@ System.out.println(word1 + " " + word2 + "!");`}
                         </code>
                     </pre>
                     
-                    <div class="Centered-container">
-                        <div class="Centered">
-                        <div class="Bottom-buttons">
-                                <a href="/Java-Modules"><button class="JModule-next">Prev</button></a>
-                                <a href="/Java-Loops"><button class="JModule-next">Next</button></a>
-                        </div>
-                        </div>
-                    </div>
                     <br />
                     <p className="Section-content">Notice how the chars are being added to the string variables. In many cases, arithmetic cannot be done on variables with different
                         types. For example, adding a String to an int is not possible under normal circumstances. However, this addition is valid due to the way Strings
                         are interpreted by the system. Rather than being whole unit, strings in java are merely considered a list of chars. Going by this, adding a
                         char is a valid operation because the char can be appended to the end of the list. </p>
-
-
-
+                    <br/>
+                    <div class="Centered-container">
+                        <div class="Centered">
+                            <div class="Bottom-buttons">
+                                <a href="/Java-Modules"><button class="JModule-next">Prev</button></a>
+                                <a href="/Java-Loops"><button class="JModule-next">Next</button></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

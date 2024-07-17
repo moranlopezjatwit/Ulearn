@@ -18,7 +18,7 @@ export default function PythonLoops() {
                 <br />
                 <p className="Section-content">
                     Let's begin by looking at if statements. These are statements that check if a given parameter is true before executing the code they hold. If the
-                    parameter is not true, their code never executes. Additionally, and if statement can also have an else statement with alternative code that will
+                    parameter is not true, their code never executes. Additionally, an if statement can also have an else statement with alternative code that will
                     execute instead of the original code if the parameter is not true.
                 </p>
                 <div className="Example">
@@ -49,8 +49,9 @@ System.out.println(enoughApples);`}
                             {`true`}
                         </code>
                     </pre>
-
                 </div>
+                <br />
+                <p className="Section-content">asdasdf</p>
             </div>
         </div>
     );
