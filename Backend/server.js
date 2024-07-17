@@ -25,15 +25,6 @@ db.once('open', () => {
   console.log('Connected to MongoDB');
 });
 
-// User schema and model
-const Schema = mongoose.Schema;
-const UserSchema = new Schema({
-  username: { type: String, required: true },
-  password: { type: String, required: true },
-  email: { type: String, required: true },
-});
-const User = mongoose.model('User', UserSchema);
-
 // Data schema and model
 const dataSchema = new mongoose.Schema({
   name: String,
