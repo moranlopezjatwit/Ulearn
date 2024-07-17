@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../models/user'); // Ensure the correct path to the user model
+const User = require('../models/User'); // Ensure the correct path to the User model
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 require('dotenv').config(); // To load environment variables from .env file
