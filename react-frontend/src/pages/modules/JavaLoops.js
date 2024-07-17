@@ -12,6 +12,9 @@ export default function PythonLoops() {
                     Java Loops
                 </p>
                 <br />
+
+
+
             </div>
         </div>
     );

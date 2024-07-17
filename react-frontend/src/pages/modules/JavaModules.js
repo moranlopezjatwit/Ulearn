@@ -32,7 +32,7 @@ function JavaModules() {
                 </ul>
 
                 <br/>
-                <p className="Section-content">Java is currently one of the most popular programming languages in the world, and for good reason.
+                <p className="Section-content">Java is currently one of the most popular programming languages worldwide, and for good reason.
                     It is open-source, simple to learn, intuitive to use, and has highly active developer community. By the time you complete these lessons, you
                     will have the foundational programming knowledge to begin creating your own Java applications.</p>
                 <br /><br />

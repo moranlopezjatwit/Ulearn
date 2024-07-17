@@ -22,12 +22,12 @@ export default function JavaVariables() {
                     <pre>
                         <code>
                             {`# Variable declaration
-String fruit = "Apples"
-int amount = 5
+String fruit = "Apples";
+int amount = 5;
 
 # Printing variables
-System.out.println("Fruit: " + fruit)
-System.out.println("Amount: " + amount)`}
+System.out.println("Fruit: " + fruit);
+System.out.println("Amount: " + amount);`}
                         </code>
                     </pre>
                     <h2>Result:</h2>
@@ -45,7 +45,7 @@ Amount: 5`}
                         <li><code>amount</code> is the name of a variable that stores an integer, and it has the value 5</li>
                     </ul>
                     <br/>
-                    <p>Additionally, the final lines of this snippet print these variables, and display the values they're currently storing, as shown below.
+                    <p> The final lines of this snippet print these variables and display the values they're currently storing, as shown below.
                         The process of creating a variable is known as variable <div className="Bold-word">declaration</div>. When a variable is given a value for
                         the firs time, it is known as <div className="Bold-word">initialization</div>.</p>
                     <br/>
@@ -99,15 +99,76 @@ Amount: 5`}
                             <td>Stores a decimal value up to 15 digits</td>
                         </tr>
                     </table>
-                    <br/>
+                    <br />
+                    <p className="Section-content">Let's look at some examples of these data types in use.</p>
+
+                    <h2>Example 2: </h2>
+                    <pre>
+                        <code>
+                            {`# Variable declaration
+short firstVal = 32000;
+short secondVal = 12000;
+int thirdVal = firstVal + secondVal;
+
+# Printing variables
+System.out.println("thirdVal: " + thirdVal);`}
+                        </code>
+                    </pre>
+                    <h2>Result:</h2>
+                    <pre>
+                        <code>
+                            {`Value3: 44000`}
+                        </code>
+                    </pre>
+                    <br />
+                    <p className="Section-content"> In this example, three variables were created. The first two are shorts that are given discrete values. 
+                        The third is an int that adds the values of the previous two variables to get its value. Notice how thirdVal was given the type int.
+                        This is because combining the values of firstVal and secondVal results in a value too great to be stored in a variable of the short data type.
+                        Now let's look at an example with non-numeric arithmetic.</p>
+                    <br />
+
+                    <h2>Example 3: </h2>
+                    <pre>
+                        <code>
+                            {`# Variable declaration
+char c1 = 'H';
+char c2 = 'e';
+char c3 = 'l';
+char c4 = 'o';
+char c5 = 'W';
+char c6 = 'r';
+char c7 = 'd';
+
+String word1 = c1 + c2 + c3 + c3 + c4; 
+String word2 = c5 + c4 + c6 + c3 + c7;
+
+# Printing variables
+System.out.println(word1 + " " + word2 + "!");`}
+                        </code>
+                    </pre>
+                    <h2>Result:</h2>
+                    <pre>
+                        <code>
+                            {`Hello World!`}
+                        </code>
+                    </pre>
+                    
                     <div class="Centered-container">
                         <div class="Centered">
                         <div class="Bottom-buttons">
-                            <button class="JModule-next">Prev</button>
-                            <button class="JModule-next">Next</button>
+                                <a href="/Java-Modules"><button class="JModule-next">Prev</button></a>
+                                <a href="/Java-Loops"><button class="JModule-next">Next</button></a>
                         </div>
                         </div>
                     </div>
+                    <br />
+                    <p className="Section-content">Notice how the chars are being added to the string variables. In many cases, arithmetic cannot be done on variables with different
+                        types. For example, adding a String to an int is not possible under normal circumstances. However, this addition is valid due to the way Strings
+                        are interpreted by the system. Rather than being whole unit, strings in java are merely considered a list of chars. Going by this, adding a
+                        char is a valid operation because the char can be appended to the end of the list. </p>
+
+
+
                 </div>
             </div>
         </div>
