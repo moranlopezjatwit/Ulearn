@@ -59,7 +59,7 @@ export default function App() {
             <Route path="/Cpp-Functions" element={<><Navbar /><CppFunctions /><Footer /></>} />
 
             <Route path="/Signup" element={<><Navbar /><Signup /><Footer /></>} />
-            <Route path="/Register" element={<><Navbar /><Register /><Footer /></>} />
+            <Route path="/Register" element={<><Navbar /><Register /></>} />
             <Route path="/login" element={<><Navbar /><Login /><Footer /></>} />
             <Route path="/protected" element={<><Navbar /><Protected /><Footer /></>} />
             <Route path="/my-component" element={<><Navbar /><MyComponent /><Footer /></>} />

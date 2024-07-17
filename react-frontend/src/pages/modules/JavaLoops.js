@@ -52,6 +52,16 @@ System.out.println(enoughApples);`}
                 </div>
                 <br />
                 <p className="Section-content">asdasdf</p>
+
+                <div class="Centered-container">
+                    <div class="Centered">
+                        <div class="Bottom-buttons">
+                            <a href="/Java-Variables"><button class="JModule-next">Prev</button></a>
+                            <a href="/Java-Functions"><button class="JModule-next">Next</button></a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     );
