@@ -399,6 +399,11 @@ p {
 
 }
 
+.Italic-word {
+    font-style: oblique;
+    display: inline-flex;
+}
+
 /*landing page paragraphs*/
 .Landing-text {
     width: 180%;

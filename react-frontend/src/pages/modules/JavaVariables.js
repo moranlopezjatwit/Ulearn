@@ -18,7 +18,7 @@ export default function JavaVariables() {
                 </p>
                 <br />
                 <div className="Example">
-                    <h2>Example 1: </h2>
+                    <h2>Example 1: Declaring & Printing</h2>
                     <pre>
                         <code>
                             {`# Variable declaration
@@ -102,7 +102,7 @@ Amount: 5`}
                     <br />
                     <p className="Section-content">Let's look at some examples of these data types in use.</p>
 
-                    <h2>Example 2: </h2>
+                    <h2>Example 2: Integer Addition</h2>
                     <pre>
                         <code>
                             {`# Variable declaration
@@ -127,7 +127,7 @@ System.out.println("thirdVal: " + thirdVal);`}
                         Now let's look at an example with non-numeric arithmetic.</p>
                     <br />
 
-                    <h2>Example 3: </h2>
+                    <h2>Example 3: String Addition</h2>
                     <pre>
                         <code>
                             {`# Variable declaration
