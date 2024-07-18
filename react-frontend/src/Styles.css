@@ -920,7 +920,7 @@ p {
         flex: 1;
         padding: 20px;
     }
-
+     
 /*Java Module Introduction Transition Button*/
 .JModule-next {
     font-size: 20px;
@@ -1037,11 +1037,18 @@ h2 {
         margin-top: 0;
     }
 
+/*cpp variables page*/
 .cpp-variables {
     display: flex;
     flex-direction: row;
     background-color: #c0c4de;
 }
+
+    .cpp-variables > div {
+    padding: 20px;
+    }
+
+/*end cpp variables*/
 
 .cpp-loops {
     display: flex;

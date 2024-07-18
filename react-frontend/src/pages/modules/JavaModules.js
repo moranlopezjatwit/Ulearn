@@ -20,8 +20,7 @@ function JavaModules() {
                     making it popular for building enterprise-scale applications, Android apps, web applications, and more!</p>
                 <br />
 
-                <p>Some common uses of Java include:</p>
-                <br />
+                <p className="Section-content">Some common uses of Java include:</p>
                 <ul className="Java-lessons">
                     <li>Web Development</li>
                     <li>Android App Development</li>

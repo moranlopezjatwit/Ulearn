@@ -10,7 +10,6 @@ export default function JavaVariables() {
             <div>
                 <h1 className="Section-header">Using Variables in Java</h1>
                 <p className="Section-content">
-                    
                     For any programming language, variables are one of the fundamental building blocks with which software is built.
                     A variable can be thought of as a method of information storage that is associated with a name. You can choose a
                     value for the variable to remember during its creation, or you can leave it empty until it's needed. Additionally,
@@ -39,18 +38,18 @@ Amount: 5`}
                     </pre>
                 </div>
                     <br />
-                    <p className="Section-content">In Java, there are three main components that make up a variables: <div className="Bold-word">Type</div>, <div className="Bold-word">Name</div>,
+                    <p className="Section-content">In Java, there are three main components that make up a variable: <div className="Bold-word">Type</div>, <div className="Bold-word">Name</div>,
                         and <div className="Bold-word">Value</div>. In this example, two variables of two different types were created:</p>
                     <ul className="Java-lessons">
                         <li><code>fruit</code> is the name of a variable that stores a string, and it has the value "Apples"</li>
                         <li><code>amount</code> is the name of a variable that stores an integer, and it has the value 5</li>
                     </ul>
                     <br/>
-                    <p> The final lines of this snippet print these variables and display the values they're currently storing, as shown below.
+                    <p className="Section-content"> The final lines of this snippet print these variables and display the values they're currently storing, as shown below.
                         The process of creating a variable is known as variable <div className="Bold-word">declaration</div>. When a variable is given a value for
-                        the firs time, it is known as <div className="Bold-word">initialization</div>.</p>
+                        the first time, it is known as <div className="Bold-word">initialization</div>.</p>
                     <br/>
-                    <p>There are many different variable types depending on what kind of data needs to be stored. Reference the table
+                    <p className="Section-content">There are many different variable types depending on what kind of data needs to be stored. Reference the table
                         below to know what type of data each one can be used for:</p>
                     <br/>
                     <table className="Var-table">
@@ -122,7 +121,7 @@ System.out.println("thirdVal: " + thirdVal);`}
                             {`thirdVal: 44000`}
                         </code>
                     </pre>
-                </div>
+                    </div>
                     <br />
                     <p className="Section-content"> In this example, three variables were created. The first two are shorts that are given discrete values. 
                         The third is an int that adds the values of the previous two variables to get its value. Notice how thirdVal was given the type int.
