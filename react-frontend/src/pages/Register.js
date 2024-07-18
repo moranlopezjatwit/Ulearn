@@ -4,51 +4,78 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const Register = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [email, setEmail] = useState('');
+  const [formData, setFormData] = useState({
+    username: '',
+    email: '',
+    password: '',
+    role: 'user', // default role
+  });
 
-  const registerUser = async () => {
-    const userData = { username, password, email };
+  const { username, email, password, role } = formData;
+
+  const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
+
+  const onSubmit = async e => {
+    e.preventDefault();
+    const userData = { username, email, password, role };
     console.log('Sending user data:', userData);
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/register', userData, {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-      console.log('Response:', response.data);
-    } catch (error) {
-      console.error('Error registering user:', error.response?.data || error.message);
+      const res = await axios.post('http://localhost:5000/api/auth/register', userData);
+      console.log(res.data);
+      // Handle successful registration (e.g., redirect, show message)
+    } catch (err) {
+      console.error(err.response?.data || err.message);
+      // Handle error (e.g., show error message)
     }
   };
 
-    return (
+  return (
     <div style={styles.container}>
       <h2>Register</h2>
-      <input
-        type="text"
-        placeholder="Username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-        style={styles.input}
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        style={styles.input}
-      />
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        style={styles.input}
-      />
-        <button onClick={registerUser} style={styles.button}>Register</button>
-      </div>
+      <form onSubmit={onSubmit} style={styles.form}>
+        <div style={styles.inputContainer}>
+          <label>Username</label>
+          <input
+            type="text"
+            name="username"
+            value={username}
+            onChange={onChange}
+            required
+            style={styles.input}
+          />
+        </div>
+        <div style={styles.inputContainer}>
+          <label>Email</label>
+          <input
+            type="email"
+            name="email"
+            value={email}
+            onChange={onChange}
+            required
+            style={styles.input}
+          />
+        </div>
+        <div style={styles.inputContainer}>
+          <label>Password</label>
+          <input
+            type="password"
+            name="password"
+            value={password}
+            onChange={onChange}
+            required
+            style={styles.input}
+          />
+        </div>
+        <div style={styles.inputContainer}>
+          <label>Role</label>
+          <select name="role" value={role} onChange={onChange} style={styles.input}>
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+        <button type="submit" style={styles.button}>Register</button>
+      </form>
+    </div>
   );
 };
 
@@ -62,7 +89,12 @@ const styles = {
     padding: '20px',
     border: '1px solid #ccc',
     borderRadius: '10px',
-        
+  },
+  form: {
+    width: '100%',
+  },
+  inputContainer: {
+    marginBottom: '15px',
   },
   input: {
     width: '100%',
