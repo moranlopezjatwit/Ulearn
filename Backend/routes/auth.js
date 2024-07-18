@@ -1,32 +1,32 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../models/User'); // Ensure the correct path to the User model
+const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-require('dotenv').config(); // To load environment variables from .env file
+require('dotenv').config();
 
 router.post('/register', async (req, res) => {
-  console.log('Register endpoint hit'); // Add this line
-  const { name, email, password } = req.body;
+  console.log('Received request:', req.body);
+  const { username, password, email } = req.body;
 
+  if (!username || !password || !email) {
+    console.error('Validation error: All fields are required');
+    return res.status(400).json({ error: 'All fields are required' });
+  }
+
+  const hashedPassword = await bcrypt.hash(password, 10);
+  const newUser = new User({ username, password: hashedPassword, email });
   try {
-    const existingUser = await User.findOne({ email });
-    if (existingUser) {
-      console.log('User already exists'); // Add this line
-      return res.status(400).json({ message: 'User already exists' });
-    }
-
-    const hashedPassword = await bcrypt.hash(password, 10);
-    const user = new User({ name, email, password: hashedPassword });
-    await user.save();
-
-    const token = jwt.sign({ _id: user._id, email: user.email }, process.env.JWT_SECRET, { expiresIn: '1h' });
+    await newUser.save();
+    console.log('User saved:', newUser);
+    const token = jwt.sign({ _id: newUser._id, email: newUser.email }, process.env.JWT_SECRET, { expiresIn: '1h' });
     res.status(201).json({ token });
   } catch (error) {
-    console.error('Error registering user', error); // Add this line
-    res.status(500).json({ message: 'Error registering user' });
+    console.error('Error saving user:', error);
+    res.status(500).json({ error: 'Error registering user' });
   }
 });
 
 module.exports = router;
+
 
