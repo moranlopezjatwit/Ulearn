@@ -2,19 +2,17 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const authRoutes = require('./routes/auth'); // Adjust the path to your auth routes
-require('dotenv').config(); // To load environment variables from .env file
+const authRoutes = require('./routes/auth');
+const User = require('./models/User'); // Ensure the correct path to the User model
+require('dotenv').config();
 
-// Create an Express application
 const app = express();
 const port = process.env.PORT || 5000;
 
-// Middleware
 app.use(cors());
 app.use(bodyParser.json());
 
-// MongoDB connection
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/mydatabase', {
+mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/ulearn', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -25,24 +23,17 @@ db.once('open', () => {
   console.log('Connected to MongoDB');
 });
 
-// Data schema and model
-const dataSchema = new mongoose.Schema({
-  name: String,
-  value: String,
-});
-const Data = mongoose.model('Data', dataSchema);
-
-// Register endpoint
+// This should be in authRoutes, so remove it if already defined
 app.post('/api/auth/register', async (req, res) => {
   console.log('Received request:', req.body);
-  const { username, password, email } = req.body;
+  const { username, password, email, role } = req.body;
 
   if (!username || !password || !email) {
     console.error('Validation error: All fields are required');
     return res.status(400).json({ error: 'All fields are required' });
   }
 
-  const newUser = new User({ username, password, email });
+  const newUser = new User({ username, password, email, role });
   try {
     await newUser.save();
     console.log('User saved:', newUser);
@@ -53,24 +44,9 @@ app.post('/api/auth/register', async (req, res) => {
   }
 });
 
-// Data insertion endpoint
-app.post('/api/data', async (req, res) => {
-  console.log('Received data request:', req.body);
-  const newData = new Data(req.body);
-  try {
-    await newData.save();
-    console.log('Data saved:', newData);
-    res.status(200).send('Data saved successfully');
-  } catch (err) {
-    console.error('Error saving data:', err);
-    res.status(500).send(err);
-  }
-});
-
-// Routes
 app.use('/api/auth', authRoutes);
 
-// Start the server
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
+
