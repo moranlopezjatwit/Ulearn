@@ -85,7 +85,6 @@ System.out.println(enoughApples);`}
                         <td>||</td>
                         <td>Appends multiple conditions; will be true if at least one of the conditions is true</td>
                     </tr>
-
                 </table>
                 <br />
                 <p className="Section-content"> Let's look at another example using these operators.</p>
@@ -163,7 +162,6 @@ System.out.println(i);
                     be executed multiple times in a program.</p> 
                 <br />
                 <p className="Section-content">Finally, let's discuss while loops.</p>
-
                 <div className="Example">
                     <h2>Example 4: While Loops</h2>
                     <pre>
@@ -208,8 +206,8 @@ Apples Remaining: 5`}
                 <div class="Centered-container">
                     <div class="Centered">
                         <div class="Bottom-buttons">
-                            <a href="/Java-Variables"><button class="JModule-next">Prev</button></a>
-                            <a href="/Java-Functions"><button class="JModule-next">Next</button></a>
+                            <a href="/Java-Variables"><button class="Lesson-transition">Prev</button></a>
+                            <a href="/Java-Functions"><button class="Lesson-transition">Next</button></a>
                         </div>
                     </div>
                 </div>

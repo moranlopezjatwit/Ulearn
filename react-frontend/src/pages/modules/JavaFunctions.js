@@ -50,11 +50,11 @@ public static void main(String[] args){
                 </p>
                 <br />
                 <p className="Section-content">
-                Now let's look at a function that has parameters returns data.
+                Now let's look at a function that has parameters and returns data.
                 </p>
 
                 <div className="Example">
-                    <h2>Example 1: Function Creation and calling</h2>
+                    <h2>Example 2: Function Types and Parameters</h2>
                     <pre>
                         <code>
                             {`public class Main {
@@ -94,7 +94,7 @@ public static void main(String[] args){
                 <div class="Centered-container">
                     <div class="Centered">
                         <div class="Bottom-buttons">
-                            <a href="/Java-Loops"><button class="JModule-next">Prev</button></a>
+                            <a href="/Java-Loops"><button class="Lesson-transition">Prev</button></a>
                         </div>
                     </div>
                 </div>

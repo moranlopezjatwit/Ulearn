@@ -86,8 +86,8 @@ print(message)`}
                     <div class="Centered-container">
                         <div class="Centered">
                             <div class="Bottom-buttons">
-                                <a href="/Python-Modules"><button class="PModule-next">Prev</button></a>
-                                <a href="/Python-Loops"><button class="PModule-next">Next</button></a>
+                                <a href="/Python-Modules"><button class="Lesson-transition">Prev</button></a>
+                                <a href="/Python-Loops"><button class="Lesson-transition">Next</button></a>
                             </div>
                         </div>
                     </div>

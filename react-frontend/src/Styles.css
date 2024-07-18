@@ -131,11 +131,11 @@ code {
 
 .Side-nav-align {
     background-color: #eeeeee;
-    border: solid #000000;
+    border: solid #0f1c74;
     border-top-width: 0px;
     border-bottom-width: 0px;
     border-left-width: 0px;
-    border-right-width: 1px;
+    border-right-width: 1.5px;
     padding-left: 0px;
     max-width: 14vw;
     min-height: 100vh;
@@ -961,6 +961,25 @@ transition: 0.5s;
 }
 /*End Transition Button*/
 
+/*bottom lesson transition buttons*/
+.Lesson-transition {
+    font-size: 20px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    background-color: #2f3c94;
+    color: #ffffff;
+    border: 1.5px solid #111122;
+    font-family: "Inter", sans-serif;
+    padding: 4px 8px;
+    border-radius: 5px;
+    transition: all 0.1s;
+}
+
+    .Lesson-transition:hover {
+        background-color: #4f5cb4;
+        border: 1.5px solid #4f5cb4;
+    }
+/*end lesson transition buttons*/
 
 .Java-lessons {
     margin-bottom: 10px;
@@ -1018,6 +1037,10 @@ h2 {
     background-color: #c0c4de;
 }
 
+.cpp-module > div {
+    padding: 20px;
+}
+
 .cpp-module .content {
     flex: 1;
     padding: 20px;
@@ -1050,17 +1073,29 @@ h2 {
 
 /*end cpp variables*/
 
+/*cpp loops page*/
 .cpp-loops {
     display: flex;
     flex-direction: row;
     background-color: #c0c4de;
 }
 
+    .cpp-loops > div {
+        padding: 20px;
+    }
+/*end cpp loops*/
+
+/*cpp functions page*/
 .cpp-functions {
     display: flex;
     flex-direction: row;
     background-color: #c0c4de;
 }
+
+    .cpp-functions > div {
+        padding: 20px;
+    }
+/*end cpp functions*/
 
 /*CPP module page ends here */
 

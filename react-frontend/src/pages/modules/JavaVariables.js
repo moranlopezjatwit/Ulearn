@@ -71,7 +71,7 @@ Amount: 5`}
                         <tr>
                             <td>short</td>
                             <td>2 bytes</td>
-                            <td>Stores a whole value between -32,768 & 32767</td>
+                            <td>Stores a whole value between -32,768 & 32,767</td>
                         </tr>
                         <tr>
                             <td>char</td>
@@ -128,7 +128,7 @@ System.out.println("thirdVal: " + thirdVal);`}
                         This is because combining the values of firstVal and secondVal results in a value too great to be stored in a variable of the short data type.
                         Now let's look at an example with non-numeric arithmetic.</p>
                     <br />
-                    <div className="Example">
+                <div className="Example">
                     <h2>Example 3: String Addition</h2>
                     <pre>
                         <code>
@@ -164,8 +164,8 @@ System.out.println(word1 + " " + word2 + "!");`}
                     <div class="Centered-container">
                         <div class="Centered">
                             <div class="Bottom-buttons">
-                                <a href="/Java-Modules"><button class="JModule-next">Prev</button></a>
-                                <a href="/Java-Loops"><button class="JModule-next">Next</button></a>
+                            <a href="/Java-Modules"><button class="Lesson-transition">Prev</button></a>
+                            <a href="/Java-Loops"><button class="Lesson-transition">Next</button></a>
                             </div>
                         </div>
                     </div>

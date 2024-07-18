@@ -24,8 +24,8 @@ String weather = "Sunny";
 int temp = 70;
 
 //Printing variables
-Std::out << "Weather: " << weather << std::endl;
-Std::out << "Temperature: " << temp << std::endl;`}
+std::cout << "Weather: " << weather << std::endl;
+std::cout << "Temperature: " << temp << std::endl;`}
                         </code>
                     </pre>
                     <h2>Result:</h2>
@@ -71,7 +71,7 @@ Temperature: 70`}
                     <tr>
                         <td>short</td>
                         <td>2 bytes</td>
-                        <td>Stores a whole value between -32,768 & 32767</td>
+                        <td>Stores a whole value between -32,768 & 32,767</td>
                     </tr>
                     <tr>
                         <td>char</td>
@@ -114,22 +114,57 @@ short secondVal = 20000;
 int thirdVal = firstVal - secondVal;
 
 //Printing variables
-System.out.println("thirdVal: " + thirdVal);`}
+std::cout << "thirdVal: " << thirdVal << std::endl;`}
                         </code>
                     </pre>
                     <h2>Result:</h2>
                     <pre>
                         <code>
-                            {`thirdVal:000`}
+                            {`thirdVal: -45000`}
                         </code>
                     </pre>
                 </div>
+                <br />
+                <p className="Section-content"> In this example, three variables were created. The first two are shorts that are given discrete values.
+                    The third is an int that adds the values of the previous two variables to get its value. Notice how thirdVal was given the type int.
+                    This is because combining the values of firstVal and secondVal results in a value outside of the bounds for a variable of the short data type. 
+                    Remember that a short can only store values between -32,768 and 32,767, so the value -45,000 falls outside of its bounds.</p>
+                <br />
+                <p className="Section-content">Now let's look at an example with non-numeric arithmetic.</p>
+                <br />
+
+                <div className="Example">
+                    <h2>Example 3: String Addition</h2>
+                    <pre>
+                        <code>
+                            {`//Variable declaration
+
+String word1 = "Hello";
+String word2 = "World";
+String word3 = word1 + " " + word2 + "!";
+
+//Printing variables
+std::cout << word3 << std::endl;`}
+                        </code>
+                    </pre>
+                    <h2>Result:</h2>
+                    <pre>
+                        <code>
+                            {`Hello World!`}
+                        </code>
+                    </pre>
+                </div>
+                <br />
+                <p className="Section-content">
+                    In this case, we created two string variables with words for their data, and then we created a third string with the first two appended to it. <code>word3</code> also
+                    combined a space and exclamation mark with the contents of <code>word1</code> and <code>word2</code>, so that the final String is as displayed in the output.
+                </p>
 
                 <div class="Centered-container">
                     <div class="Centered">
                         <div class="Bottom-buttons">
-                            <a href="/Cpp-Modules"><button class="JModule-next">Prev</button></a>
-                            <a href="/Cpp-Loops"><button class="JModule-next">Next</button></a>
+                            <a href="/Cpp-Modules"><button class="Lesson-transition">Prev</button></a>
+                            <a href="/Cpp-Loops"><button class="Lesson-transition">Next</button></a>
                         </div>
                     </div>
                 </div>

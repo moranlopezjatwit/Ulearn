@@ -71,8 +71,8 @@ for i in range(3):
                     <div class="Centered-container">
                         <div class="Centered">
                             <div class="Bottom-buttons">
-                                <a href="/Python-Variables"><button class="PModule-next">Prev</button></a>
-                                <a href="/Python-Functions"><button class="PModule-next">Next</button></a>
+                                <a href="/Python-Variables"><button class="Lesson-transition">Prev</button></a>
+                                <a href="/Python-Functions"><button class="Lesson-transition">Next</button></a>
                             </div>
                         </div>
                     </div>
