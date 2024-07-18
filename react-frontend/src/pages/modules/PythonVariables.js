@@ -12,6 +12,59 @@ export default function PythonVariables() {
                     For any programming language, variables are one of the fundamental building blocks with which software is built. A variable can be thought of as a method of information storage that is associated with a name. You can choose a value for the variable to remember during its creation, or you can leave it empty until it's needed. Additionally, variables can be used to manipulate the information that they store, or they can be overwritten with new information if needed.
                 </p>
                 <br />
+
+                <p className="Section-content">There are many different variable types depending on what kind of data needs to be stored. Reference the table
+                    below to know what type of data each one can be used for:</p>
+                <br />
+                <table className="Var-table">
+                    <tr>
+                        <th>Variable Type</th>
+                        <th>Storage Size</th>
+                        <th>Usage</th>
+                    </tr>
+                    <tr>
+                        <td>boolean</td>
+                        <td>1 bit</td>
+                        <td>Stores a single true or false value</td>
+                    </tr>
+                    <tr>
+                        <td>byte</td>
+                        <td>1 byte</td>
+                        <td>Stores a whole value between -128 & 127</td>
+                    </tr>
+                    <tr>
+                        <td>short</td>
+                        <td>2 bytes</td>
+                        <td>Stores a whole value between -32,768 & 32767</td>
+                    </tr>
+                    <tr>
+                        <td>char</td>
+                        <td>2 bytes</td>
+                        <td>Stores a single character or ASCII value</td>
+                    </tr>
+                    <tr>
+                        <td>int</td>
+                        <td>4 bytes</td>
+                        <td>Stores a whole value between -2,147,483,648 & 2,147,483,647</td>
+                    </tr>
+                    <tr>
+                        <td>float</td>
+                        <td>4 bytes</td>
+                        <td>Stores a decimal value up to 6 digits</td>
+                    </tr>
+                    <tr>
+                        <td>long</td>
+                        <td>8 bytes</td>
+                        <td>Stores a whole value between -9,223,372,036,854,775,808 & 9,223,372,036,854,775,807</td>
+                    </tr>
+                    <tr>
+                        <td>double</td>
+                        <td>8 bytes</td>
+                        <td>Stores a decimal value up to 15 digits</td>
+                    </tr>
+                </table>
+                <br />
+
                 <p>Look at the examples below to understand how variables work in Python:</p>
 
                 <div className="Example">
