@@ -33,6 +33,16 @@ import Protected from './pages/Protected';
 import MyComponent from './components/MyComponent';
 
 export default function App() {
+  const { setUser } = useContext(UserContext);
+  
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      const user = jwt.decode(token);
+      setUser({ username: user.username });
+    }
+  }, []);
+  
   return (
     <div>
       <title>ULearn</title>
