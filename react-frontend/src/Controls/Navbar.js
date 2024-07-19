@@ -15,7 +15,7 @@ const Navbar = () => {
   const handleLogout = () => {
     localStorage.removeItem('token');
     setUser(null);
-    navigate('/login');
+    navigate('/Register');
   };
 
   return (
@@ -48,7 +48,6 @@ const Navbar = () => {
         ) : (
           <>
             <li><Link to="/Register">Sign Up</Link></li>
-            <li><Link to="/Login">Login</Link></li>
           </>
         )}
       </ul>
