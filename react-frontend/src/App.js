@@ -30,7 +30,8 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import Protected from './pages/Protected';
 import MyComponent from './components/MyComponent';
-import { UserProvider } from './UserContext';
+import { useContext } from 'react';
+import { UserContext } from '../context/UserContext';
 
 export default function App() {
   return (
