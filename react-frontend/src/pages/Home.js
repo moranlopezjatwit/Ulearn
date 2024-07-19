@@ -1,11 +1,13 @@
 // Home.js
 import React from 'react';
+import { UserContext } from '../UserContext';
 
 function Home() {
     return (
         <div className="Homepage">
             <div className="Hero">
                 <h1>Welcome to ULearn</h1>
+                {user && <p>Hello, {user}!</p>}
                 <p>
                     <em>Your personalized gateway to mastering computer science.</em>
                 </p>
