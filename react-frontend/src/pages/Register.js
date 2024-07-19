@@ -12,6 +12,7 @@ const Register = () => {
     role: 'user', // default role
   });
 
+  const { setUser } = useContext(UserContext);
   const { username, email, password, role } = formData;
   const navigate = useNavigate();
 
@@ -24,8 +25,8 @@ const Register = () => {
     try {
       const res = await axios.post('http://localhost:5000/api/auth/register', userData);
       console.log(res.data);
-      setUser(username); // Set the user context
-      navigate('/home');
+      setUser({ username: res.data.username });
+      navigate('/Home');
       // Handle successful registration (e.g., redirect, show message)
     } catch (err) {
       console.error(err.response?.data || err.message);
