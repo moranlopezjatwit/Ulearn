@@ -15,7 +15,7 @@ const Navbar = () => {
   const handleLogout = () => {
     localStorage.removeItem('token');
     setUser(null);
-    navigate('/Register');
+    navigate('/login');
   };
 
   return (
@@ -34,7 +34,7 @@ const Navbar = () => {
           {isDropdownOpen && (
             <ul className="dropdown-menu">
               <li><Link to="/Python-Modules">Python</Link></li>
-              <li><Link to="/Java-Modules">Java</Link></li>
+              <li><Link to="/Java-Modules">Java</li>
               <li><Link to="/Cpp-Modules">C++</Link></li>
             </ul>
           )}
@@ -48,7 +48,7 @@ const Navbar = () => {
         ) : (
           <>
             <li><Link to="/Register">Sign Up</Link></li>
-            <li><Link to="/login">Login</Link></li>
+            <li><Link to="/Login">Login</Link></li>
           </>
         )}
       </ul>
@@ -57,4 +57,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
