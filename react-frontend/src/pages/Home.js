@@ -1,6 +1,5 @@
 // Home.js
-import React from 'react';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { UserProvider } from './context/UserContext';
 
 function Home() {
