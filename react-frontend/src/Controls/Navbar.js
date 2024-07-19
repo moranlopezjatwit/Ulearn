@@ -34,7 +34,7 @@ const Navbar = () => {
           {isDropdownOpen && (
             <ul className="dropdown-menu">
               <li><Link to="/Python-Modules">Python</Link></li>
-              <li><Link to="/Java-Modules">Java</li>
+              <li><Link to="/Java-Modules">Java</Link></li>
               <li><Link to="/Cpp-Modules">C++</Link></li>
             </ul>
           )}
