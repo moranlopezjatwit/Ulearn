@@ -4,6 +4,7 @@ import { UserProvider } from '../context/UserContext';
 
 function Home() {
     const { user } = useContext(UserContext);
+    
     return (
         <div className="Homepage">
             <div className="Hero">
