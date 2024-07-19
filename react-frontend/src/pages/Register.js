@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { register } from '../api';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { UserContext } from '../UserContext';
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -23,6 +24,7 @@ const Register = () => {
     try {
       const res = await axios.post('http://localhost:5000/api/auth/register', userData);
       console.log(res.data);
+      setUser(username); // Set the user context
       navigate('/home');
       // Handle successful registration (e.g., redirect, show message)
     } catch (err) {
