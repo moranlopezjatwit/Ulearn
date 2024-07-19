@@ -30,14 +30,16 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import Protected from './pages/Protected';
 import MyComponent from './components/MyComponent';
+import { UserProvider } from './UserContext';
 
 export default function App() {
   return (
     <div>
       <title>ULearn</title>
-      <LanguageProvider>
-        <Router> 
-          <Routes>
+        <UserProvider>
+          <LanguageProvider>
+            <Router> 
+              <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/Home" element={<><Navbar /><Home /><Footer /></>} />
             <Route path="/Introduction" element={<><Navbar /><Introduction /><Footer /></>} />
@@ -66,6 +68,7 @@ export default function App() {
           </Routes>
         </Router>
       </LanguageProvider>
+    </UserProvider>
     </div>
   );
 }
