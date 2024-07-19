@@ -12,6 +12,7 @@ const Register = () => {
   });
 
   const { username, email, password, role } = formData;
+  const navigate = useNavigate();
 
   const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -22,6 +23,7 @@ const Register = () => {
     try {
       const res = await axios.post('http://localhost:5000/api/auth/register', userData);
       console.log(res.data);
+      navigate('/home');
       // Handle successful registration (e.g., redirect, show message)
     } catch (err) {
       console.error(err.response?.data || err.message);
