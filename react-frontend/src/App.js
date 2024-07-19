@@ -1,5 +1,6 @@
 import React, { useEffect, useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import jwtDecode from 'jwt-decode';  // Ensure this import is here
 import './App.css';
 import './Styles.css';
 import Home from './pages/Home';
@@ -8,7 +9,6 @@ import Navbar from './Controls/Navbar';
 import Footer from './Controls/Footer';
 import { LanguageProvider } from './LanguageContext';
 import { UserProvider, UserContext } from './context/UserContext';
-import jwtDecode from 'jwt-decode';
 
 import PythonModules from './pages/modules/PythonModules';
 import PythonVariables from './pages/modules/PythonVariables';
@@ -35,26 +35,26 @@ import MyComponent from './components/MyComponent';
 
 export default function App() {
   const { setUser } = useContext(UserContext);
-
+  
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
-      const user = jwtDecode(token);
+      const user = jwtDecode(token);  // Ensure this line is here
       setUser({ username: user.username });
     }
   }, [setUser]);
-
+  
   return (
     <div>
       <title>ULearn</title>
       <UserProvider>
         <LanguageProvider>
-          <Router>
+          <Router> 
             <Routes>
               <Route path="/" element={<Landing />} />
               <Route path="/Home" element={<><Navbar /><Home /><Footer /></>} />
               <Route path="/Introduction" element={<><Navbar /><Introduction /><Footer /></>} />
-              <Route path="/About" element={<><Navbar /><About /><Footer /></>} />
+              <Route path="/About" element={<><Navbar /><About /><Footer /></>}/>
 
               <Route path="/Python-Modules" element={<><Navbar /><PythonModules /><Footer /></>} />
               <Route path="/Python-Variables" element={<><Navbar /><PythonVariables /><Footer /></>} />
