@@ -1,6 +1,6 @@
 // Home.js
 import React, { useContext } from 'react';
-import { UserProvider } from './context/UserContext';
+import { UserProvider } from '../context/UserContext';
 
 function Home() {
     return (
