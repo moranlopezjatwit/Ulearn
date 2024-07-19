@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import jwtDecode from 'jwt-decode';  // Ensure this import is here
+import { jwtDecode } from 'jwt-decode';
 import './App.css';
 import './Styles.css';
 import Home from './pages/Home';
