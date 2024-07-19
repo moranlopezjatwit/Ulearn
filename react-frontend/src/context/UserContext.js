@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from 'react';
-import { jwtDecode } from 'jwt-decode';
+import jwtDecode from 'jwt-decode';
 
 export const UserContext = createContext();
 
@@ -20,3 +20,4 @@ export const UserProvider = ({ children }) => {
     </UserContext.Provider>
   );
 };
+
