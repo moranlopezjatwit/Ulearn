@@ -341,7 +341,7 @@ p {
 
 /*landing page div, applies to all landing page elements & used for setting background*/
 .Landing {
-    position: relative;
+    position: center;
     color: #ffffff;
     background-image: url("./Assets/Landing-page-background.png");
     background-size: 100% 100%;

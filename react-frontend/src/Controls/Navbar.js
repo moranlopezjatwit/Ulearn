@@ -21,7 +21,7 @@ export default function Navbar() {
                     onMouseEnter={handleDropdownToggle}
                     onMouseLeave={handleDropdownToggle}
                 >
-                    <Link to="/Introduction">Introduction</Link>
+                    <Link to="/Introduction">Modules</Link>
                     {isDropdownOpen && (
                         <ul className="dropdown-menu">
                             <li><Link to="/Python-Modules">Python</Link></li>
