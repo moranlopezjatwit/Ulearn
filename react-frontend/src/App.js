@@ -39,13 +39,14 @@ const App = () => {
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
-      const user = jwtDecode(token);
-      setUser({ username: user.username });
+      const decodedUser = jwtDecode(token);
+      setUser(decodedUser);
     }
   }, [setUser]);
 
   return (
-    <UserProvider>
+    <div>
+      <title>ULearn</title>
       <LanguageProvider>
         <Router>
           <Routes>
@@ -53,18 +54,22 @@ const App = () => {
             <Route path="/Home" element={<><Navbar /><Home /><Footer /></>} />
             <Route path="/Introduction" element={<><Navbar /><Introduction /><Footer /></>} />
             <Route path="/About" element={<><Navbar /><About /><Footer /></>} />
+
             <Route path="/Python-Modules" element={<><Navbar /><PythonModules /><Footer /></>} />
             <Route path="/Python-Variables" element={<><Navbar /><PythonVariables /><Footer /></>} />
             <Route path="/Python-Loops" element={<><Navbar /><PythonLoops /><Footer /></>} />
             <Route path="/Python-Functions" element={<><Navbar /><PythonFunctions /><Footer /></>} />
+
             <Route path="/Java-Modules" element={<><Navbar /><JavaModules /><Footer /></>} />
             <Route path="/Java-Variables" element={<><Navbar /><JavaVariables /><Footer /></>} />
             <Route path="/Java-Loops" element={<><Navbar /><JavaLoops /><Footer /></>} />
             <Route path="/Java-Functions" element={<><Navbar /><JavaFunctions /><Footer /></>} />
+
             <Route path="/Cpp-Modules" element={<><Navbar /><CppModules /><Footer /></>} />
             <Route path="/Cpp-Variables" element={<><Navbar /><CppVariables /><Footer /></>} />
             <Route path="/Cpp-Loops" element={<><Navbar /><CppLoops /><Footer /></>} />
             <Route path="/Cpp-Functions" element={<><Navbar /><CppFunctions /><Footer /></>} />
+
             <Route path="/Signup" element={<><Navbar /><Signup /><Footer /></>} />
             <Route path="/Register" element={<><Navbar /><Register /></>} />
             <Route path="/login" element={<><Navbar /><Login /><Footer /></>} />
@@ -73,8 +78,14 @@ const App = () => {
           </Routes>
         </Router>
       </LanguageProvider>
-    </UserProvider>
+    </div>
   );
 };
 
-export default App;
+const AppWithProviders = () => (
+  <UserProvider>
+    <App />
+  </UserProvider>
+);
+
+export default AppWithProviders;
