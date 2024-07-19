@@ -7,6 +7,7 @@ import Introduction from './pages/Introduction';
 import Navbar from './Controls/Navbar';
 import Footer from './Controls/Footer';
 import { LanguageProvider } from './LanguageContext';
+import { UserProvider } from './context/UserContext';
 
 import PythonModules from './pages/modules/PythonModules';
 import PythonVariables from './pages/modules/PythonVariables';
@@ -30,7 +31,6 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import Protected from './pages/Protected';
 import MyComponent from './components/MyComponent';
-import { UserProvider } from './context/UserContext';
 
 export default function App() {
   return (
