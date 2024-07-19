@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { register } from '../api';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { UserContext } from '../UserContext';
+import { useContext } from 'react';
+import { UserContext } from '../context/UserContext';
 
 const Register = () => {
   const [formData, setFormData] = useState({
