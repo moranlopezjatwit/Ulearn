@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react';
-import { register } from '../api';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { UserContext } from '../context/UserContext';
@@ -26,12 +25,10 @@ const Register = () => {
       const res = await axios.post('http://localhost:5000/api/auth/register', userData);
       console.log(res.data);
       localStorage.setItem('token', res.data.token);
-      setUser({ username: res.data.username });
+      setUser({ username: res.data.user.username });
       navigate('/Home');
-      // Handle successful registration (e.g., redirect, show message)
     } catch (err) {
       console.error(err.response?.data || err.message);
-      // Handle error (e.g., show error message)
     }
   };
 
