@@ -13,7 +13,7 @@ export const UserProvider = ({ children }) => {
       const decodedUser = jwtDecode(token);
       setUser(decodedUser);
     }
-  }, []);
+  }, [setUser]);
 
   return (
     <UserContext.Provider value={{ user, setUser }}>
