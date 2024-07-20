@@ -9,7 +9,7 @@ import Navbar from './Controls/Navbar';
 import Footer from './Controls/Footer';
 import { LanguageProvider } from './LanguageContext';
 import { UserProvider, UserContext } from './context/UserContext';
-import jwtDecode from 'jwt-decode';
+import { jwtDecode } from 'jwt-decode';
 
 import PythonModules from './pages/modules/PythonModules';
 import PythonVariables from './pages/modules/PythonVariables';
