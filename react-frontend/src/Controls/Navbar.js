@@ -44,13 +44,12 @@ const Navbar = () => {
         <li><Link to="/About">About</Link></li>
         {user ? (
           <>
-            <li><span>Hello, {user.username}</span></li>
+            <li><span>Hello, {user.username || 'User'}</span></li>
             <li><button onClick={handleLogout}>Logout</button></li>
           </>
         ) : (
           <>
             <li><Link to="/Register">Sign Up</Link></li>
-            <li><Link to="/login">Login</Link></li>
           </>
         )}
       </ul>
@@ -59,4 +58,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
