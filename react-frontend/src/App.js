@@ -1,3 +1,5 @@
+// src/App.js
+
 import React, { useEffect, useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
@@ -33,14 +35,14 @@ import Login from './pages/Login';
 import Protected from './pages/Protected';
 import MyComponent from './components/MyComponent';
 
-const App = () => {
+function App() {
   const { setUser } = useContext(UserContext);
 
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
       const decodedUser = jwtDecode(token);
-      setUser(decodedUser);
+      setUser({ username: decodedUser.username });
     }
   }, [setUser]);
 
