@@ -1,4 +1,3 @@
-// src/Controls/Navbar.js
 import React, { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';
@@ -49,6 +48,7 @@ const Navbar = () => {
         ) : (
           <>
             <li><Link to="/Register">Sign Up</Link></li>
+            <li><Link to="/login">Login</Link></li>
           </>
         )}
       </ul>
