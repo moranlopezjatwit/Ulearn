@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useEffect, useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
@@ -7,9 +6,7 @@ import Home from './pages/Home';
 import Introduction from './pages/Introduction';
 import Navbar from './Controls/Navbar';
 import Footer from './Controls/Footer';
-import { LanguageProvider } from './LanguageContext';
-import { UserProvider, UserContext } from './context/UserContext';
-import { jwtDecode } from 'jwt-decode';
+import { UserContext } from './context/UserContext';
 
 import PythonModules from './pages/modules/PythonModules';
 import PythonVariables from './pages/modules/PythonVariables';
@@ -35,7 +32,7 @@ import Protected from './pages/Protected';
 import MyComponent from './components/MyComponent';
 
 function App() {
-  const { setUser } = useContext(UserContext);
+  const { user } = useContext(UserContext);
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -43,42 +40,39 @@ function App() {
       const decodedUser = jwtDecode(token);
       setUser({ username: decodedUser.username });
     }
-  }, [setUser]);
+  }, []);
 
   return (
     <div>
-      <title>ULearn</title>
-      <UserProvider>
-        <LanguageProvider>
-          <Router>
-            <Routes>
-              <Route path="/" element={<Landing />} />
-              <Route path="/Home" element={<><Navbar /><Home /><Footer /></>} />
-              <Route path="/Introduction" element={<><Navbar /><Introduction /><Footer /></>} />
-              <Route path="/About" element={<><Navbar /><About /><Footer /></>} />
-              <Route path="/Python-Modules" element={<><Navbar /><PythonModules /><Footer /></>} />
-              <Route path="/Python-Variables" element={<><Navbar /><PythonVariables /><Footer /></>} />
-              <Route path="/Python-Loops" element={<><Navbar /><PythonLoops /><Footer /></>} />
-              <Route path="/Python-Functions" element={<><Navbar /><PythonFunctions /><Footer /></>} />
-              <Route path="/Java-Modules" element={<><Navbar /><JavaModules /><Footer /></>} />
-              <Route path="/Java-Variables" element={<><Navbar /><JavaVariables /><Footer /></>} />
-              <Route path="/Java-Loops" element={<><Navbar /><JavaLoops /><Footer /></>} />
-              <Route path="/Java-Functions" element={<><Navbar /><JavaFunctions /><Footer /></>} />
-              <Route path="/Cpp-Modules" element={<><Navbar /><CppModules /><Footer /></>} />
-              <Route path="/Cpp-Variables" element={<><Navbar /><CppVariables /><Footer /></>} />
-              <Route path="/Cpp-Loops" element={<><Navbar /><CppLoops /><Footer /></>} />
-              <Route path="/Cpp-Functions" element={<><Navbar /><CppFunctions /><Footer /></>} />
-              <Route path="/Signup" element={<><Navbar /><Signup /><Footer /></>} />
-              <Route path="/Register" element={<><Navbar /><Register /></>} />
-              <Route path="/login" element={<><Navbar /><Login /><Footer /></>} />
-              <Route path="/protected" element={<><Navbar /><Protected /><Footer /></>} />
-              <Route path="/my-component" element={<><Navbar /><MyComponent /><Footer /></>} />
-            </Routes>
-          </Router>
-        </LanguageProvider>
-      </UserProvider>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/Home" element={<><Home /><Footer /></>} />
+          <Route path="/Introduction" element={<><Introduction /><Footer /></>} />
+          <Route path="/About" element={<><About /><Footer /></>} />
+          <Route path="/Python-Modules" element={<><PythonModules /><Footer /></>} />
+          <Route path="/Python-Variables" element={<><PythonVariables /><Footer /></>} />
+          <Route path="/Python-Loops" element={<><PythonLoops /><Footer /></>} />
+          <Route path="/Python-Functions" element={<><PythonFunctions /><Footer /></>} />
+          <Route path="/Java-Modules" element={<><JavaModules /><Footer /></>} />
+          <Route path="/Java-Variables" element={<><JavaVariables /><Footer /></>} />
+          <Route path="/Java-Loops" element={<><JavaLoops /><Footer /></>} />
+          <Route path="/Java-Functions" element={<><JavaFunctions /><Footer /></>} />
+          <Route path="/Cpp-Modules" element={<><CppModules /><Footer /></>} />
+          <Route path="/Cpp-Variables" element={<><CppVariables /><Footer /></>} />
+          <Route path="/Cpp-Loops" element={<><CppLoops /><Footer /></>} />
+          <Route path="/Cpp-Functions" element={<><CppFunctions /><Footer /></>} />
+          <Route path="/Signup" element={<><Signup /><Footer /></>} />
+          <Route path="/Register" element={<><Register /></>} />
+          <Route path="/login" element={<><Login /><Footer /></>} />
+          <Route path="/protected" element={<><Protected /><Footer /></>} />
+          <Route path="/my-component" element={<><MyComponent /><Footer /></>} />
+        </Routes>
+      </Router>
     </div>
   );
 }
 
 export default App;
+
