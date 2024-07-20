@@ -47,9 +47,7 @@ function App() {
 
   return (
     <div>
-      <head>
-        <title>ULearn</title>
-      </head>
+      <title>ULearn</title>
       <UserProvider>
         <LanguageProvider>
           <Router>
