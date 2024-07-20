@@ -34,7 +34,7 @@ import Protected from './pages/Protected';
 import MyComponent from './components/MyComponent';
 
 function App() {
-  const { user } = useContext(UserContext);
+  const { setUser } = useContext(UserContext);
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -42,7 +42,7 @@ function App() {
       const decodedUser = jwtDecode(token);
       setUser({ username: decodedUser.username });
     }
-  }, []);
+  }, [setUser]);
 
   return (
     <div>
