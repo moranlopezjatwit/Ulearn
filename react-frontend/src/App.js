@@ -1,3 +1,4 @@
+// src/App.js
 import React, { useEffect, useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
@@ -7,8 +8,7 @@ import Introduction from './pages/Introduction';
 import Navbar from './Controls/Navbar';
 import Footer from './Controls/Footer';
 import { UserProvider, UserContext } from './context/UserContext';
-import { jwtDecode } from 'jwt-decode'; // Ensure this is the correct import statement
-
+import jwtDecode from 'jwt-decode';
 
 import PythonModules from './pages/modules/PythonModules';
 import PythonVariables from './pages/modules/PythonVariables';
@@ -45,36 +45,37 @@ function App() {
   }, [setUser]);
 
   return (
-    <div>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/Home" element={<><Home /><Footer /></>} />
-          <Route path="/Introduction" element={<><Introduction /><Footer /></>} />
-          <Route path="/About" element={<><About /><Footer /></>} />
-          <Route path="/Python-Modules" element={<><PythonModules /><Footer /></>} />
-          <Route path="/Python-Variables" element={<><PythonVariables /><Footer /></>} />
-          <Route path="/Python-Loops" element={<><PythonLoops /><Footer /></>} />
-          <Route path="/Python-Functions" element={<><PythonFunctions /><Footer /></>} />
-          <Route path="/Java-Modules" element={<><JavaModules /><Footer /></>} />
-          <Route path="/Java-Variables" element={<><JavaVariables /><Footer /></>} />
-          <Route path="/Java-Loops" element={<><JavaLoops /><Footer /></>} />
-          <Route path="/Java-Functions" element={<><JavaFunctions /><Footer /></>} />
-          <Route path="/Cpp-Modules" element={<><CppModules /><Footer /></>} />
-          <Route path="/Cpp-Variables" element={<><CppVariables /><Footer /></>} />
-          <Route path="/Cpp-Loops" element={<><CppLoops /><Footer /></>} />
-          <Route path="/Cpp-Functions" element={<><CppFunctions /><Footer /></>} />
-          <Route path="/Signup" element={<><Signup /><Footer /></>} />
-          <Route path="/Register" element={<><Register /></>} />
-          <Route path="/login" element={<><Login /><Footer /></>} />
-          <Route path="/protected" element={<><Protected /><Footer /></>} />
-          <Route path="/my-component" element={<><MyComponent /><Footer /></>} />
-        </Routes>
-      </Router>
-    </div>
+    <UserProvider>
+      <LanguageProvider>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/Home" element={<><Home /><Footer /></>} />
+            <Route path="/Introduction" element={<><Introduction /><Footer /></>} />
+            <Route path="/About" element={<><About /><Footer /></>} />
+            <Route path="/Python-Modules" element={<><PythonModules /><Footer /></>} />
+            <Route path="/Python-Variables" element={<><PythonVariables /><Footer /></>} />
+            <Route path="/Python-Loops" element={<><PythonLoops /><Footer /></>} />
+            <Route path="/Python-Functions" element={<><PythonFunctions /><Footer /></>} />
+            <Route path="/Java-Modules" element={<><JavaModules /><Footer /></>} />
+            <Route path="/Java-Variables" element={<><JavaVariables /><Footer /></>} />
+            <Route path="/Java-Loops" element={<><JavaLoops /><Footer /></>} />
+            <Route path="/Java-Functions" element={<><JavaFunctions /><Footer /></>} />
+            <Route path="/Cpp-Modules" element={<><CppModules /><Footer /></>} />
+            <Route path="/Cpp-Variables" element={<><CppVariables /><Footer /></>} />
+            <Route path="/Cpp-Loops" element={<><CppLoops /><Footer /></>} />
+            <Route path="/Cpp-Functions" element={<><CppFunctions /><Footer /></>} />
+            <Route path="/Signup" element={<><Signup /><Footer /></>} />
+            <Route path="/Register" element={<><Register /></>} />
+            <Route path="/login" element={<><Login /><Footer /></>} />
+            <Route path="/protected" element={<><Protected /><Footer /></>} />
+            <Route path="/my-component" element={<><MyComponent /><Footer /></>} />
+          </Routes>
+        </Router>
+      </LanguageProvider>
+    </UserProvider>
   );
 }
 
 export default App;
-
