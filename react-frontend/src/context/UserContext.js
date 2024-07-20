@@ -1,4 +1,3 @@
-// src/context/UserContext.js
 import React, { createContext, useState, useEffect } from 'react';
 import { jwtDecode } from 'jwt-decode';
 
@@ -11,9 +10,9 @@ export const UserProvider = ({ children }) => {
     const token = localStorage.getItem('token');
     if (token) {
       const decodedUser = jwtDecode(token);
-      setUser(decodedUser);
+      setUser({ username: decodedUser.username });
     }
-  }, [setUser]);
+  }, []);
 
   return (
     <UserContext.Provider value={{ user, setUser }}>
@@ -21,4 +20,3 @@ export const UserProvider = ({ children }) => {
     </UserContext.Provider>
   );
 };
-
