@@ -165,6 +165,7 @@ System.out.println(word1 + " " + word2 + "!");`}
                         <div class="Centered">
                             <div class="Bottom-buttons">
                             <a href="/Java-Modules"><button class="Lesson-transition">Prev</button></a>
+                            <a href="/Java-Vars-Test"><button class="Lesson-transition">Test Exercises</button></a>
                             <a href="/Java-Loops"><button class="Lesson-transition">Next</button></a>
                             </div>
                         </div>

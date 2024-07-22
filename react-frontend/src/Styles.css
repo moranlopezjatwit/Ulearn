@@ -336,7 +336,7 @@ p {
 
 .Bottom-buttons {
     display: flex;
-    gap: 50vw;
+    gap: 15em;
 }
 
 /*landing page div, applies to all landing page elements & used for setting background*/
@@ -1099,6 +1099,7 @@ h2 {
 
 /*CPP module page ends here */
 
+/*Var-type table for variable pages*/
 .Var-table {
     font-family: Arial, sans-serif;
     border-collapse: collapse;
@@ -1116,6 +1117,22 @@ td, th {
 .Var-table > tr {
     background: #eeeeee;
 }
+/*End var table*/
+
+
+/*Test Pages*/
+.Test-page {
+    max-width: 100%;
+    overflow: hidden;
+    background-color: #ededff;
+    min-height: 100vh;
+}
+
+.Test-page-center {
+
+}
+
+
 
 
 

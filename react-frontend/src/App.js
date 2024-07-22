@@ -8,16 +8,22 @@ import Navbar from './Controls/Navbar';
 import Footer from './Controls/Footer';
 import { LanguageProvider } from './LanguageContext';
 
+//Python Page Imports
 import PythonModules from './pages/modules/PythonModules';
 import PythonVariables from './pages/modules/PythonVariables';
 import PythonLoops from './pages/modules/PythonLoops';
 import PythonFunctions from './pages/modules/PythonFunctions';
 
+//Java Page Imports
 import JavaModules from './pages/modules/JavaModules';
 import JavaVariables from './pages/modules/JavaVariables';
+import JavaVarsTest from './pages/modules/JavaVarsTest';
 import JavaLoops from './pages/modules/JavaLoops';
+import JavaLoopsTest from './pages/modules/JavaLoopsTest';
 import JavaFunctions from './pages/modules/JavaFunctions';
+import JavaFunctionsTest from './pages/modules/JavaFunctionsTest';
 
+//C++ Page Imports
 import CppModules from './pages/modules/CppModules';
 import CppVariables from './pages/modules/CppVariables';
 import CppLoops from './pages/modules/CppLoops';
@@ -48,10 +54,14 @@ export default function App() {
             <Route path="/Python-Loops" element={<><Navbar /><PythonLoops /><Footer /></>} />
             <Route path="/Python-Functions" element={<><Navbar /><PythonFunctions /><Footer /></>} />
 
+            {/*Java Module Links*/}
             <Route path="/Java-Modules" element={<><Navbar /><JavaModules /><Footer /></>} />
-            <Route path="/Java-Variables" element={<><Navbar /><JavaVariables /><Footer /></>} />
-            <Route path="/Java-Loops" element={<><Navbar /><JavaLoops /><Footer /></>} />
-            <Route path="/Java-Functions" element={<><Navbar /><JavaFunctions /><Footer /></>} />
+                <Route path="/Java-Variables" element={<><Navbar /><JavaVariables /><Footer /></>} />
+                    <Route path="/Java-Vars-Test" element={<><Navbar /><JavaVarsTest /><Footer /></>} />
+                <Route path="/Java-Loops" element={<><Navbar /><JavaLoops /><Footer /></>} />
+                      <Route path="/Java-Loops-Test" element={<><Navbar /><JavaLoopsTest /><Footer /></>} />
+                <Route path="/Java-Functions" element={<><Navbar /><JavaFunctions /><Footer /></>} />
+                      <Route path="/Java-Functions-Test" element={<><Navbar /><JavaFunctionsTest /><Footer /></>} />
 
             <Route path="/Cpp-Modules" element={<><Navbar /><CppModules /><Footer /></>} />
             <Route path="/Cpp-Variables" element={<><Navbar /><CppVariables /><Footer /></>} />
