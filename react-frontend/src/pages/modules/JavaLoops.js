@@ -207,6 +207,7 @@ Apples Remaining: 5`}
                     <div class="Centered">
                         <div class="Bottom-buttons">
                             <a href="/Java-Variables"><button class="Lesson-transition">Prev</button></a>
+                            <a href="/Java-Loops-Test"><button class="Lesson-transition">Exercises</button></a>
                             <a href="/Java-Functions"><button class="Lesson-transition">Next</button></a>
                         </div>
                     </div>

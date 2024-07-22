@@ -2,12 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\react-frontend",
+    "\\react-frontend\\public",
     "\\react-frontend\\src",
     "\\react-frontend\\src\\Assets",
     "\\react-frontend\\src\\Controls",
     "\\react-frontend\\src\\pages",
     "\\react-frontend\\src\\pages\\modules"
   ],
-  "SelectedNode": "\\react-frontend\\src\\Assets",
+  "SelectedNode": "\\react-frontend\\src\\pages\\About.js",
   "PreviewInSolutionExplorer": false
 }
