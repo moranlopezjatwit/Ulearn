@@ -53,7 +53,6 @@ function App() {
   return (
     <div>
       <title>ULearn</title>
-      <LanguageProvider>
         <Router> 
           <Routes>
             <Route path="/" element={<Landing />} />
@@ -87,7 +86,6 @@ function App() {
             <Route path="/my-component" element={<><Navbar /><MyComponent /><Footer /></>} />
           </Routes>
         </Router>
-      </LanguageProvider>
     </div>
   );
 }

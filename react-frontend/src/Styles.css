@@ -254,6 +254,7 @@ code {
     .Example code {
         font-family: 'Courier New', Courier, monospace;
     }
+
 /*End Example Class Section*/
 .languages {
     align-content: start;
@@ -1124,14 +1125,81 @@ td, th {
 .Test-page {
     max-width: 100%;
     overflow: hidden;
-    background-color: #ededff;
-    min-height: 100vh;
+    background-color: #c0c4de;
+}
+
+.Test-sub-header {
+    font-family: "Inter", sans-serif;
+    padding-left: 20px;
+    font-style: oblique;
 }
 
 .Test-page-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Test-question-title {
+    font-family: "Inter", sans-serif;
+    padding-left: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.Test-return-button {
+    font-size: 10px;
+    cursor: pointer;
+    background: #0f1c74;
+    color: #ffffff;
+    border: 1px solid #111122;
+    font-family: "Inter", sans-serif;
+    padding: 4px 8px;
+    border-radius: 5px;
+    transition: all 0.1s;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.Test-return-button:hover {
+    background-color: #4f5cb4;
+    border: 1px solid #4f5cb4;
+}
+
+.Test-return-position {
 
 }
 
+.Test-answer-bar {
+    display: inline-flex;
+    padding-bottom: 25px;
+}
+
+.Test-answer {
+    background: #eeeeff;
+    margin-left: 10px;
+}
+
+.Test-answer-button {
+    background: #0f1c74;
+    height: 20px;
+    width: 40px;
+    font-size: 10px;
+    color: #ffffff;
+    border: 1px solid #111122;
+    font-family: "Inter", sans-serif;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+
+.Test-answer-button:hover {
+    background-color: #4f5cb4;
+    border: 1px solid #4f5cb4;
+}
+
+.Spacing {
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
 
 
@@ -1177,7 +1245,7 @@ td, th {
 }
 
 .register-container button:hover {
-  background-color: #218838;
+    background-color: #218838;
 }
 /*Register ends*/
 
