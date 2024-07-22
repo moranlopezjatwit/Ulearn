@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { register } from '../api';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { UserContext } from '../context/UserContext';
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -11,7 +11,9 @@ const Register = () => {
     role: 'user', // default role
   });
 
+  const { setUser } = useContext(UserContext);
   const { username, email, password, role } = formData;
+  const navigate = useNavigate();
 
   const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -22,10 +24,11 @@ const Register = () => {
     try {
       const res = await axios.post('http://localhost:5000/api/auth/register', userData);
       console.log(res.data);
-      // Handle successful registration (e.g., redirect, show message)
+      localStorage.setItem('token', res.data.token);
+      setUser({ username: res.data.user.username });
+      navigate('/Home');
     } catch (err) {
       console.error(err.response?.data || err.message);
-      // Handle error (e.g., show error message)
     }
   };
 

@@ -1,4 +1,5 @@
-import React from 'react';
+// src/App.js
+import React, { useEffect, useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import './Styles.css';
@@ -6,7 +7,8 @@ import Home from './pages/Home';
 import Introduction from './pages/Introduction';
 import Navbar from './Controls/Navbar';
 import Footer from './Controls/Footer';
-import { LanguageProvider } from './LanguageContext';
+import { UserContext } from './context/UserContext';
+import { jwtDecode } from 'jwt-decode';
 
 //Python Page Imports
 import PythonModules from './pages/modules/PythonModules';
@@ -37,7 +39,17 @@ import Login from './pages/Login';
 import Protected from './pages/Protected';
 import MyComponent from './components/MyComponent';
 
-export default function App() {
+function App() {
+  const { setUser } = useContext(UserContext);
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      const decodedUser = jwtDecode(token);
+      setUser({ username: decodedUser.username });
+    }
+  }, [setUser]);
+
   return (
     <div>
       <title>ULearn</title>
@@ -79,3 +91,5 @@ export default function App() {
     </div>
   );
 }
+
+export default App;
