@@ -164,6 +164,27 @@ code {
     border-radius: 5px;
 }
 
+.Side-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+    .Side-nav ul li {
+        margin: 10px 0;
+    }
+
+        .Side-nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-family: "Inter", sans-serif;
+        }
+
+            .Side-nav ul li a.active {
+                font-weight: bold;
+                color: #0f1c74;
+            }
+
+
 /*End Side Navbar section*/
 
 
