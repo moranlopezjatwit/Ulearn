@@ -3,28 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\modules\\CppFunctions.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-frontend\\src\\pages\\modules\\CppFunctions.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\modules\\JavaLoopsTest.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-frontend\\src\\pages\\modules\\JavaLoopsTest.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\modules\\JavaFunctionsTest.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-frontend\\src\\pages\\modules\\JavaFunctionsTest.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\App.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-frontend\\src\\App.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\Styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-frontend\\src\\Styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\modules\\JavaVarsTest.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-frontend\\src\\pages\\modules\\JavaVarsTest.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\Styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-frontend\\src\\Styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\modules\\JavaLoops.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-frontend\\src\\pages\\modules\\JavaLoops.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\modules\\JavaVariables.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -33,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\modules\\JavaFunctions.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-frontend\\src\\pages\\modules\\JavaFunctions.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\modules\\JavaModules.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:react-frontend\\src\\pages\\modules\\JavaModules.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,20 +34,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
+              "Title": "JavaLoops.js",
+              "DocumentMoniker": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\modules\\JavaLoops.js",
+              "RelativeDocumentMoniker": "react-frontend\\src\\pages\\modules\\JavaLoops.js",
+              "ToolTip": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\modules\\JavaLoops.js",
+              "RelativeToolTip": "react-frontend\\src\\pages\\modules\\JavaLoops.js",
+              "ViewState": "AQIAAMQAAAAAAAAAAAAAANEAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-22T20:54:14.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "JavaLoopsTest.js",
+              "DocumentMoniker": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\modules\\JavaLoopsTest.js",
+              "RelativeDocumentMoniker": "react-frontend\\src\\pages\\modules\\JavaLoopsTest.js",
+              "ToolTip": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\modules\\JavaLoopsTest.js",
+              "RelativeToolTip": "react-frontend\\src\\pages\\modules\\JavaLoopsTest.js",
+              "ViewState": "AQIAABcAAAAAAAAAAAAAwDYAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-22T15:13:43.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Styles.css",
               "DocumentMoniker": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\Styles.css",
               "RelativeDocumentMoniker": "react-frontend\\src\\Styles.css",
               "ToolTip": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\Styles.css",
               "RelativeToolTip": "react-frontend\\src\\Styles.css",
-              "ViewState": "AQIAAE0EAAAAAAAAAAAAAGcEAAAWAAAA",
+              "ViewState": "AQIAAF8EAAAAAAAAAAAuwHEEAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-06-13T19:04:09.949Z",
-              "IsPinned": true
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -74,81 +88,38 @@
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "JavaVarsTest.js",
               "DocumentMoniker": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\modules\\JavaVarsTest.js",
               "RelativeDocumentMoniker": "react-frontend\\src\\pages\\modules\\JavaVarsTest.js",
               "ToolTip": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\modules\\JavaVarsTest.js",
               "RelativeToolTip": "react-frontend\\src\\pages\\modules\\JavaVarsTest.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-07-22T15:13:31.575Z"
+              "WhenOpened": "2024-07-22T15:13:31.575Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "JavaVariables.js",
               "DocumentMoniker": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\modules\\JavaVariables.js",
               "RelativeDocumentMoniker": "react-frontend\\src\\pages\\modules\\JavaVariables.js",
               "ToolTip": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\modules\\JavaVariables.js",
               "RelativeToolTip": "react-frontend\\src\\pages\\modules\\JavaVariables.js",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAxwKcAAABmAAAA",
+              "ViewState": "AQIAAJQAAAAAAAAAAAAAAKcAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-07-22T15:47:09.243Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "App.js",
-              "DocumentMoniker": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\App.js",
-              "RelativeDocumentMoniker": "react-frontend\\src\\App.js",
-              "ToolTip": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\App.js",
-              "RelativeToolTip": "react-frontend\\src\\App.js",
-              "ViewState": "AQIAADEAAAAAAAAAAAAAAEoAAABKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-07-22T15:41:42.559Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "JavaFunctionsTest.js",
-              "DocumentMoniker": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\modules\\JavaFunctionsTest.js",
-              "RelativeDocumentMoniker": "react-frontend\\src\\pages\\modules\\JavaFunctionsTest.js",
-              "ToolTip": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\modules\\JavaFunctionsTest.js",
-              "RelativeToolTip": "react-frontend\\src\\pages\\modules\\JavaFunctionsTest.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-07-22T15:14:08.013Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "JavaLoopsTest.js",
-              "DocumentMoniker": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\modules\\JavaLoopsTest.js",
-              "RelativeDocumentMoniker": "react-frontend\\src\\pages\\modules\\JavaLoopsTest.js",
-              "ToolTip": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\modules\\JavaLoopsTest.js",
-              "RelativeToolTip": "react-frontend\\src\\pages\\modules\\JavaLoopsTest.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-07-22T15:13:43.559Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CppFunctions.js",
-              "DocumentMoniker": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\modules\\CppFunctions.js",
-              "RelativeDocumentMoniker": "react-frontend\\src\\pages\\modules\\CppFunctions.js",
-              "ToolTip": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\modules\\CppFunctions.js*",
-              "RelativeToolTip": "react-frontend\\src\\pages\\modules\\CppFunctions.js*",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAkwF8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-07-18T19:59:50.797Z",
+              "WhenOpened": "2024-07-22T15:47:09.243Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "JavaFunctions.js",
               "DocumentMoniker": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\modules\\JavaFunctions.js",
               "RelativeDocumentMoniker": "react-frontend\\src\\pages\\modules\\JavaFunctions.js",
@@ -157,18 +128,6 @@
               "ViewState": "AQIAAEgAAAAAAAAAAAAAAFgAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2024-07-18T21:29:15.83Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "JavaModules.js",
-              "DocumentMoniker": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\modules\\JavaModules.js",
-              "RelativeDocumentMoniker": "react-frontend\\src\\pages\\modules\\JavaModules.js",
-              "ToolTip": "C:\\Users\\norrisb1\\source\\repos\\Ulearn\\react-frontend\\src\\pages\\modules\\JavaModules.js",
-              "RelativeToolTip": "react-frontend\\src\\pages\\modules\\JavaModules.js",
-              "ViewState": "AQIAABYAAAAAAAAAAAAAACgAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-07-18T16:30:36.081Z"
             }
           ]
         }

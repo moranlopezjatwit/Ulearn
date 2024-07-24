@@ -95,6 +95,8 @@ public static void main(String[] args){
                     <div class="Centered">
                         <div class="Bottom-buttons">
                             <a href="/Java-Loops"><button class="Lesson-transition">Prev</button></a>
+                            <a href="/Java-Functions-Test"><button class="Lesson-transition">Exercises</button></a>
+                            <button class="Hidden-button"></button>
                         </div>
                     </div>
                 </div>

@@ -1003,6 +1003,10 @@ transition: 0.5s;
     }
 /*end lesson transition buttons*/
 
+.Hidden-button {
+    width: 60px;
+}
+
 .Java-lessons {
     margin-bottom: 10px;
     list-style-type: disc;

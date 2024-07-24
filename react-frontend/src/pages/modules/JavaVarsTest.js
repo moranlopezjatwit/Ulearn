@@ -51,7 +51,7 @@ System.out.println(val3);`}
                 <br />
                 <p class="Section-content">What is the output?</p>
                 <div class="Test-answer-bar">
-                    <input type="text" value="" class="Test-answer" id="jVar1" placeholder="Answer Here..." maxlength="8" minlength="1" />
+                    <input type="text" value="" class="Test-answer" id="jVar2" placeholder="Answer Here..." maxlength="8" minlength="1" />
                     <button id="tbutton" type="submit" class="Test-answer-button">Check</button>
                 </div>
 
@@ -77,7 +77,7 @@ System.out.println(bananas);`}
                 <br />
                 <p class="Section-content">What is the output?</p>
                 <div class="Test-answer-bar">
-                    <input type="text" value="" class="Test-answer" id="jVar1" placeholder="Answer Here..." maxlength="8" minlength="1" />
+                    <input type="text" value="" class="Test-answer" id="jVar3" placeholder="Answer Here..." maxlength="8" minlength="1" />
                     <button id="tbutton" type="submit" class="Test-answer-button">Check</button>
                 </div>
 

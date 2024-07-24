@@ -32,7 +32,7 @@ while(hour != 17) {
                 <br />
                 <p class="Section-content">How many times is "Not Hungry" printed?</p>
                 <div class="Test-answer-bar">
-                    <input type="text" value="" class="Test-answer" id="jVar1" placeholder="Answer Here..." maxlength="8" minlength="1" />
+                    <input type="text" value="" class="Test-answer" id="jLoop1" placeholder="Answer Here..." maxlength="8" minlength="1" />
                     <button id="tbutton" type="submit" class="Test-answer-button">Check</button>
                 </div>
                 <br />
@@ -60,7 +60,7 @@ console.out.println(forest);`}
                 <br />
                 <p class="Section-content">What is the output?</p>
                 <div class="Test-answer-bar">
-                    <input type="text" value="" class="Test-answer" id="jVar1" placeholder="Answer Here..." maxlength="8" minlength="1" />
+                    <input type="text" value="" class="Test-answer" id="jLoop2" placeholder="Answer Here..." maxlength="8" minlength="1" />
                     <button id="tbutton" type="submit" class="Test-answer-button">Check</button>
                 </div>
 
@@ -84,7 +84,7 @@ while(start < end) {
                 <br />
                 <p class="Section-content">How many characters are in the variable 'greeting' after execution?</p>
                 <div class="Test-answer-bar">
-                    <input type="text" value="" class="Test-answer" id="jVar1" placeholder="Answer Here..." maxlength="8" minlength="1" />
+                    <input type="text" value="" class="Test-answer" id="jLoop3" placeholder="Answer Here..." maxlength="8" minlength="1" />
                     <button id="tbutton" type="submit" class="Test-answer-button">Check</button>
                 </div>
 
