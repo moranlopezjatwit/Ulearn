@@ -8,9 +8,6 @@ export default function CppFunctions() {
             <CppSidenav />
             <div>
                 <h1 className="Section-header">C++ Functions</h1>
-                <p className="Section-content">
-                Cpp Functions
-                </p>
                 <br />
                 <p className="Section-content">Functions in C++ are blocks of code that can be reused to execute a specific operation. This is helpful for organizing
                     code and reducing time spent completing a program. Look at the example below to see the architecture of a C++ function.
@@ -93,6 +90,8 @@ true`}
                     <div class="Centered">
                         <div class="Bottom-buttons">
                             <a href="/Cpp-Loops"><button class="Lesson-transition">Prev</button></a>
+                            <a href="/Cpp-Functions-Test"><button class="Lesson-transition">Exercises</button></a>
+                            <button class="Hidden-button"></button>
                         </div>
                     </div>
                 </div>

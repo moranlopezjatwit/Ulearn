@@ -4,8 +4,8 @@ export default function JavaFunctionsTest() {
     return (
         <div class="App-container">
             <div class="Test-page">
-                <a href="/Java-Loops"><button class="Test-return-button">Back</button></a>
-                <h2 class="Section-header">Test Exercises: Conditions & Loops</h2>
+                <a href="/Java-Functions"><button class="Test-return-button">Back</button></a>
+                <h2 class="Section-header">Test Exercises: Functions</h2>
                 <p class="Test-sub-header">Read the code snippets and answer below</p>
                 <br />
                 <div className="Example">

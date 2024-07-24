@@ -5,7 +5,7 @@ export default function CppVarsTest() {
     return (
         <div class="App-container">
             <div class="Test-page">
-                <a href="/Java-Variables"><button class="Test-return-button">Back</button></a>
+                <a href="/Cpp-Variables"><button class="Test-return-button">Back</button></a>
                 <h2 class="Section-header">Test Exercises: Variables</h2>
                 <p class="Test-sub-header">Read the code snippets and answer below</p>
                 <br />
