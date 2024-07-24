@@ -13,23 +13,29 @@ import { jwtDecode } from 'jwt-decode';
 //Python Page Imports
 import PythonModules from './pages/modules/PythonModules';
 import PythonVariables from './pages/modules/PythonVariables';
+    //import PythonVarsTest from './pages/modules/PythonVarsTest';
 import PythonLoops from './pages/modules/PythonLoops';
+    //import PythonLoopsTest from './pages/modules/PythonLoopsTest';
 import PythonFunctions from './pages/modules/PythonFunctions';
+    //import PythonFunctionsTest from './pages/modules/PythonFunctionsTest';
 
 //Java Page Imports
 import JavaModules from './pages/modules/JavaModules';
 import JavaVariables from './pages/modules/JavaVariables';
-import JavaVarsTest from './pages/modules/JavaVarsTest';
+    import JavaVarsTest from './pages/modules/JavaVarsTest';
 import JavaLoops from './pages/modules/JavaLoops';
-import JavaLoopsTest from './pages/modules/JavaLoopsTest';
+    import JavaLoopsTest from './pages/modules/JavaLoopsTest';
 import JavaFunctions from './pages/modules/JavaFunctions';
-import JavaFunctionsTest from './pages/modules/JavaFunctionsTest';
+    import JavaFunctionsTest from './pages/modules/JavaFunctionsTest';
 
 //C++ Page Imports
 import CppModules from './pages/modules/CppModules';
 import CppVariables from './pages/modules/CppVariables';
+    import CppVarsTest from './pages/modules/CppVarsTest';
 import CppLoops from './pages/modules/CppLoops';
+    import CppLoopsTest from './pages/modules/CppLoopsTest';
 import CppFunctions from './pages/modules/CppFunctions';
+    import CppFunctionsTest from './pages/modules/CppFunctionsTest';
 
 import About from './pages/About';
 import Signup from './pages/Signup';
@@ -60,6 +66,7 @@ function App() {
             <Route path="/Introduction" element={<><Navbar /><Introduction /><Footer /></>} />
             <Route path="/About" element={<><Navbar /><About /><Footer /></>}/>
 
+            {/*Python Module Links*/}
             <Route path="/Python-Modules" element={<><Navbar /><PythonModules /><Footer /></>} />
             <Route path="/Python-Variables" element={<><Navbar /><PythonVariables /><Footer /></>} />
             <Route path="/Python-Loops" element={<><Navbar /><PythonLoops /><Footer /></>} />
@@ -68,16 +75,21 @@ function App() {
             {/*Java Module Links*/}
             <Route path="/Java-Modules" element={<><Navbar /><JavaModules /><Footer /></>} />
                 <Route path="/Java-Variables" element={<><Navbar /><JavaVariables /><Footer /></>} />
-                    <Route path="/Java-Vars-Test" element={<><Navbar /><JavaVarsTest /><Footer /></>} />
+                      <Route path="/Java-Vars-Test" element={<><Navbar /><JavaVarsTest /><Footer /></>} />
                 <Route path="/Java-Loops" element={<><Navbar /><JavaLoops /><Footer /></>} />
                       <Route path="/Java-Loops-Test" element={<><Navbar /><JavaLoopsTest /><Footer /></>} />
                 <Route path="/Java-Functions" element={<><Navbar /><JavaFunctions /><Footer /></>} />
                       <Route path="/Java-Functions-Test" element={<><Navbar /><JavaFunctionsTest /><Footer /></>} />
 
+            {/*Cpp Module Links*/}
             <Route path="/Cpp-Modules" element={<><Navbar /><CppModules /><Footer /></>} />
-            <Route path="/Cpp-Variables" element={<><Navbar /><CppVariables /><Footer /></>} />
-            <Route path="/Cpp-Loops" element={<><Navbar /><CppLoops /><Footer /></>} />
-            <Route path="/Cpp-Functions" element={<><Navbar /><CppFunctions /><Footer /></>} />
+                <Route path="/Cpp-Variables" element={<><Navbar /><CppVariables /><Footer /></>} />
+                      <Route path="/Cpp-Vars-Test" element={<><Navbar /><CppVarsTest /><Footer /></>} />
+                <Route path="/Cpp-Loops" element={<><Navbar /><CppLoops /><Footer /></>} />
+                      <Route path="/Cpp-Loops-Test" element={<><Navbar /><CppLoopsTest /><Footer /></>} />
+                <Route path="/Cpp-Functions" element={<><Navbar /><CppFunctions /><Footer /></>} />
+                      <Route path="/Cpp-Functions-Test" element={<><Navbar /><CppFunctionsTest /><Footer /></>} />
+
 
             <Route path="/Signup" element={<><Navbar /><Signup /><Footer /></>} />
             <Route path="/Register" element={<><Navbar /><Register /></>} />

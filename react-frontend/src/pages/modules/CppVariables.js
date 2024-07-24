@@ -164,6 +164,7 @@ std::cout << word3 << std::endl;`}
                     <div class="Centered">
                         <div class="Bottom-buttons">
                             <a href="/Cpp-Modules"><button class="Lesson-transition">Prev</button></a>
+                            <a href="/Cpp-vars-test"><button class="Lesson-transition">Exercises</button></a>
                             <a href="/Cpp-Loops"><button class="Lesson-transition">Next</button></a>
                         </div>
                     </div>

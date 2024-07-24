@@ -179,6 +179,7 @@ AAAAA`}
                     <div class="Centered">
                         <div class="Bottom-buttons">
                             <a href="/Cpp-Variables"><button class="Lesson-transition">Prev</button></a>
+                            <a href="/Cpp-Loops-Test"><button class="Lesson-transition">Exercises</button></a>
                             <a href="/Cpp-Functions"><button class="Lesson-transition">Next</button></a>
                         </div>
                     </div>
