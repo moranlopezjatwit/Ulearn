@@ -1,19 +1,17 @@
 /*
-// src/pages/Home.js
 import React, { useContext } from 'react';
 import { UserContext } from '../context/UserContext';
+import QRCodeGenerator from '../components/QRCodeGenerator';
 
-function Home() {
+const Home = () => {
   const { user } = useContext(UserContext);
 
   return (
     <div className="Homepage">
       <div className="Hero">
         <h1>Welcome to ULearn</h1>
-        {user && <p>Hello, {user.username}!</p>}
-        <p>
-          <em>Your personalized gateway to mastering computer science.</em>
-        </p>
+        <p><em>Your personalized gateway to mastering computer science.</em></p>
+        {user ? <p>Hello, {user.username}!</p> : <QRCodeGenerator url="http://localhost:3000/Register" />}
       </div>
       <br />
       <div className="Features">
