@@ -63,7 +63,7 @@ export default Navbar;
 import React, { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';
-import QRCodeComponent from '../components/QRCodeComponent';
+import QRCodeGenerator from '../components/QRCodeGenerator';
 import '../Styles.css';
 
 const Navbar = () => {
