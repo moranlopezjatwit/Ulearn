@@ -9,6 +9,7 @@ import Navbar from './Controls/Navbar';
 import Footer from './Controls/Footer';
 import { UserProvider, UserContext } from './context/UserContext';
 import { jwtDecode } from 'jwt-decode';
+import { LanguageProvider } from './context/LanguageContext';
 
 //Python Page Imports
 import PythonModules from './pages/modules/PythonModules';
