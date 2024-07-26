@@ -77,8 +77,8 @@ name = "Bob"
 age = 25
 
 # Printing variables
-print("Name:", name)
-print("Age:", age)`}
+print("Name: " + name)
+print("Age: " + age)`}
                         </code>
                     </pre>
                     <p>In this example:</p>
@@ -104,7 +104,7 @@ print("Sum:", sum)
 
 # Subtraction
 difference = num1 - num2
-print("Difference:", difference)`}
+print("Difference:" + difference)`}
                         </code>
                     </pre>
                     <p>In this example:</p>
@@ -140,6 +140,7 @@ print(message)`}
                         <div class="Centered">
                             <div class="Bottom-buttons">
                                 <a href="/Python-Modules"><button class="Lesson-transition">Prev</button></a>
+                                <a href="/Python-Vars-Test"><button class="Lesson-transition">Exercises</button></a>
                                 <a href="/Python-Loops"><button class="Lesson-transition">Next</button></a>
                             </div>
                         </div>

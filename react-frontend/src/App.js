@@ -13,11 +13,11 @@ import { jwtDecode } from 'jwt-decode';
 //Python Page Imports
 import PythonModules from './pages/modules/PythonModules';
 import PythonVariables from './pages/modules/PythonVariables';
-    //import PythonVarsTest from './pages/modules/PythonVarsTest';
+    import PythonVarsTest from './pages/modules/PythonVarsTest';
 import PythonLoops from './pages/modules/PythonLoops';
-    //import PythonLoopsTest from './pages/modules/PythonLoopsTest';
+    import PythonLoopsTest from './pages/modules/PythonLoopsTest';
 import PythonFunctions from './pages/modules/PythonFunctions';
-    //import PythonFunctionsTest from './pages/modules/PythonFunctionsTest';
+    import PythonFunctionsTest from './pages/modules/PythonFunctionsTest';
 
 //Java Page Imports
 import JavaModules from './pages/modules/JavaModules';
@@ -68,9 +68,13 @@ function App() {
 
             {/*Python Module Links*/}
             <Route path="/Python-Modules" element={<><Navbar /><PythonModules /><Footer /></>} />
-            <Route path="/Python-Variables" element={<><Navbar /><PythonVariables /><Footer /></>} />
-            <Route path="/Python-Loops" element={<><Navbar /><PythonLoops /><Footer /></>} />
-            <Route path="/Python-Functions" element={<><Navbar /><PythonFunctions /><Footer /></>} />
+                <Route path="/Python-Variables" element={<><Navbar /><PythonVariables /><Footer /></>} />
+                    <Route path="/Python-Vars-Test" element={<><Navbar /><PythonVarsTest /><Footer /></>} />
+                  <Route path="/Python-Loops" element={<><Navbar /><PythonLoops /><Footer /></>} />
+                    <Route path="/Python-Loops-Test" element={<><Navbar /><PythonLoopsTest /><Footer /></>} />
+                <Route path="/Python-Functions" element={<><Navbar /><PythonFunctions /><Footer /></>} />
+                    <Route path="/Python-Functions-Test" element={<><Navbar /><PythonFunctionsTest /><Footer /></>} />
+
 
             {/*Java Module Links*/}
             <Route path="/Java-Modules" element={<><Navbar /><JavaModules /><Footer /></>} />

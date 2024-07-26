@@ -57,7 +57,10 @@ print(result)`}
                     <div class="Centered-container">
                         <div class="Centered">
                             <div class="Bottom-buttons">
-                                <a href="/Python-Loops"><button class="Lesson-transition">Prev</button></a>                           
+                                <a href="/Python-Loops"><button class="Lesson-transition">Prev</button></a>         
+                                <a href="/Python-Functions-Test"><button class="Lesson-transition">Exercises</button></a>
+                                <button class="Hidden-button"></button>
+
                             </div>
                         </div>
                     </div>
