@@ -78,11 +78,8 @@ function Home() {
         <p>
           <em>Your personalized gateway to mastering computer science.</em>
         </p>
-        {user ? (
-          <p>Hello, {user.username}!</p>
-        ) : (
-          <QRCodeGenerator url="http://localhost:3000/Register" />
-        )}
+        {user && <p>Hello, {user.username}!</p>}
+        {!user && <QRCodeGenerator url="http://localhost:3000/Register" />}
       </div>
       <br />
       <div className="Features">
@@ -115,7 +112,6 @@ function Home() {
           </p>
         </div>
       </div>
-
       <div className="Testimonials">
         <h2>What Our Users Say</h2>
         <blockquote>
@@ -132,3 +128,4 @@ function Home() {
 }
 
 export default Home;
+
