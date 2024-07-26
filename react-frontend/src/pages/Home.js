@@ -61,6 +61,7 @@ const Home = () => {
 
 export default Home;
 */
+// src/pages/Home.js
 import React, { useContext } from 'react';
 import { UserContext } from '../context/UserContext';
 import QRCodeGenerator from '../components/QRCodeGenerator';
@@ -122,4 +123,5 @@ const Home = () => {
 }
 
 export default Home;
+
 
