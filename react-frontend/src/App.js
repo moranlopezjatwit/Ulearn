@@ -8,7 +8,7 @@ import Introduction from './pages/Introduction';
 import Navbar from './Controls/Navbar';
 import Footer from './Controls/Footer';
 import { UserProvider, UserContext } from './context/UserContext';
-import jwtDecode from 'jwt-decode';
+import { jwtDecode } from 'jwt-decode';
 import { LanguageProvider } from './LanguageContext';
 
 //Python Page Imports
