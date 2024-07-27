@@ -46,6 +46,16 @@ import Login from './pages/Login';
 import Protected from './pages/Protected';
 import MyComponent from './components/MyComponent';
 
+const fetchLocalIp = async () => {
+  try {
+    const response = await fetch('http://localhost:5000/getLocalIp');
+    const data = await response.json();
+    return data.ip;
+  } catch (error) {
+    console.error('Failed to fetch local IP:', error);
+  }
+};
+
 const App = () => {
   const { setUser } = useContext(UserContext);
   const [localIp, setLocalIp] = useState('localhost');
