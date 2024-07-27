@@ -3,7 +3,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import './Styles.css';
-import HomePage from './pages/Home'; // Ensure this import is correct
+import Home from './pages/Home'; // Ensure this import is correct
 import Introduction from './pages/Introduction';
 import Navbar from './Controls/Navbar';
 import Footer from './Controls/Footer';
