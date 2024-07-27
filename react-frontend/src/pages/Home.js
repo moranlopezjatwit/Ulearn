@@ -1,27 +1,9 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import { UserContext } from '../context/UserContext';
 import QRCodeGenerator from '../components/QRCodeGenerator';
 
-const Home = ({ localIp }) => {
+const HomePage = ({ localIp }) => {
   const { user } = useContext(UserContext);
-  const [localIp, setLocalIp] = useState('');
-
-  useEffect(() => {
-    const fetchLocalIp = async () => {
-      try {
-        const response = await fetch('http://localhost:5000/getLocalIp');
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        setLocalIp(data.ip);
-      } catch (error) {
-        console.error('Failed to fetch local IP:', error);
-      }
-    };
-
-    fetchLocalIp();
-  }, []);
 
   return (
     <div className="Homepage">
@@ -76,4 +58,4 @@ const Home = ({ localIp }) => {
   );
 };
 
-export default Home;
+export default HomePage;
