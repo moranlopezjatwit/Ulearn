@@ -1,6 +1,5 @@
 const express = require('express');
 const cors = require('cors');
-const internalIp = require('internal-ip');
 const authRoutes = require('./routes/auth'); // Make sure the path is correct
 const bodyParser = require('body-parser'); // Middleware to parse request bodies
 
