@@ -1,9 +1,9 @@
 const express = require('express');
-const internalIp = require('internal-ip');
 
 const app = express();
 
 app.get('/getLocalIp', async (req, res) => {
+  const internalIp = await import('internal-ip');
   const ip = await internalIp.v4();
   res.json({ ip });
 });
