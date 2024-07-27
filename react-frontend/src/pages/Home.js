@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { UserContext } from '../context/UserContext';
 import QRCodeGenerator from '../components/QRCodeGenerator';
 
-const Home = () => {
+const Home = ({ localIp }) => {
   const { user } = useContext(UserContext);
   const [localIp, setLocalIp] = useState('');
 
