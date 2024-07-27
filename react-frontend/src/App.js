@@ -56,24 +56,22 @@ const fetchLocalIp = async () => {
   }
 };
 
-const App = () => {
+function App() {
   const { setUser } = useContext(UserContext);
-  const [localIp, setLocalIp] = useState('localhost');
+  const [localIp, setLocalIp] = useState('');
 
   useEffect(() => {
-    const fetchLocalIp = async () => {
-      const response = await fetch('http://localhost:5000/getLocalIp');
-      const data = await response.json();
-      setLocalIp(data.ip);
-    };
-
-    fetchLocalIp();
-
     const token = localStorage.getItem('token');
     if (token) {
       const decodedUser = jwtDecode(token);
       setUser({ username: decodedUser.username });
     }
+
+    const getLocalIp = async () => {
+      const ip = await fetchLocalIp();
+      setLocalIp(ip);
+    };
+    getLocalIp();
   }, [setUser]);
   
   return (
