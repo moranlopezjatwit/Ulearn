@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+const React = require('react');
+const { QRCodeCanvas } = require('qrcode.react');
 
 const QRCodeComponent = () => {
   const [localIp, setLocalIp] = useState('');
