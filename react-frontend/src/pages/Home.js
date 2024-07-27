@@ -1,9 +1,8 @@
-// src/pages/Home.js
-import React, { useContext } from 'react';
-import { UserContext } from '../context/UserContext';
+import React, { useState, useContext } from 'react';
 import QRCodeGenerator from '../components/QRCodeGenerator';
+import { UserContext } from '../context/UserContext';
 
-const Home = ({ localIp }) => {
+const Home = () => {
   const { user } = useContext(UserContext);
 
   return (
@@ -11,7 +10,7 @@ const Home = ({ localIp }) => {
       <div className="Hero">
         <h1>Welcome to ULearn</h1>
         <p><em>Your personalized gateway to mastering computer science.</em></p>
-        {user ? <p>Hello, {user.username}!</p> : <QRCodeGenerator url={`http://${localIp}:3000/Register`} />}
+        {user ? <p>Hello, {user.username}!</p> : <QRCodeGenerator url="http://localhost:3000/Register" />}
       </div>
       <br />
       <div className="Features">
@@ -57,8 +56,6 @@ const Home = ({ localIp }) => {
       </div>
     </div>
   );
-};
+}
 
 export default Home;
-
-
