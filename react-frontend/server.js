@@ -1,11 +1,11 @@
-// server.js
-import express from 'express';
-import cors from 'cors';
-import internalIp from 'internal-ip';
-import authRoutes from './routes/auth';
-import bodyParser from 'body-parser';
+const express = require('express');
+const cors = require('cors');
+const internalIp = require('internal-ip');
+const authRoutes = require('./routes/auth'); // Make sure the path is correct
+const bodyParser = require('body-parser'); // Middleware to parse request bodies
 
 const app = express();
+
 app.use(cors());
 app.use(bodyParser.json());
 app.use('/api/auth', authRoutes);
