@@ -46,17 +46,26 @@ import Login from './pages/Login';
 import Protected from './pages/Protected';
 import MyComponent from './components/MyComponent';
 
-function App() {
+const App = () => {
   const { setUser } = useContext(UserContext);
+  const [localIp, setLocalIp] = useState('localhost');
 
   useEffect(() => {
+    const fetchLocalIp = async () => {
+      const response = await fetch('http://localhost:5000/getLocalIp');
+      const data = await response.json();
+      setLocalIp(data.ip);
+    };
+
+    fetchLocalIp();
+
     const token = localStorage.getItem('token');
     if (token) {
       const decodedUser = jwtDecode(token);
       setUser({ username: decodedUser.username });
     }
   }, [setUser]);
-
+  
   return (
     <UserProvider>
       <LanguageProvider>
