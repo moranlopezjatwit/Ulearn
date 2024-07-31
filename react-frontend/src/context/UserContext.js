@@ -1,10 +1,11 @@
 import React, { createContext, useState, useEffect } from 'react';
-import { jwtDecode } from 'jwt-decode';
+import { jwtDecode } from 'jwt-decode'; // Ensure this is the correct import for jwtDecode
 
 export const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [progress, setProgress] = useState([]);
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -15,7 +16,7 @@ export const UserProvider = ({ children }) => {
   }, []);
 
   return (
-    <UserContext.Provider value={{ user, setUser }}>
+    <UserContext.Provider value={{ user, setUser, progress, setProgress }}>
       {children}
     </UserContext.Provider>
   );
