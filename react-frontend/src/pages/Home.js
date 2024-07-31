@@ -1,9 +1,10 @@
+// src/pages/Home.js
 import React, { useContext } from 'react';
 import { UserContext } from '../context/UserContext';
 import QRCodeGenerator from '../components/QRCodeGenerator';
 
 const HomePage = ({ localIp }) => {
-  const { user } = useContext(UserContext);
+  const { user, progress } = useContext(UserContext);
 
   return (
     <div className="Homepage">
@@ -43,6 +44,16 @@ const HomePage = ({ localIp }) => {
           </p>
         </div>
       </div>
+      <div className="Progress">
+        <h2>Your Progress</h2>
+        {progress.map((p, index) => (
+          <div key={index}>
+            <h3>{p.module}</h3>
+            <p>Score: {p.score}</p>
+            <p>Last Accessed: {new Date(p.lastAccessed).toLocaleString()}</p>
+          </div>
+        ))}
+      </div>
       <div className="Testimonials">
         <h2>What Our Users Say</h2>
         <blockquote>
@@ -59,3 +70,4 @@ const HomePage = ({ localIp }) => {
 };
 
 export default HomePage;
+
