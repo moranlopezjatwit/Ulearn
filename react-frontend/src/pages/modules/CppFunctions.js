@@ -1,8 +1,28 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom'; // Import Link here
+import { UserContext } from '../../context/UserContext';
 import CppSidenav from '../../Controls/CppSidenav';
 
 export default function CppFunctions() {
+    const { user } = useContext(UserContext);
+
+    const handleCompleteLesson = async (score) => {
+        try {
+            const res = await axios.post('http://localhost:5000/api/progress/save', {
+                module: 'CppFunctions',
+                score,
+            }, {
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem('token')}`
+                }
+            });
+            console.log('Progress saved:', res.data);
+        } catch (error) {
+            console.error('Error saving progress:', error);
+        }
+    };
+
     return (
         <div className="cpp-functions"> {/* Replace id with className */}
             <CppSidenav />
@@ -86,12 +106,12 @@ true`}
                     reference it using the name <code>val</code>.
                 </p>
 
-                <div class="Centered-container">
-                    <div class="Centered">
-                        <div class="Bottom-buttons">
-                            <a href="/Cpp-Loops"><button class="Lesson-transition">Prev</button></a>
-                            <a href="/Cpp-Functions-Test"><button class="Lesson-transition">Exercises</button></a>
-                            <button class="Hidden-button"></button>
+                <div className="Centered-container">
+                    <div className="Centered">
+                        <div className="Bottom-buttons">
+                            <Link to="/Cpp-Loops"><button className="Lesson-transition">Prev</button></Link>
+                            <button className="Lesson-transition" onClick={() => handleCompleteLesson(100)}>Complete Lesson</button>
+                            <Link to="/Cpp-Functions-Test"><button className="Lesson-transition">Exercises</button></Link>
                         </div>
                     </div>
                 </div>
