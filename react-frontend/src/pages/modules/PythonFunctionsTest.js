@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 
 export default function PythonFunctionsTest() {
     return (
@@ -27,8 +27,7 @@ print(isEven(12))`}
                 <br />
                 <p class="Section-content">What is the output?</p>
                 <div class="Test-answer-bar">
-                    <input type="text" value="" class="Test-answer" id="pFunc1" placeholder="Answer Here..." maxlength="8" minlength="1" />
-                    <button id="tbutton" type="submit" class="Test-answer-button">Check</button>
+                    <Q1 />
                 </div>
                 <br />
 
@@ -38,7 +37,7 @@ print(isEven(12))`}
                         <pre>
                             <code>
                                 {`def doubleIt(val)
-    val *= 2
+    return val * 2
 
 num1 = 4
 num2 = doubleIt(doubleIt(num))
@@ -52,8 +51,7 @@ print(num2)
                 <br />
                 <p class="Section-content">What is the output?</p>
                 <div class="Test-answer-bar">
-                    <input type="text" value="" class="Test-answer" id="pFunc2" placeholder="Answer Here..." maxlength="8" minlength="1" />
-                    <button id="tbutton" type="submit" class="Test-answer-button">Check</button>
+                    <Q2 />
                 </div>
                 <br />
 
@@ -76,8 +74,7 @@ print(equation(3,1,5))`}
                 <br />
                 <p class="Section-content">What is the output?</p>
                 <div class="Test-answer-bar">
-                    <input type="text" value="" class="Test-answer" id="pFunc3" placeholder="Answer Here..." maxlength="8" minlength="1" />
-                    <button id="tbutton" type="submit" class="Test-answer-button">Check</button>
+                    <Q3 />
                 </div>
                 <br />
 
@@ -90,6 +87,106 @@ print(equation(3,1,5))`}
                     </div>
                 </div>
             </div>
+        </div>
+    );
+}
+
+
+function Q1() {
+    const [inputValue, setInputValue] = useState('');
+    const [message, setMessage] = useState('');
+
+    //Event handler for input changes
+    const handleInputChange = (e) => {
+        setInputValue(e.target.value);
+    };
+
+    //Function to validate the input
+    const validateInput = () => {
+        if (inputValue === 'true') {
+            setMessage('Correct!');
+        } else {
+            setMessage('Answer is incorrect. Please try again.');
+        }
+    };
+
+    return (
+        <div>
+            <input
+                type="text"
+                value={inputValue}
+                onChange={handleInputChange}
+                placeholder="Enter value"
+                class="Test-answer"
+            />
+            <button class="Test-answer-button" onClick={validateInput}>Check</button>
+            <p>{message}</p>
+        </div>
+    );
+}
+
+function Q2() {
+    const [inputValue, setInputValue] = useState('');
+    const [message, setMessage] = useState('');
+
+    //Event handler for input changes
+    const handleInputChange = (e) => {
+        setInputValue(e.target.value);
+    };
+
+    //Function to validate the input
+    const validateInput = () => {
+        if (inputValue === '16') {
+            setMessage('Correct!');
+        } else {
+            setMessage('Answer is incorrect. Please try again.');
+        }
+    };
+
+    return (
+        <div>
+            <input
+                type="text"
+                value={inputValue}
+                onChange={handleInputChange}
+                placeholder="Enter value"
+                class="Test-answer"
+            />
+            <button class="Test-answer-button" onClick={validateInput}>Check</button>
+            <p>{message}</p>
+        </div>
+    );
+}
+
+function Q3() {
+    const [inputValue, setInputValue] = useState('');
+    const [message, setMessage] = useState('');
+
+    //Event handler for input changes
+    const handleInputChange = (e) => {
+        setInputValue(e.target.value);
+    };
+
+    //Function to validate the input
+    const validateInput = () => {
+        if (inputValue === '15') {
+            setMessage('Correct!');
+        } else {
+            setMessage('Answer is incorrect. Please try again.');
+        }
+    };
+
+    return (
+        <div>
+            <input
+                type="text"
+                value={inputValue}
+                onChange={handleInputChange}
+                placeholder="Enter value"
+                class="Test-answer"
+            />
+            <button class="Test-answer-button" onClick={validateInput}>Check</button>
+            <p>{message}</p>
         </div>
     );
 }

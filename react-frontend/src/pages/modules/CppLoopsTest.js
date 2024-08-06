@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 
 export default function CppLoopsTest() {
     return (
@@ -13,7 +13,7 @@ export default function CppLoopsTest() {
                     <div class="Spacing">
                         <pre>
                             <code>
-                                {`bool hourOfDay = 16;
+                                {`int hourOfDay = 16;
 bool nighttime;
 
 if(hourOfDay > 20) {
@@ -31,8 +31,7 @@ std::cout<<nighttime<<std::endl;`}
                 <br />
                 <p class="Section-content">What is the output?</p>
                 <div class="Test-answer-bar">
-                    <input type="text" value="" class="Test-answer" id="CppLoop1" placeholder="Answer Here..." maxlength="8" minlength="1" />
-                    <button id="tbutton" type="submit" class="Test-answer-button">Check</button>
+                    <Q1 />
                 </div>
                 <br />
 
@@ -60,10 +59,9 @@ for(int i = 0; i < 100; i++) {
                     </div>
                 </div>
                 <br />
-                <p class="Section-content">What is the output?</p>
+                <p class="Section-content">What is the value of sandPile?</p>
                 <div class="Test-answer-bar">
-                    <input type="text" value="" class="Test-answer" id="CppLoop2" placeholder="Answer Here..." maxlength="8" minlength="1" />
-                    <button id="tbutton" type="submit" class="Test-answer-button">Check</button>
+                    <Q2 />
                 </div>
 
                 <div className="Example">
@@ -86,8 +84,7 @@ while(start < end) {
                 <br />
                 <p class="Section-content">How many characters are in the variable 'greeting' after execution?</p>
                 <div class="Test-answer-bar">
-                    <input type="text" value="" class="Test-answer" id="CppLoop3" placeholder="Answer Here..." maxlength="8" minlength="1" />
-                    <button id="tbutton" type="submit" class="Test-answer-button">Check</button>
+                    <Q3 />
                 </div>
 
                 <div class="Centered-container">
@@ -98,6 +95,105 @@ while(start < end) {
                     </div>
                 </div>
             </div>
+        </div>
+    );
+}
+
+function Q1() {
+    const [inputValue, setInputValue] = useState('');
+    const [message, setMessage] = useState('');
+
+    //Event handler for input changes
+    const handleInputChange = (e) => {
+        setInputValue(e.target.value);
+    };
+
+    //Function to validate the input
+    const validateInput = () => {
+        if (inputValue === 'false') {
+            setMessage('Correct!');
+        } else {
+            setMessage('Answer is incorrect. Please try again.');
+        }
+    };
+
+    return (
+        <div>
+            <input
+                type="text"
+                value={inputValue}
+                onChange={handleInputChange}
+                placeholder="Enter value"
+                class="Test-answer"
+            />
+            <button class="Test-answer-button" onClick={validateInput}>Check</button>
+            <p>{message}</p>
+        </div>
+    );
+}
+
+function Q2() {
+    const [inputValue, setInputValue] = useState('');
+    const [message, setMessage] = useState('');
+
+    //Event handler for input changes
+    const handleInputChange = (e) => {
+        setInputValue(e.target.value);
+    };
+
+    //Function to validate the input
+    const validateInput = () => {
+        if (inputValue === 'false') {
+            setMessage('Correct!');
+        } else {
+            setMessage('Answer is incorrect. Please try again.');
+        }
+    };
+
+    return (
+        <div>
+            <input
+                type="text"
+                value={inputValue}
+                onChange={handleInputChange}
+                placeholder="Enter value"
+                class="Test-answer"
+            />
+            <button class="Test-answer-button" onClick={validateInput}>Check</button>
+            <p>{message}</p>
+        </div>
+    );
+}
+
+function Q3() {
+    const [inputValue, setInputValue] = useState('');
+    const [message, setMessage] = useState('');
+
+    //Event handler for input changes
+    const handleInputChange = (e) => {
+        setInputValue(e.target.value);
+    };
+
+    //Function to validate the input
+    const validateInput = () => {
+        if (inputValue === '12') {
+            setMessage('Correct!');
+        } else {
+            setMessage('Answer is incorrect. Please try again.');
+        }
+    };
+
+    return (
+        <div>
+            <input
+                type="text"
+                value={inputValue}
+                onChange={handleInputChange}
+                placeholder="Enter value"
+                class="Test-answer"
+            />
+            <button class="Test-answer-button" onClick={validateInput}>Check</button>
+            <p>{message}</p>
         </div>
     );
 }

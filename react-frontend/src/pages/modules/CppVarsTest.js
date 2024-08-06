@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 
 export default function CppVarsTest() {
 
@@ -28,8 +28,7 @@ std::cout<<clothes<<std::endl;`}
                 <br />
                 <p class="Section-content">What is the output?</p>
                 <div class="Test-answer-bar">
-                    <input type="text" value="" class="Test-answer" id="CppVar1" placeholder="Answer Here..." maxlength="8" minlength="1" />
-                    <button id="tbutton" type="submit" class="Test-answer-button">Check</button>
+                    <Q1 />
                 </div>
                 <br />
 
@@ -51,8 +50,7 @@ std::cout<<fruits<<std::endl;`}
                 <br />
                 <p class="Section-content">What is the output?</p>
                 <div class="Test-answer-bar">
-                    <input type="text" value="" class="Test-answer" id="CppVar2" placeholder="Answer Here..." maxlength="8" minlength="1" />
-                    <button id="tbutton" type="submit" class="Test-answer-button">Check</button>
+                    <Q2 />
                 </div>
 
                 <div className="Example">
@@ -73,8 +71,7 @@ std::cout<<val4<<std::endl`}
                 <br />
                 <p class="Section-content">What is the output?</p>
                 <div class="Test-answer-bar">
-                    <input type="text" value="" class="Test-answer" id="CppVar3" placeholder="Answer Here..." maxlength="8" minlength="1" />
-                    <button id="tbutton" type="submit" class="Test-answer-button">Check</button>
+                    <Q3 />
                 </div>
 
 
@@ -92,23 +89,101 @@ std::cout<<val4<<std::endl`}
     );
 }
 
-/*
-//var declaration
-var ans1 = document.getElementById("jVar1");
+function Q1() {
+    const [inputValue, setInputValue] = useState('');
+    const [message, setMessage] = useState('');
 
-function readAnswer(elem, correctans) {
-    if (ans == "") {
-        document.getElementById(elem).placeholder.value = "Must Submit an Answer";
-    }
-    else {
-        var ans = document.getElementById(jVar1).value;
-        if (ans.value != correctans) {
-            //incorrect entry
+    //Event handler for input changes
+    const handleInputChange = (e) => {
+        setInputValue(e.target.value);
+    };
+
+    //Function to validate the input
+    const validateInput = () => {
+        if (inputValue === '65') {
+            setMessage('Correct!');
+        } else {
+            setMessage('Answer is incorrect. Please try again.');
         }
-        else {
-            //correct entry
-        }
-    }
-    ans1.placeholder = "TEST";
+    };
+
+    return (
+        <div>
+            <input
+                type="text"
+                value={inputValue}
+                onChange={handleInputChange}
+                placeholder="Enter value"
+                class="Test-answer"
+            />
+            <button class="Test-answer-button" onClick={validateInput}>Check</button>
+            <p>{message}</p>
+        </div>
+    );
 }
-*/
+
+function Q2() {
+    const [inputValue, setInputValue] = useState('');
+    const [message, setMessage] = useState('');
+
+    //Event handler for input changes
+    const handleInputChange = (e) => {
+        setInputValue(e.target.value);
+    };
+
+    //Function to validate the input
+    const validateInput = () => {
+        if (inputValue === '1216') {
+            setMessage('Correct!');
+        } else {
+            setMessage('Answer is incorrect. Please try again.');
+        }
+    };
+
+    return (
+        <div>
+            <input
+                type="text"
+                value={inputValue}
+                onChange={handleInputChange}
+                placeholder="Enter value"
+                class="Test-answer"
+            />
+            <button class="Test-answer-button" onClick={validateInput}>Check</button>
+            <p>{message}</p>
+        </div>
+    );
+}
+
+function Q3() {
+    const [inputValue, setInputValue] = useState('');
+    const [message, setMessage] = useState('');
+
+    //Event handler for input changes
+    const handleInputChange = (e) => {
+        setInputValue(e.target.value);
+    };
+
+    //Function to validate the input
+    const validateInput = () => {
+        if (inputValue === '54') {
+            setMessage('Correct!');
+        } else {
+            setMessage('Answer is incorrect. Please try again.');
+        }
+    };
+
+    return (
+        <div>
+            <input
+                type="text"
+                value={inputValue}
+                onChange={handleInputChange}
+                placeholder="Enter value"
+                class="Test-answer"
+            />
+            <button class="Test-answer-button" onClick={validateInput}>Check</button>
+            <p>{message}</p>
+        </div>
+    );
+}

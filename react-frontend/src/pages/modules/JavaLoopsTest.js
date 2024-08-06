@@ -174,7 +174,7 @@ function Q3() {
 
     //Function to validate the input
     const validateInput = () => {
-        if (inputValue === '13') {
+        if (inputValue === '12') {
             setMessage('Correct!');
         } else {
             setMessage('Answer is incorrect. Please try again.');
