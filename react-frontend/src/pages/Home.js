@@ -1,18 +1,17 @@
 // src/pages/Home.js
 import React, { useContext } from 'react';
 import { UserContext } from '../context/UserContext';
+import QRCodeGenerator from '../components/QRCodeGenerator';
 
-function Home() {
-  const { user } = useContext(UserContext);
+const HomePage = ({ localIp }) => {
+  const { user, progress } = useContext(UserContext);
 
   return (
     <div className="Homepage">
       <div className="Hero">
         <h1>Welcome to ULearn</h1>
-        {user && <p>Hello, {user.username}!</p>}
-        <p>
-          <em>Your personalized gateway to mastering computer science.</em>
-        </p>
+        <p><em>Your personalized gateway to mastering computer science.</em></p>
+        {user ? <p>Hello, {user.username}!</p> : <QRCodeGenerator url={`http://${localIp}:3000/Register`} />}
       </div>
       <br />
       <div className="Features">
@@ -45,6 +44,16 @@ function Home() {
           </p>
         </div>
       </div>
+      <div className="Progress">
+        <h2>Your Progress</h2>
+        {progress.map((p, index) => (
+          <div key={index}>
+            <h3>{p.module}</h3>
+            <p>Score: {p.score}</p>
+            <p>Last Accessed: {new Date(p.lastAccessed).toLocaleString()}</p>
+          </div>
+        ))}
+      </div>
       <div className="Testimonials">
         <h2>What Our Users Say</h2>
         <blockquote>
@@ -58,6 +67,7 @@ function Home() {
       </div>
     </div>
   );
-}
+};
 
-export default Home;
+export default HomePage;
+

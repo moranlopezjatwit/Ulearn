@@ -1,41 +1,42 @@
 // src/App.js
-import React, { useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import './Styles.css';
-import Home from './pages/Home';
+import Home from './pages/Home'; // Ensure this import is correct
 import Introduction from './pages/Introduction';
 import Navbar from './Controls/Navbar';
 import Footer from './Controls/Footer';
-import { UserContext } from './context/UserContext';
+import { UserProvider, UserContext } from './context/UserContext';
 import { jwtDecode } from 'jwt-decode';
+import { LanguageProvider } from './LanguageContext';
 
 //Python Page Imports
 import PythonModules from './pages/modules/PythonModules';
 import PythonVariables from './pages/modules/PythonVariables';
-    import PythonVarsTest from './pages/modules/PythonVarsTest';
+import PythonVarsTest from './pages/modules/PythonVarsTest';
 import PythonLoops from './pages/modules/PythonLoops';
-    import PythonLoopsTest from './pages/modules/PythonLoopsTest';
+import PythonLoopsTest from './pages/modules/PythonLoopsTest';
 import PythonFunctions from './pages/modules/PythonFunctions';
-    import PythonFunctionsTest from './pages/modules/PythonFunctionsTest';
+import PythonFunctionsTest from './pages/modules/PythonFunctionsTest';
 
 //Java Page Imports
 import JavaModules from './pages/modules/JavaModules';
 import JavaVariables from './pages/modules/JavaVariables';
-    import JavaVarsTest from './pages/modules/JavaVarsTest';
+import JavaVarsTest from './pages/modules/JavaVarsTest';
 import JavaLoops from './pages/modules/JavaLoops';
-    import JavaLoopsTest from './pages/modules/JavaLoopsTest';
+import JavaLoopsTest from './pages/modules/JavaLoopsTest';
 import JavaFunctions from './pages/modules/JavaFunctions';
-    import JavaFunctionsTest from './pages/modules/JavaFunctionsTest';
+import JavaFunctionsTest from './pages/modules/JavaFunctionsTest';
 
 //C++ Page Imports
 import CppModules from './pages/modules/CppModules';
 import CppVariables from './pages/modules/CppVariables';
-    import CppVarsTest from './pages/modules/CppVarsTest';
+import CppVarsTest from './pages/modules/CppVarsTest';
 import CppLoops from './pages/modules/CppLoops';
-    import CppLoopsTest from './pages/modules/CppLoopsTest';
+import CppLoopsTest from './pages/modules/CppLoopsTest';
 import CppFunctions from './pages/modules/CppFunctions';
-    import CppFunctionsTest from './pages/modules/CppFunctionsTest';
+import CppFunctionsTest from './pages/modules/CppFunctionsTest';
 
 import About from './pages/About';
 import Signup from './pages/Signup';
@@ -45,8 +46,19 @@ import Login from './pages/Login';
 import Protected from './pages/Protected';
 import MyComponent from './components/MyComponent';
 
+const fetchLocalIp = async () => {
+  try {
+    const response = await fetch('http://localhost:5000/getLocalIp');
+    const data = await response.json();
+    return data.ip;
+  } catch (error) {
+    console.error('Failed to fetch local IP:', error);
+  }
+};
+
 function App() {
   const { setUser } = useContext(UserContext);
+  const [localIp, setLocalIp] = useState('');
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -54,55 +66,63 @@ function App() {
       const decodedUser = jwtDecode(token);
       setUser({ username: decodedUser.username });
     }
+
+    const getLocalIp = async () => {
+      const ip = await fetchLocalIp();
+      setLocalIp(ip);
+    };
+    getLocalIp();
   }, [setUser]);
-
+  
   return (
-    <div>
-      <title>ULearn</title>
-        <Router> 
-          <Routes>
-            <Route path="/" element={<Landing />} />
-            <Route path="/Home" element={<><Navbar /><Home /><Footer /></>} />
-            <Route path="/Introduction" element={<><Navbar /><Introduction /><Footer /></>} />
-            <Route path="/About" element={<><Navbar /><About /><Footer /></>}/>
+    <UserProvider>
+      <LanguageProvider>
+        <div>
+          <title>ULearn</title>
+          <Router>
+            <Routes>
+              <Route path="/" element={<Landing />} />
+              <Route path="/Home" element={<><Navbar /><Home /><Footer /></>} />
+              <Route path="/Introduction" element={<><Navbar /><Introduction /><Footer /></>} />
+              <Route path="/About" element={<><Navbar /><About /><Footer /></>} />
 
-            {/*Python Module Links*/}
-            <Route path="/Python-Modules" element={<><Navbar /><PythonModules /><Footer /></>} />
-                <Route path="/Python-Variables" element={<><Navbar /><PythonVariables /><Footer /></>} />
-                    <Route path="/Python-Vars-Test" element={<><Navbar /><PythonVarsTest /><Footer /></>} />
-                  <Route path="/Python-Loops" element={<><Navbar /><PythonLoops /><Footer /></>} />
-                    <Route path="/Python-Loops-Test" element={<><Navbar /><PythonLoopsTest /><Footer /></>} />
-                <Route path="/Python-Functions" element={<><Navbar /><PythonFunctions /><Footer /></>} />
-                    <Route path="/Python-Functions-Test" element={<><Navbar /><PythonFunctionsTest /><Footer /></>} />
+              {/*Python Module Links*/}
+              <Route path="/Python-Modules" element={<><Navbar /><PythonModules /><Footer /></>} />
+              <Route path="/Python-Variables" element={<><Navbar /><PythonVariables /><Footer /></>} />
+              <Route path="/Python-Vars-Test" element={<><Navbar /><PythonVarsTest /><Footer /></>} />
+              <Route path="/Python-Loops" element={<><Navbar /><PythonLoops /><Footer /></>} />
+              <Route path="/Python-Loops-Test" element={<><Navbar /><PythonLoopsTest /><Footer /></>} />
+              <Route path="/Python-Functions" element={<><Navbar /><PythonFunctions /><Footer /></>} />
+              <Route path="/Python-Functions-Test" element={<><Navbar /><PythonFunctionsTest /><Footer /></>} />
 
+              {/*Java Module Links*/}
+              <Route path="/Java-Modules" element={<><Navbar /><JavaModules /><Footer /></>} />
+              <Route path="/Java-Variables" element={<><Navbar /><JavaVariables /><Footer /></>} />
+              <Route path="/Java-Vars-Test" element={<><Navbar /><JavaVarsTest /><Footer /></>} />
+              <Route path="/Java-Loops" element={<><Navbar /><JavaLoops /><Footer /></>} />
+              <Route path="/Java-Loops-Test" element={<><Navbar /><JavaLoopsTest /><Footer /></>} />
+              <Route path="/Java-Functions" element={<><Navbar /><JavaFunctions /><Footer /></>} />
+              <Route path="/Java-Functions-Test" element={<><Navbar /><JavaFunctionsTest /><Footer /></>} />
 
-            {/*Java Module Links*/}
-            <Route path="/Java-Modules" element={<><Navbar /><JavaModules /><Footer /></>} />
-                <Route path="/Java-Variables" element={<><Navbar /><JavaVariables /><Footer /></>} />
-                      <Route path="/Java-Vars-Test" element={<><Navbar /><JavaVarsTest /><Footer /></>} />
-                <Route path="/Java-Loops" element={<><Navbar /><JavaLoops /><Footer /></>} />
-                      <Route path="/Java-Loops-Test" element={<><Navbar /><JavaLoopsTest /><Footer /></>} />
-                <Route path="/Java-Functions" element={<><Navbar /><JavaFunctions /><Footer /></>} />
-                      <Route path="/Java-Functions-Test" element={<><Navbar /><JavaFunctionsTest /><Footer /></>} />
+              {/*Cpp Module Links*/}
+              <Route path="/Cpp-Modules" element={<><Navbar /><CppModules /><Footer /></>} />
+              <Route path="/Cpp-Variables" element={<><Navbar /><CppVariables /><Footer /></>} />
+              <Route path="/Cpp-Vars-Test" element={<><Navbar /><CppVarsTest /><Footer /></>} />
+              <Route path="/Cpp-Loops" element={<><Navbar /><CppLoops /><Footer /></>} />
+              <Route path="/Cpp-Loops-Test" element={<><Navbar /><CppLoopsTest /><Footer /></>} />
+              <Route path="/Cpp-Functions" element={<><Navbar /><CppFunctions /><Footer /></>} />
+              <Route path="/Cpp-Functions-Test" element={<><Navbar /><CppFunctionsTest /><Footer /></>} />
 
-            {/*Cpp Module Links*/}
-            <Route path="/Cpp-Modules" element={<><Navbar /><CppModules /><Footer /></>} />
-                <Route path="/Cpp-Variables" element={<><Navbar /><CppVariables /><Footer /></>} />
-                      <Route path="/Cpp-Vars-Test" element={<><Navbar /><CppVarsTest /><Footer /></>} />
-                <Route path="/Cpp-Loops" element={<><Navbar /><CppLoops /><Footer /></>} />
-                      <Route path="/Cpp-Loops-Test" element={<><Navbar /><CppLoopsTest /><Footer /></>} />
-                <Route path="/Cpp-Functions" element={<><Navbar /><CppFunctions /><Footer /></>} />
-                      <Route path="/Cpp-Functions-Test" element={<><Navbar /><CppFunctionsTest /><Footer /></>} />
-
-
-            <Route path="/Signup" element={<><Navbar /><Signup /><Footer /></>} />
-            <Route path="/Register" element={<><Navbar /><Register /></>} />
-            <Route path="/login" element={<><Navbar /><Login /><Footer /></>} />
-            <Route path="/protected" element={<><Navbar /><Protected /><Footer /></>} />
-            <Route path="/my-component" element={<><Navbar /><MyComponent /><Footer /></>} />
-          </Routes>
-        </Router>
-    </div>
+              <Route path="/Signup" element={<><Navbar /><Signup /><Footer /></>} />
+              <Route path="/Register" element={<><Navbar /><Register /></>} />
+              <Route path="/login" element={<><Navbar /><Login /><Footer /></>} />
+              <Route path="/protected" element={<><Navbar /><Protected /><Footer /></>} />
+              <Route path="/my-component" element={<><Navbar /><MyComponent /><Footer /></>} />
+            </Routes>
+          </Router>
+        </div>
+      </LanguageProvider>
+    </UserProvider>
   );
 }
 
