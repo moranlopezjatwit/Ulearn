@@ -10,6 +10,7 @@ import Footer from './Controls/Footer';
 import { UserProvider, UserContext } from './context/UserContext';
 import { jwtDecode } from 'jwt-decode';
 import { LanguageProvider } from './LanguageContext';
+import Login from './pages/Login';
 
 //Python Page Imports
 import PythonModules from './pages/modules/PythonModules';
@@ -42,7 +43,6 @@ import About from './pages/About';
 import Signup from './pages/Signup';
 import Landing from './pages/Landing';
 import Register from './pages/Register';
-import Login from './pages/Login';
 import Protected from './pages/Protected';
 import MyComponent from './components/MyComponent';
 
