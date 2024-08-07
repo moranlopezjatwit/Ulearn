@@ -1,12 +1,11 @@
-import React, { useState, useContext } from 'react';
-import axios from 'axios';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../context/UserContext';
 import CppSidenav from '../../Controls/CppSidenav';
+import axios from 'axios';
 
 export default function CppFunctions() {
-    const { user } = useContext(UserContext);
-    const [score, setScore] = useState(null); // State to hold the score
+    const { user, progress, setProgress } = useContext(UserContext);
 
     const handleCompleteLesson = async (score) => {
         try {
@@ -18,12 +17,16 @@ export default function CppFunctions() {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }
             });
-            console.log('Progress saved:', res.data);
-            setScore(score); // Set the score in the state
+            setProgress((prevProgress) => [
+                ...prevProgress.filter(p => p.module !== 'CppFunctions'),
+                { module: 'CppFunctions', score, lastAccessed: new Date() }
+            ]);
         } catch (error) {
             console.error('Error saving progress:', error);
         }
     };
+
+    const cppProgress = progress.find(p => p.module === 'CppFunctions');
 
     return (
         <div className="cpp-functions">
@@ -41,7 +44,7 @@ export default function CppFunctions() {
                         <code>
                             {`//Function creation
 void greetWorld(){
-std::cout << "Hello World!" << std::endl;
+    std::cout << "Hello World!" << std::endl;
 }
 
 //Function call
@@ -59,10 +62,10 @@ Hello World!`}
                 </div>
                 <br />
                 <p className="Section-content">
-                    Let's break down greetWorld into the components that make it up. first is the <div className="Bold-word">return type</div>, which defines what
+                    Let's break down greetWorld into the components that make it up. First is the <span className="Bold-word">return type</span>, which defines what
                     data type the function will return when it finishes executing. This function's return type is <code>void</code>, which means it executes its code
-                    without returning any data. Second are the <div className="Bold-word">parameters</div> of the function. This is data that gets sent into the function
-                    for execution purposes, and it goes in the parenthesis. In this example, our function has no parameters, so the parentheses remain empty. We
+                    without returning any data. Second are the <span className="Bold-word">parameters</span> of the function. This is data that gets sent into the function
+                    for execution purposes, and it goes in the parentheses. In this example, our function has no parameters, so the parentheses remain empty. We
                     call greetWorld twice at the bottom of the snippet by typing its name with parentheses at the end. When it executes, it prints the line <code>Hello World!</code> to the console.
                 </p>
                 <br />
@@ -82,7 +85,7 @@ static bool isValTen(int val){
         return false;
     }
 }
-    
+
 //variable declaration
 int num1 = 7;
 int num2 = 10;
@@ -102,12 +105,18 @@ true`}
                 </div>
                 <br />
                 <p className="Section-content">
-                    There are two main difference between this example and the last one: first, our return type is int instead of void, meaning the function
-                    will return an integer when it finishes executing. Second, this function has a parameter where the last one had none. This can be seen in the
+                    There are two main differences between this example and the last one: first, our return type is <code>bool</code> instead of void, meaning the function
+                    will return a boolean value when it finishes executing. Second, this function has a parameter where the last one had none. This can be seen in the
                     parentheses, where it reads <code>int val</code>. This means the function needs an integer as an input, and any operations that use the input can
                     reference it using the name <code>val</code>.
                 </p>
-
+                {cppProgress && (
+                    <div className="Section-content">
+                        <h2>Your Progress</h2>
+                        <p>Score: {cppProgress.score}</p>
+                        <p>Last Accessed: {new Date(cppProgress.lastAccessed).toLocaleString()}</p>
+                    </div>
+                )}
                 <div className="Centered-container">
                     <div className="Centered">
                         <div className="Bottom-buttons">
@@ -115,14 +124,10 @@ true`}
                             <button className="Lesson-transition" onClick={() => handleCompleteLesson(100)}>Complete Lesson</button>
                             <Link to="/Cpp-Functions-Test"><button className="Lesson-transition">Exercises</button></Link>
                         </div>
-                        {score !== null && (
-                            <div className="Score-display">
-                                <p>Your Score: {score}</p>
-                            </div>
-                        )}
                     </div>
                 </div>
             </div>
         </div>
     );
 }
+
