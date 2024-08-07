@@ -1,8 +1,41 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { UserContext } from '../../context/UserContext';
 import JavaSidenav from '../../Controls/JavaSidenav';
 
 export default function PythonFunctions() {
+    const { user, setProgress } = useContext(UserContext);
+
+    useEffect(() => {
+        return () => {
+            if (user) {
+                saveProgress();
+            }
+        };
+    }, []);
+
+    const saveProgress = async () => {
+        const moduleScore = 50; // Example score for this module
+
+        try {
+            const res = await axios.post('http://localhost:5000/api/progress/save', {
+                module: 'PythonFunctions',
+                score: moduleScore,
+            }, {
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem('token')}`
+                }
+            });
+            setProgress((prevProgress) => [
+                ...prevProgress.filter(p => p.module !== 'PythonFunctions'),
+                { module: 'PythonFunctions', score: moduleScore, lastAccessed: new Date() }
+            ]);
+        } catch (error) {
+            console.error('Error saving progress:', error);
+        }
+    };
+
     return (
         <div className="java-functions"> {/* Replace id with className */}
             <JavaSidenav />
@@ -91,12 +124,12 @@ public static void main(String[] args){
                     reference it using the name <code>val</code>.
                 </p>
                 <br />
-                <div class="Centered-container">
-                    <div class="Centered">
-                        <div class="Bottom-buttons">
-                            <a href="/Java-Loops"><button class="Lesson-transition">Prev</button></a>
-                            <a href="/Java-Functions-Test"><button class="Lesson-transition">Exercises</button></a>
-                            <button class="Hidden-button"></button>
+                <div className="Centered-container">
+                    <div className="Centered">
+                        <div className="Bottom-buttons">
+                            <Link to="/Java-Loops"><button className="Lesson-transition">Prev</button></Link>
+                            <Link to="/Java-Functions-Test"><button className="Lesson-transition">Exercises</button></Link>
+                            <button className="Hidden-button"></button>
                         </div>
                     </div>
                 </div>
