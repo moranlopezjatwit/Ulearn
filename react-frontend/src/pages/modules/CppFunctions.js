@@ -32,22 +32,19 @@ export default function CppFunctions() {
   const totalScore = progress.reduce((acc, curr) => acc + curr.score, 0);
 
   return (
-    <div className="cpp-functions">
+    <div className="cpp-functions"> {/* Replace id with className */}
       <CppSidenav />
-      <div>
+      <div className="content-container">
         <h1 className="Section-header">C++ Functions</h1>
         <br />
-        <p className="Section-content">
-          Functions in C++ are blocks of code that can be reused to execute a specific operation...
-        </p>
+        <p className="Section-content">Functions in C++ are blocks of code that can be reused to execute a specific operation...</p>
         <br />
         <div className="Example">
           <h2>Example 1: Function Creation and calling</h2>
           <pre>
-            <code>
-              {`//Function creation
+            <code>{`//Function creation
 void greetWorld(){
-std::cout << "Hello World!" << std::endl;
+  std::cout << "Hello World!" << std::endl;
 }
 
 //Function call
@@ -57,34 +54,29 @@ greetWorld();`}
           </pre>
           <h2>Result:</h2>
           <pre>
-            <code>
-              {`Hello World!
+            <code>{`Hello World!
 Hello World!`}
             </code>
           </pre>
         </div>
         <br />
         <p className="Section-content">
-          Let's break down greetWorld into the components that make it up...
+          Let's break down greetWorld into the components that make it up. First is the <span className="Bold-word">return type</span>, which defines what data type the function will return when it finishes executing...
         </p>
         <br />
-        <p className="Section-content">
-          Now let's look at a function that has parameters and returns data.
-        </p>
+        <p className="Section-content">Now let's look at a function that has parameters and returns data.</p>
         <div className="Example">
           <h2>Example 2: Function Types and Parameters</h2>
           <pre>
-            <code>
-              {`//Function Creation
+            <code>{`//Function Creation
 static bool isValTen(int val){
-    if(val == 10) {
-        return true;
-    }
-    else {
-        return false;
-    }
+  if(val == 10) {
+    return true;
+  } else {
+    return false;
+  }
 }
-    
+
 //variable declaration
 int num1 = 7;
 int num2 = 10;
@@ -96,16 +88,13 @@ std::cout << isValTen(num2) << std::endl;`}
           </pre>
           <h2>Result:</h2>
           <pre>
-            <code>
-              {`false
+            <code>{`false
 true`}
             </code>
           </pre>
         </div>
         <br />
-        <p className="Section-content">
-          There are two main differences between this example and the last one...
-        </p>
+        <p className="Section-content">There are two main differences between this example and the last one...</p>
 
         <div className="Centered-container">
           <div className="Centered">
