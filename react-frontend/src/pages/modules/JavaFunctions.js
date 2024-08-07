@@ -136,14 +136,11 @@ public static void main(String[] args){
                             <Link to="/Java-Loops"><button className="Lesson-transition">Prev</button></Link>
                             <Link to="/Java-Functions-Test"><button className="Lesson-transition">Exercises</button></Link>
                             <button className="Hidden-button"></button>
+                            <button className="Complete-module" onClick={completeModule}>Complete Module</button>
                         </div>
-                    </div>
-                    <div className="Centered">
-                        <button className="Complete-module" onClick={completeModule}>Complete Module</button>
                     </div>
                 </div>
             </div>
         </div>
     );
 }
-
