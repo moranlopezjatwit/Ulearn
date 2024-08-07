@@ -1,8 +1,41 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { UserContext } from '../../context/UserContext';
 import JavaSidenav from '../../Controls/JavaSidenav';
 
 export default function PythonLoops() {
+    const { user, setProgress } = useContext(UserContext);
+
+    useEffect(() => {
+        return () => {
+            if (user) {
+                saveProgress();
+            }
+        };
+    }, []);
+
+    const saveProgress = async () => {
+        const moduleScore = 50; // Example score for this module
+
+        try {
+            const res = await axios.post('http://localhost:5000/api/progress/save', {
+                module: 'PythonLoops',
+                score: moduleScore,
+            }, {
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem('token')}`
+                }
+            });
+            setProgress((prevProgress) => [
+                ...prevProgress.filter(p => p.module !== 'PythonLoops'),
+                { module: 'PythonLoops', score: moduleScore, lastAccessed: new Date() }
+            ]);
+        } catch (error) {
+            console.error('Error saving progress:', error);
+        }
+    };
+
     return (
         <div className="java-loops"> {/* Replace id with className */}
             <JavaSidenav />
@@ -106,7 +139,6 @@ if(temperature > 85 && rainy == false) {
 }
 else {
     beachDay = false;
-}
 
 //Printing variables
 System.out.println(beachDay);`}
@@ -130,7 +162,7 @@ System.out.println(beachDay);`}
                     <h2>Example 3: For Loops</h2>
                     <pre>
                         <code>
-                            {`# Variable Declaration                       
+                            {`// Variable Declaration                       
 int numLoops = 5;
 
 //Loop Execution
@@ -202,13 +234,12 @@ Apples Remaining: 5`}
                     by one, increments applesEaten by one, and then executes an if statement to see if hungry should be changed to false. After this, it prints to console the
                     number of remaining apples. Once enough apples have been eaten, hungry is set to false and the loop ends.</p>
 
-
-                <div class="Centered-container">
-                    <div class="Centered">
-                        <div class="Bottom-buttons">
-                            <a href="/Java-Variables"><button class="Lesson-transition">Prev</button></a>
-                            <a href="/Java-Loops-Test"><button class="Lesson-transition">Exercises</button></a>
-                            <a href="/Java-Functions"><button class="Lesson-transition">Next</button></a>
+                <div className="Centered-container">
+                    <div className="Centered">
+                        <div className="Bottom-buttons">
+                            <Link to="/Java-Variables"><button className="Lesson-transition">Prev</button></Link>
+                            <Link to="/Java-Loops-Test"><button className="Lesson-transition">Exercises</button></Link>
+                            <Link to="/Java-Functions"><button className="Lesson-transition">Next</button></Link>
                         </div>
                     </div>
                 </div>
