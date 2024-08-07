@@ -1,11 +1,12 @@
 import React, { useContext, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { UserContext } from '../../context/UserContext';
 import JavaSidenav from '../../Controls/JavaSidenav';
 
 export default function PythonFunctions() {
     const { user, setProgress } = useContext(UserContext);
+    const navigate = useNavigate();
 
     useEffect(() => {
         return () => {
@@ -34,6 +35,11 @@ export default function PythonFunctions() {
         } catch (error) {
             console.error('Error saving progress:', error);
         }
+    };
+
+    const completeModule = () => {
+        saveProgress();
+        navigate('/Java-Modules'); // Redirect to the modules page after saving progress
     };
 
     return (
@@ -132,9 +138,13 @@ public static void main(String[] args){
                             <button className="Hidden-button"></button>
                         </div>
                     </div>
+                    <div className="Centered">
+                        <button className="Complete-module" onClick={completeModule}>Complete Module</button>
+                    </div>
                 </div>
 
             </div>
         </div>
     );
 }
+
