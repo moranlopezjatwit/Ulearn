@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom'; // Import Link here
+import { Link } from 'react-router-dom';
 import { UserContext } from '../../context/UserContext';
 import CppSidenav from '../../Controls/CppSidenav';
 
@@ -24,7 +24,7 @@ export default function CppFunctions() {
     };
 
     return (
-        <div className="cpp-functions"> {/* Replace id with className */}
+        <div className="cpp-functions">
             <CppSidenav />
             <div>
                 <h1 className="Section-header">C++ Functions</h1>
