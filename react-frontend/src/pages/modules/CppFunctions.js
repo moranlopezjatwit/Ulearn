@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../context/UserContext';
@@ -6,6 +6,7 @@ import CppSidenav from '../../Controls/CppSidenav';
 
 export default function CppFunctions() {
     const { user } = useContext(UserContext);
+    const [score, setScore] = useState(null); // State to hold the score
 
     const handleCompleteLesson = async (score) => {
         try {
@@ -18,6 +19,7 @@ export default function CppFunctions() {
                 }
             });
             console.log('Progress saved:', res.data);
+            setScore(score); // Set the score in the state
         } catch (error) {
             console.error('Error saving progress:', error);
         }
@@ -113,6 +115,11 @@ true`}
                             <button className="Lesson-transition" onClick={() => handleCompleteLesson(100)}>Complete Lesson</button>
                             <Link to="/Cpp-Functions-Test"><button className="Lesson-transition">Exercises</button></Link>
                         </div>
+                        {score !== null && (
+                            <div className="Score-display">
+                                <p>Your Score: {score}</p>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
