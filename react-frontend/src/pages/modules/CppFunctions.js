@@ -4,7 +4,7 @@ import axios from 'axios';
 import { UserContext } from '../../context/UserContext';
 import CppSidenav from '../../Controls/CppSidenav';
 
-export default function CppFunctions() {
+export default function CppLoops() {
   const { user, progress, setProgress } = useContext(UserContext);
 
   const handleCompleteModule = async () => {
@@ -12,7 +12,7 @@ export default function CppFunctions() {
 
     try {
       const res = await axios.post('http://localhost:5000/api/progress/save', {
-        module: 'CppFunctions',
+        module: 'CppLoops',
         score: moduleScore,
       }, {
         headers: {
@@ -20,96 +20,131 @@ export default function CppFunctions() {
         }
       });
       setProgress((prevProgress) => [
-        ...prevProgress.filter(p => p.module !== 'CppFunctions'),
-        { module: 'CppFunctions', score: moduleScore, lastAccessed: new Date() }
+        ...prevProgress.filter(p => p.module !== 'CppLoops'),
+        { module: 'CppLoops', score: moduleScore, lastAccessed: new Date() }
       ]);
     } catch (error) {
       console.error('Error saving progress:', error);
     }
   };
 
-  const cppFunctionsProgress = progress.find(p => p.module === 'CppFunctions');
+  const cppLoopsProgress = progress.find(p => p.module === 'CppLoops');
   const totalScore = progress.reduce((acc, curr) => acc + curr.score, 0);
 
   return (
-    <div className="cpp-functions"> {/* Replace id with className */}
+    <div className="cpp-loops"> {/* Replace id with className */}
       <CppSidenav />
       <div className="content-container">
-        <h1 className="Section-header">C++ Functions</h1>
+        <h1 className="Section-header">If Statements & Loops in C++</h1>
+        <p className="Section-content">
+          Just as with variables, logic is another foundational piece to any programming language...
+        </p>
         <br />
-        <p className="Section-content">Functions in C++ are blocks of code that can be reused to execute a specific operation...</p>
+        <p className="Section-content">
+          Let's begin by looking at if statements...
+        </p>
         <br />
         <div className="Example">
-          <h2>Example 1: Function Creation and calling</h2>
+          <h2>Example 1: If / Else</h2>
           <pre>
-            <code>{`//Function creation
-void greetWorld(){
-  std::cout << "Hello World!" << std::endl;
+            <code>
+              {`//Variable declaration
+int testGrade = 90;
+bool passed = false;
+
+if(testGrade >= 60) {
+  passed = true;
 }
 
-//Function call
-greetWorld();
-greetWorld();`}
+//Printing variables
+if(passed == true){
+  std::cout << "Student passed the exam" << std::endl;
+} else {
+  std::cout << "Student did not pass the exam" << std::endl;
+}`}
             </code>
           </pre>
           <h2>Result:</h2>
           <pre>
-            <code>{`Hello World!
-Hello World!`}
+            <code>{`Student passed the exam`}
             </code>
           </pre>
         </div>
         <br />
         <p className="Section-content">
-          Let's break down greetWorld into the components that make it up. First is the <span className="Bold-word">return type</span>, which defines what data type the function will return when it finishes executing...
+          Here we see two different forms of if statement usage...
         </p>
         <br />
-        <p className="Section-content">Now let's look at a function that has parameters and returns data.</p>
         <div className="Example">
-          <h2>Example 2: Function Types and Parameters</h2>
+          <h2>Example 2: For Loops</h2>
           <pre>
-            <code>{`//Function Creation
-static bool isValTen(int val){
-  if(val == 10) {
-    return true;
-  } else {
-    return false;
-  }
-}
+            <code>{`//Variable Declaration
+int numLoops = 5;
 
-//variable declaration
-int num1 = 7;
-int num2 = 10;
-
-//Function Call
-std::cout << isValTen(num1) << std::endl;
-std::cout << isValTen(num2) << std::endl;`}
+//Loop Execution
+for(int i = 0; i < numLoops; i++) {
+  std::cout << i << std::endl;
+}`}
             </code>
           </pre>
           <h2>Result:</h2>
           <pre>
-            <code>{`false
-true`}
+            <code>{`0
+1
+2
+3
+4`}
             </code>
           </pre>
         </div>
         <br />
-        <p className="Section-content">There are two main differences between this example and the last one...</p>
+        <p className="Section-content">The parameters of a for loop are a bit more complex...</p>
+        <br />
+        <div className="Example">
+          <h2>Example 3: While Loops</h2>
+          <pre>
+            <code>{`//Variable Declaration
+String display = "";
+
+int limit = 5;
+int current = 0;
+
+//Loop Execution
+while(current < limit) {
+  current++;
+  display += "A";
+  std::cout << display << std::endl;
+}`}
+            </code>
+          </pre>
+          <h2>Result:</h2>
+          <pre>
+            <code>{`A
+AA
+AAA
+AAAA
+AAAAA`}
+            </code>
+          </pre>
+        </div>
+        <br />
+        <p className="Section-content">Just like for loops, while loops will repeatedly execute whatever code they contain within...</p>
 
         <div className="Centered-container">
           <div className="Centered">
             <div className="Bottom-buttons">
-              <Link to="/Cpp-Loops"><button className="Lesson-transition">Prev</button></Link>
-              <Link to="/Cpp-Functions-Test"><button className="Lesson-transition">Exercises</button></Link>
+              <Link to="/Cpp-Variables"><button className="Lesson-transition">Prev</button></Link>
+              <Link to="/Cpp-Loops-Test"><button className="Lesson-transition">Exercises</button></Link>
+              <Link to="/Cpp-Functions"><button className="Lesson-transition">Next</button></Link>
               <button className="Lesson-transition" onClick={handleCompleteModule}>Complete Module</button>
             </div>
           </div>
         </div>
-        {cppFunctionsProgress && (
+        {cppLoopsProgress && (
           <div className="Section-content">
             <h2>Your Progress</h2>
-            <p>Score: {cppFunctionsProgress.score}</p>
-            <p>Last Accessed: {new Date(cppFunctionsProgress.lastAccessed).toLocaleString()}</p>
+            <p>Score: {cppLoopsProgress.score}</p>
+            <p>Last Accessed: {new Date(cppLoopsProgress.lastAccessed).toLocaleString()}</p>
             <p>Total Score: {totalScore}</p>
           </div>
         )}
