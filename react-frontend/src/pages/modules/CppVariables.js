@@ -1,9 +1,41 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { UserContext } from '../../context/UserContext';
 import CppSidenav from '../../Controls/CppSidenav';
 
-
 export default function CppVariables() {
+    const { user, setProgress } = useContext(UserContext);
+
+    useEffect(() => {
+        return () => {
+            if (user) {
+                saveProgress();
+            }
+        };
+    }, []);
+
+    const saveProgress = async () => {
+        const moduleScore = 50; // Example score for this module
+
+        try {
+            const res = await axios.post('http://localhost:5000/api/progress/save', {
+                module: 'CppVariables',
+                score: moduleScore,
+            }, {
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem('token')}`
+                }
+            });
+            setProgress((prevProgress) => [
+                ...prevProgress.filter(p => p.module !== 'CppVariables'),
+                { module: 'CppVariables', score: moduleScore, lastAccessed: new Date() }
+            ]);
+        } catch (error) {
+            console.error('Error saving progress:', error);
+        }
+    };
+
     return (
         <div className="cpp-variables"> {/* Replace id with className */}
             <CppSidenav />
@@ -160,12 +192,12 @@ std::cout << word3 << std::endl;`}
                     combined a space and exclamation mark with the contents of <code>word1</code> and <code>word2</code>, so that the final String is as displayed in the output.
                 </p>
 
-                <div class="Centered-container">
-                    <div class="Centered">
-                        <div class="Bottom-buttons">
-                            <a href="/Cpp-Modules"><button class="Lesson-transition">Prev</button></a>
-                            <a href="/Cpp-vars-test"><button class="Lesson-transition">Exercises</button></a>
-                            <a href="/Cpp-Loops"><button class="Lesson-transition">Next</button></a>
+                <div className="Centered-container">
+                    <div className="Centered">
+                        <div className="Bottom-buttons">
+                            <Link to="/Cpp-Modules"><button className="Lesson-transition">Prev</button></Link>
+                            <Link to="/Cpp-vars-test"><button className="Lesson-transition">Exercises</button></Link>
+                            <Link to="/Cpp-Loops"><button className="Lesson-transition">Next</button></Link>
                         </div>
                     </div>
                 </div>
