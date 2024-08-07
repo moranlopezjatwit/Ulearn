@@ -142,7 +142,6 @@ public static void main(String[] args){
                         <button className="Complete-module" onClick={completeModule}>Complete Module</button>
                     </div>
                 </div>
-
             </div>
         </div>
     );
