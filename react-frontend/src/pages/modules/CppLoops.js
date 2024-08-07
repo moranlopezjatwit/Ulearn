@@ -1,36 +1,8 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
-import { UserContext } from '../../context/UserContext';
 import CppSidenav from '../../Controls/CppSidenav';
 
 export default function CppLoops() {
-  const { user, progress, setProgress } = useContext(UserContext);
-
-  const handleCompleteModule = async () => {
-    const moduleScore = 100; // Set the score for this module
-
-    try {
-      const res = await axios.post('http://localhost:5000/api/progress/save', {
-        module: 'CppLoops',
-        score: moduleScore,
-      }, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem('token')}`
-        }
-      });
-      setProgress((prevProgress) => [
-        ...prevProgress.filter(p => p.module !== 'CppLoops'),
-        { module: 'CppLoops', score: moduleScore, lastAccessed: new Date() }
-      ]);
-    } catch (error) {
-      console.error('Error saving progress:', error);
-    }
-  };
-
-  const cppLoopsProgress = progress.find(p => p.module === 'CppLoops');
-  const totalScore = progress.reduce((acc, curr) => acc + curr.score, 0);
-
   return (
     <div className="cpp-loops">
       <CppSidenav />
@@ -96,7 +68,8 @@ if(passed == true){
 }
 else {
     std::cout << "Student did not pass the exam" << std::endl;
-}`}
+}
+`}
             </code>
           </pre>
           <h2>Result:</h2>
@@ -188,18 +161,10 @@ AAAAA`}
             <div className="Bottom-buttons">
               <Link to="/Cpp-Variables"><button className="Lesson-transition">Prev</button></Link>
               <Link to="/Cpp-Loops-Test"><button className="Lesson-transition">Exercises</button></Link>
-              <button className="Lesson-transition" onClick={handleCompleteModule}>Complete Module</button>
+              <Link to="/Cpp-Functions"><button className="Lesson-transition">Next</button></Link>
             </div>
           </div>
         </div>
-        {cppLoopsProgress && (
-          <div className="Section-content">
-            <h2>Your Progress</h2>
-            <p>Score: {cppLoopsProgress.score}</p>
-            <p>Last Accessed: {new Date(cppLoopsProgress.lastAccessed).toLocaleString()}</p>
-            <p>Total Score: {totalScore}</p>
-          </div>
-        )}
       </div>
     </div>
   );
