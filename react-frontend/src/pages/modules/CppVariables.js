@@ -1,19 +1,12 @@
 import React, { useContext, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { UserContext } from '../../context/UserContext';
 import CppSidenav from '../../Controls/CppSidenav';
 
 export default function CppVariables() {
     const { user, setProgress } = useContext(UserContext);
-
-    useEffect(() => {
-        return () => {
-            if (user) {
-                saveProgress();
-            }
-        };
-    }, []);
+    const navigate = useNavigate();
 
     const saveProgress = async () => {
         const moduleScore = 50; // Example score for this module
@@ -34,6 +27,11 @@ export default function CppVariables() {
         } catch (error) {
             console.error('Error saving progress:', error);
         }
+    };
+
+    const handleNext = async () => {
+        await saveProgress();
+        navigate('/Cpp-Loops'); // Redirect to the next lesson
     };
 
     return (
@@ -197,7 +195,7 @@ std::cout << word3 << std::endl;`}
                         <div className="Bottom-buttons">
                             <Link to="/Cpp-Modules"><button className="Lesson-transition">Prev</button></Link>
                             <Link to="/Cpp-vars-test"><button className="Lesson-transition">Exercises</button></Link>
-                            <Link to="/Cpp-Loops"><button className="Lesson-transition">Next</button></Link>
+                            <button onClick={handleNext} className="Lesson-transition">Next</button>
                         </div>
                     </div>
                 </div>
