@@ -1,17 +1,48 @@
 import React, { useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { UserContext } from '../../context/UserContext';
 
 export default function PythonVarsTest() {
+    const { user, setProgress } = useContext(UserContext);
+    const navigate = useNavigate();
+
+    const saveProgress = async () => {
+        const moduleScore = 50; // Example score for this module
+
+        try {
+            const res = await axios.post('http://localhost:5000/api/progress/save', {
+                module: 'PythonVarsTest',
+                score: moduleScore,
+            }, {
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem('token')}`
+                }
+            });
+            setProgress((prevProgress) => [
+                ...prevProgress.filter(p => p.module !== 'PythonVarsTest'),
+                { module: 'PythonVarsTest', score: moduleScore, lastAccessed: new Date() }
+            ]);
+        } catch (error) {
+            console.error('Error saving progress:', error);
+        }
+    };
+
+    const handleContinue = async () => {
+        await saveProgress();
+        navigate('/Python-Loops'); // Redirect to the next lesson
+    };
 
     return (
-        <div class="App-container">
-            <div class="Test-page">
-                <a href="/Python-Variables"><button class="Test-return-button">Back</button></a>
-                <h2 class="Section-header">Test Exercises: Variables</h2>
-                <p class="Test-sub-header">Read the code snippets and answer below</p>
+        <div className="App-container">
+            <div className="Test-page">
+                <a href="/Python-Variables"><button className="Test-return-button">Back</button></a>
+                <h2 className="Section-header">Test Exercises: Variables</h2>
+                <p className="Test-sub-header">Read the code snippets and answer below</p>
                 <br />
                 <div className="Example">
-                    <p class="Test-question-title">Question 1:</p>
-                    <div class="Spacing">
+                    <p className="Test-question-title">Question 1:</p>
+                    <div className="Spacing">
                         <pre>
                             <code>
                                 {`a = 7
@@ -26,15 +57,15 @@ print(d)`}
                     </div>
                 </div>
                 <br />
-                <p class="Section-content">What is the output?</p>
-                <div class="Test-answer-bar">
+                <p className="Section-content">What is the output?</p>
+                <div className="Test-answer-bar">
                     <Q1 />
                 </div>
                 <br />
 
                 <div className="Example">
-                    <p class="Test-question-title">Question 2:</p>
-                    <div class="Spacing">
+                    <p className="Test-question-title">Question 2:</p>
+                    <div className="Spacing">
                         <pre>
                             <code>
                                 {`val1 = "90"
@@ -48,14 +79,14 @@ print(val3)`}
                     </div>
                 </div>
                 <br />
-                <p class="Section-content">What is the output?</p>
-                <div class="Test-answer-bar">
+                <p className="Section-content">What is the output?</p>
+                <div className="Test-answer-bar">
                     <Q2 />
                 </div>
 
                 <div className="Example">
-                    <p class="Test-question-title">Question 3:</p>
-                    <div class="Spacing">
+                    <p className="Test-question-title">Question 3:</p>
+                    <div className="Spacing">
                         <pre>
                             <code>
                                 {`oranges = 10
@@ -73,18 +104,15 @@ print(bananas)`}
                     </div>
                 </div>
                 <br />
-                <p class="Section-content">What is the output?</p>
-                <div class="Test-answer-bar">
+                <p className="Section-content">What is the output?</p>
+                <div className="Test-answer-bar">
                     <Q3 />
                 </div>
 
-
-
-
-                <div class="Centered-container">
-                    <div class="Centered">
-                        <div class="Bottom-buttons">
-                            <a href="/Python-Loops"><button class="Lesson-transition">Continue</button></a>
+                <div className="Centered-container">
+                    <div className="Centered">
+                        <div className="Bottom-buttons">
+                            <button onClick={handleContinue} className="Lesson-transition">Continue</button>
                         </div>
                     </div>
                 </div>
@@ -93,19 +121,16 @@ print(bananas)`}
     );
 }
 
-
 function Q1() {
     const [inputValue, setInputValue] = useState('');
     const [message, setMessage] = useState('');
 
-    //Event handler for input changes
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
     };
 
-    //Function to validate the input
     const validateInput = () => {
-        if (inputValue === '6') {
+        if (inputValue === '7') {
             setMessage('Correct!');
         } else {
             setMessage('Answer is incorrect. Please try again.');
@@ -119,9 +144,9 @@ function Q1() {
                 value={inputValue}
                 onChange={handleInputChange}
                 placeholder="Enter value"
-                class="Test-answer"
+                className="Test-answer"
             />
-            <button class="Test-answer-button" onClick={validateInput}>Check</button>
+            <button className="Test-answer-button" onClick={validateInput}>Check</button>
             <p>{message}</p>
         </div>
     );
@@ -131,12 +156,10 @@ function Q2() {
     const [inputValue, setInputValue] = useState('');
     const [message, setMessage] = useState('');
 
-    //Event handler for input changes
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
     };
 
-    //Function to validate the input
     const validateInput = () => {
         if (inputValue === '9015') {
             setMessage('Correct!');
@@ -152,9 +175,9 @@ function Q2() {
                 value={inputValue}
                 onChange={handleInputChange}
                 placeholder="Enter value"
-                class="Test-answer"
+                className="Test-answer"
             />
-            <button class="Test-answer-button" onClick={validateInput}>Check</button>
+            <button className="Test-answer-button" onClick={validateInput}>Check</button>
             <p>{message}</p>
         </div>
     );
@@ -164,12 +187,10 @@ function Q3() {
     const [inputValue, setInputValue] = useState('');
     const [message, setMessage] = useState('');
 
-    //Event handler for input changes
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
     };
 
-    //Function to validate the input
     const validateInput = () => {
         if (inputValue === '69') {
             setMessage('Correct!');
@@ -185,9 +206,9 @@ function Q3() {
                 value={inputValue}
                 onChange={handleInputChange}
                 placeholder="Enter value"
-                class="Test-answer"
+                className="Test-answer"
             />
-            <button class="Test-answer-button" onClick={validateInput}>Check</button>
+            <button className="Test-answer-button" onClick={validateInput}>Check</button>
             <p>{message}</p>
         </div>
     );
