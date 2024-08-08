@@ -1,8 +1,41 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { UserContext } from '../../context/UserContext';
 import PythonSidenav from '../../Controls/PythonSidenav';
 
 export default function PythonFunctions() {
+    const { user, setProgress } = useContext(UserContext);
+
+    useEffect(() => {
+        return () => {
+            if (user) {
+                saveProgress();
+            }
+        };
+    }, []);
+
+    const saveProgress = async () => {
+        const moduleScore = 50; // Example score for this module
+
+        try {
+            const res = await axios.post('http://localhost:5000/api/progress/save', {
+                module: 'PythonFunctions',
+                score: moduleScore,
+            }, {
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem('token')}`
+                }
+            });
+            setProgress((prevProgress) => [
+                ...prevProgress.filter(p => p.module !== 'PythonFunctions'),
+                { module: 'PythonFunctions', score: moduleScore, lastAccessed: new Date() }
+            ]);
+        } catch (error) {
+            console.error('Error saving progress:', error);
+        }
+    };
+
     return (
         <div className="python-functions">
             <PythonSidenav />
@@ -57,10 +90,10 @@ print(result)`}
                     <div class="Centered-container">
                         <div class="Centered">
                             <div class="Bottom-buttons">
-                                <a href="/Python-Loops"><button class="Lesson-transition">Prev</button></a>         
-                                <a href="/Python-Functions-Test"><button class="Lesson-transition">Exercises</button></a>
+                                <Link to="/Python-Loops"><button class="Lesson-transition">Prev</button></Link>
+                                <Link to="/Python-Functions-Test"><button class="Lesson-transition">Exercises</button></Link>
                                 <button class="Hidden-button"></button>
-
+                                <button className="Lesson-transition" onClick={saveProgress}>Complete Module</button>
                             </div>
                         </div>
                     </div>
