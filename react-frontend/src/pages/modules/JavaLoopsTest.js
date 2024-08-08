@@ -1,28 +1,60 @@
 import React, { useContext, useState } from 'react';
+import axios from 'axios';
+import { UserContext } from '../../context/UserContext';
+import { useNavigate } from 'react-router-dom';
 
 export default function JavaLoopsTest() {
+    const { user, setProgress } = useContext(UserContext);
+    const navigate = useNavigate();
+
+    const saveProgress = async () => {
+        const moduleScore = 50; // Example score for this module
+
+        try {
+            const res = await axios.post('http://localhost:5000/api/progress/save', {
+                module: 'JavaLoopsTest',
+                score: moduleScore,
+            }, {
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem('token')}`
+                }
+            });
+            setProgress((prevProgress) => [
+                ...prevProgress.filter(p => p.module !== 'JavaLoopsTest'),
+                { module: 'JavaLoopsTest', score: moduleScore, lastAccessed: new Date() }
+            ]);
+        } catch (error) {
+            console.error('Error saving progress:', error);
+        }
+    };
+
+    const handleContinue = async () => {
+        await saveProgress();
+        navigate('/Java-Functions'); // Redirect to the next lesson
+    };
+
     return (
-        <div class="App-container">
-            <div class="Test-page">
-                <a href="/Java-Loops"><button class="Test-return-button">Back</button></a>
-                <h2 class="Section-header">Test Exercises: Conditions & Loops</h2>
-                <p class="Test-sub-header">Read the code snippets and answer below</p>
+        <div className="App-container">
+            <div className="Test-page">
+                <a href="/Java-Loops"><button className="Test-return-button">Back</button></a>
+                <h2 className="Section-header">Test Exercises: Conditions & Loops</h2>
+                <p className="Test-sub-header">Read the code snippets and answer below</p>
                 <br />
                 <div className="Example">
-                    <p class="Test-question-title">Question 1:</p>
-                    <div class="Spacing">
+                    <p className="Test-question-title">Question 1:</p>
+                    <div className="Spacing">
                         <pre>
                             <code>
                                 {`bool dinnerTime  = false;
 int hour = 0;
 
 while(hour != 17) {
-    hour++
+    hour++;
     if(hour == 17) {
         dinnerTime = true;
     }
     else {
-        console.out.println("Not Hungry");
+        System.out.println("Not Hungry");
     }
 }`}
                             </code>
@@ -30,15 +62,15 @@ while(hour != 17) {
                     </div>
                 </div>
                 <br />
-                <p class="Section-content">How many times is "Not Hungry" printed?</p>
-                <div class="Test-answer-bar">
+                <p className="Section-content">How many times is "Not Hungry" printed?</p>
+                <div className="Test-answer-bar">
                     <Q1 />
                 </div>
                 <br />
 
                 <div className="Example">
-                    <p class="Test-question-title">Question 2:</p>
-                    <div class="Spacing">
+                    <p className="Test-question-title">Question 2:</p>
+                    <div className="Spacing">
                         <pre>
                             <code>
                                 {`int trees = 0;
@@ -48,31 +80,31 @@ for(int i = 0; i < 15; i++) {
     if(trees == 15) {
         forest = true;
     }
-    trees++
+    trees++;
 }
 
-console.out.println(forest);`}
+System.out.println(forest);`}
                             </code>
                         </pre>
                     </div>
                 </div>
                 <br />
-                <p class="Section-content">What is the output?</p>
-                <div class="Test-answer-bar">
+                <p className="Section-content">What is the output?</p>
+                <div className="Test-answer-bar">
                     <Q2 />
                 </div>
 
                 <div className="Example">
-                    <p class="Test-question-title">Question 3:</p>
-                    <div class="Spacing">
+                    <p className="Test-question-title">Question 3:</p>
+                    <div className="Spacing">
                         <pre>
                             <code>
-                                {`String greeting = Hello;
+                                {`String greeting = "Hello";
 int start = 3;
 int end = 10;
 
 while(start < end) {
-    start++
+    start++;
     greeting += "o";
 }`}
                             </code>
@@ -80,15 +112,15 @@ while(start < end) {
                     </div>
                 </div>
                 <br />
-                <p class="Section-content">How many characters are in the variable 'greeting' after execution?</p>
-                <div class="Test-answer-bar">
+                <p className="Section-content">How many characters are in the variable 'greeting' after execution?</p>
+                <div className="Test-answer-bar">
                     <Q3 />
                 </div>
 
-                <div class="Centered-container">
-                    <div class="Centered">
-                        <div class="Bottom-buttons">
-                            <a href="/Java-Functions"><button class="Lesson-transition">Continue</button></a>
+                <div className="Centered-container">
+                    <div className="Centered">
+                        <div className="Bottom-buttons">
+                            <button onClick={handleContinue} className="Lesson-transition">Continue</button>
                         </div>
                     </div>
                 </div>
@@ -101,14 +133,12 @@ function Q1() {
     const [inputValue, setInputValue] = useState('');
     const [message, setMessage] = useState('');
 
-    //Event handler for input changes
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
     };
 
-    //Function to validate the input
     const validateInput = () => {
-        if (inputValue === '17') {
+        if (inputValue === '16') {
             setMessage('Correct!');
         } else {
             setMessage('Answer is incorrect. Please try again.');
@@ -122,9 +152,9 @@ function Q1() {
                 value={inputValue}
                 onChange={handleInputChange}
                 placeholder="Enter value"
-                class="Test-answer"
+                className="Test-answer"
             />
-            <button class="Test-answer-button" onClick={validateInput}>Check</button>
+            <button className="Test-answer-button" onClick={validateInput}>Check</button>
             <p>{message}</p>
         </div>
     );
@@ -134,12 +164,10 @@ function Q2() {
     const [inputValue, setInputValue] = useState('');
     const [message, setMessage] = useState('');
 
-    //Event handler for input changes
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
     };
 
-    //Function to validate the input
     const validateInput = () => {
         if (inputValue === 'false') {
             setMessage('Correct!');
@@ -155,9 +183,9 @@ function Q2() {
                 value={inputValue}
                 onChange={handleInputChange}
                 placeholder="Enter value"
-                class="Test-answer"
+                className="Test-answer"
             />
-            <button class="Test-answer-button" onClick={validateInput}>Check</button>
+            <button className="Test-answer-button" onClick={validateInput}>Check</button>
             <p>{message}</p>
         </div>
     );
@@ -167,12 +195,10 @@ function Q3() {
     const [inputValue, setInputValue] = useState('');
     const [message, setMessage] = useState('');
 
-    //Event handler for input changes
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
     };
 
-    //Function to validate the input
     const validateInput = () => {
         if (inputValue === '12') {
             setMessage('Correct!');
@@ -188,9 +214,9 @@ function Q3() {
                 value={inputValue}
                 onChange={handleInputChange}
                 placeholder="Enter value"
-                class="Test-answer"
+                className="Test-answer"
             />
-            <button class="Test-answer-button" onClick={validateInput}>Check</button>
+            <button className="Test-answer-button" onClick={validateInput}>Check</button>
             <p>{message}</p>
         </div>
     );
