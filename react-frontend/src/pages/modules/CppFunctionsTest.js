@@ -114,7 +114,7 @@ printVal(val);`}
                 <div className="Centered-container">
                     <div className="Centered">
                         <div className="Bottom-buttons">
-                            <a href="/Cpp-Modules"><button className="Lesson-transition" onClick={() => handleCompleteTest(100)}>Finish</button></a>
+                            <button className="Lesson-transition" onClick={() => handleCompleteTest(100)}>Finish</button>
                         </div>
                     </div>
                 </div>
@@ -134,12 +134,10 @@ function Q1() {
     const [inputValue, setInputValue] = useState('');
     const [message, setMessage] = useState('');
 
-    // Event handler for input changes
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
     };
 
-    // Function to validate the input
     const validateInput = () => {
         if (inputValue === '5') {
             setMessage('Correct!');
@@ -167,12 +165,10 @@ function Q2() {
     const [inputValue, setInputValue] = useState('');
     const [message, setMessage] = useState('');
 
-    // Event handler for input changes
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
     };
 
-    // Function to validate the input
     const validateInput = () => {
         if (inputValue === 'true') {
             setMessage('Correct!');
@@ -200,12 +196,10 @@ function Q3() {
     const [inputValue, setInputValue] = useState('');
     const [message, setMessage] = useState('');
 
-    // Event handler for input changes
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
     };
 
-    // Function to validate the input
     const validateInput = () => {
         if (inputValue === '22222') {
             setMessage('Correct!');
