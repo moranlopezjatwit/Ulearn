@@ -4,7 +4,7 @@ import axios from 'axios';
 import { UserContext } from '../../context/UserContext';
 import JavaSidenav from '../../Controls/JavaSidenav';
 
-export default function PythonFunctions() {
+export default function JavaFunctions() {
     const { user, setProgress } = useContext(UserContext);
     const navigate = useNavigate();
 
@@ -21,7 +21,7 @@ export default function PythonFunctions() {
 
         try {
             const res = await axios.post('http://localhost:5000/api/progress/save', {
-                module: 'PythonFunctions',
+                module: 'JavaFunctions',
                 score: moduleScore,
             }, {
                 headers: {
@@ -29,26 +29,27 @@ export default function PythonFunctions() {
                 }
             });
             setProgress((prevProgress) => [
-                ...prevProgress.filter(p => p.module !== 'PythonFunctions'),
-                { module: 'PythonFunctions', score: moduleScore, lastAccessed: new Date() }
+                ...prevProgress.filter(p => p.module !== 'JavaFunctions'),
+                { module: 'JavaFunctions', score: moduleScore, lastAccessed: new Date() }
             ]);
         } catch (error) {
             console.error('Error saving progress:', error);
         }
     };
 
-    const completeModule = () => {
-        saveProgress();
+    const completeModule = async () => {
+        await saveProgress();
         navigate('/Java-Modules'); // Redirect to the modules page after saving progress
     };
 
     return (
-        <div className="java-functions"> {/* Replace id with className */}
+        <div className="java-functions">
             <JavaSidenav />
             <div>
                 <h1 className="Section-header">Functions</h1>
-                <p className="Section-content">Functions in Java are blocks of code that can be reused to execute a specific operation. This is helpful for organizing
-                code and reducing time spent completing a program. Look at the example below to see the architecture of a Java function.
+                <p className="Section-content">
+                    Functions in Java are blocks of code that can be reused to execute a specific operation. This is helpful for organizing
+                    code and reducing time spent completing a program. Look at the example below to see the architecture of a Java function.
                 </p>
                 <br />
                 <div className="Example">
@@ -80,16 +81,16 @@ public static void main(String[] args){
                 <br />
                 <p className="Section-content">
                     While this code may look confusing, keep in mind that the two parts labelled main are structural pieces of the program rather than operations. Let's
-                    Focus on the components that make up firstFunction. first is the <div className="Bold-word">scope</div>, which defines what parts of the program are allowed
+                    focus on the components that make up firstFunction. First is the <div className="Bold-word">scope</div>, which defines what parts of the program are allowed
                     to view and work with the function. Here, the scope is <code>static</code>, and it means that the function can be viewed by anything within the main function.
                     Second is the <div className="Bold-word">return type</div>, which defines what data type the function will return when it finishes executing. This function's
-                    return type is <code>void</code>, which means it executes its code without returning any data. Finally are the <div className="Bold-word">parameters</div> of the function.
+                    return type is <code>void</code>, which means it executes its code without returning any data. Finally, there are the <div className="Bold-word">parameters</div> of the function.
                     This is data that gets sent into the function for execution, and it goes in the parenthesis. In this example, our function has no parameters. We call
                     firstFunction at the bottom of the snippet by typing its name with parentheses at the end. When it executes, it prints the line <code>This is my first function!</code> to the console.
                 </p>
                 <br />
                 <p className="Section-content">
-                Now let's look at a function that has parameters and returns data.
+                    Now let's look at a function that has parameters and returns data.
                 </p>
 
                 <div className="Example">
@@ -124,7 +125,7 @@ public static void main(String[] args){
                 </div>
                 <br />
                 <p className="Section-content">
-                    There are two main difference between this example and the last one: first, our return type is int instead of void, meaning the function
+                    There are two main differences between this example and the last one: first, our return type is int instead of void, meaning the function
                     will return an integer when it finishes executing. Second, this function has a parameter where the last one had none. This can be seen in the 
                     parentheses, where it reads <code>int val</code>. This means the function needs an integer as an input, and any operations that use the input can
                     reference it using the name <code>val</code>.
@@ -135,7 +136,6 @@ public static void main(String[] args){
                         <div className="Bottom-buttons">
                             <Link to="/Java-Loops"><button className="Lesson-transition">Prev</button></Link>
                             <Link to="/Java-Functions-Test"><button className="Lesson-transition">Exercises</button></Link>
-                            <button className="Hidden-button"></button>
                             <button className="Complete-module" onClick={completeModule}>Complete Module</button>
                         </div>
                     </div>
