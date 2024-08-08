@@ -58,7 +58,7 @@ print(isEven(12))`}
 
                 <div className="Example">
                     <p className="Test-question-title">Question 2:</p>
-                    <div className="Spacing">
+                    <div class="Spacing">
                         <pre>
                             <code>
                                 {`def doubleIt(val):
@@ -81,7 +81,7 @@ print(num2)`}
 
                 <div className="Example">
                     <p className="Test-question-title">Question 3:</p>
-                    <div className="Spacing">
+                    <div class="Spacing">
                         <pre>
                             <code>
                                 {`def equation(a, b, c):
@@ -125,12 +125,10 @@ function Q1() {
     const [inputValue, setInputValue] = useState('');
     const [message, setMessage] = useState('');
 
-    //Event handler for input changes
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
     };
 
-    //Function to validate the input
     const validateInput = () => {
         if (inputValue === 'true') {
             setMessage('Correct!');
@@ -158,12 +156,10 @@ function Q2() {
     const [inputValue, setInputValue] = useState('');
     const [message, setMessage] = useState('');
 
-    //Event handler for input changes
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
     };
 
-    //Function to validate the input
     const validateInput = () => {
         if (inputValue === '16') {
             setMessage('Correct!');
@@ -191,12 +187,10 @@ function Q3() {
     const [inputValue, setInputValue] = useState('');
     const [message, setMessage] = useState('');
 
-    //Event handler for input changes
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
     };
 
-    //Function to validate the input
     const validateInput = () => {
         if (inputValue === '15') {
             setMessage('Correct!');
