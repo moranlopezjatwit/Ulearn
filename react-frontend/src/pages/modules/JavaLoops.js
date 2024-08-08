@@ -1,11 +1,12 @@
 import React, { useContext, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { UserContext } from '../../context/UserContext';
 import JavaSidenav from '../../Controls/JavaSidenav';
 
-export default function PythonLoops() {
+export default function JavaLoops() {
     const { user, setProgress } = useContext(UserContext);
+    const navigate = useNavigate();
 
     useEffect(() => {
         return () => {
@@ -20,7 +21,7 @@ export default function PythonLoops() {
 
         try {
             const res = await axios.post('http://localhost:5000/api/progress/save', {
-                module: 'PythonLoops',
+                module: 'JavaLoops',
                 score: moduleScore,
             }, {
                 headers: {
@@ -28,16 +29,21 @@ export default function PythonLoops() {
                 }
             });
             setProgress((prevProgress) => [
-                ...prevProgress.filter(p => p.module !== 'PythonLoops'),
-                { module: 'PythonLoops', score: moduleScore, lastAccessed: new Date() }
+                ...prevProgress.filter(p => p.module !== 'JavaLoops'),
+                { module: 'JavaLoops', score: moduleScore, lastAccessed: new Date() }
             ]);
         } catch (error) {
             console.error('Error saving progress:', error);
         }
     };
 
+    const handleNext = async () => {
+        await saveProgress();
+        navigate('/Java-Functions'); // Redirect to the next lesson
+    };
+
     return (
-        <div className="java-loops"> {/* Replace id with className */}
+        <div className="java-loops">
             <JavaSidenav />
             <div>
                 <h1 className="Section-header">If Statements & Loop logic</h1>
@@ -239,7 +245,7 @@ Apples Remaining: 5`}
                         <div className="Bottom-buttons">
                             <Link to="/Java-Variables"><button className="Lesson-transition">Prev</button></Link>
                             <Link to="/Java-Loops-Test"><button className="Lesson-transition">Exercises</button></Link>
-                            <Link to="/Java-Functions"><button className="Lesson-transition">Next</button></Link>
+                            <button onClick={handleNext} className="Lesson-transition">Next</button>
                         </div>
                     </div>
                 </div>
@@ -248,3 +254,4 @@ Apples Remaining: 5`}
         </div>
     );
 }
+
