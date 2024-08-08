@@ -1,17 +1,32 @@
 // src/pages/Home.js
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../context/UserContext';
 import QRCodeGenerator from '../components/QRCodeGenerator';
+import axios from 'axios';
 
-const HomePage = ({ localIp }) => {
+const HomePage = () => {
   const { user, progress } = useContext(UserContext);
+  const [localIp, setLocalIp] = useState('');
+
+  useEffect(() => {
+    const fetchLocalIp = async () => {
+      try {
+        const res = await axios.get('http://localhost:5000/getLocalIp');
+        setLocalIp(res.data.ip);
+      } catch (error) {
+        console.error('Error fetching local IP:', error);
+      }
+    };
+
+    fetchLocalIp();
+  }, []);
 
   return (
     <div className="Homepage">
       <div className="Hero">
         <h1>Welcome to ULearn</h1>
         <p><em>Your personalized gateway to mastering computer science.</em></p>
-        {user ? <p>Hello, {user.username}!</p> : <QRCodeGenerator url={`http://${localIp}:3000/Register`} />}
+        {user ? <p>Hello, {user.username}!</p> : localIp && <QRCodeGenerator url={`http://${localIp}:3000/Register`} />}
       </div>
       <br />
       <div className="Features">
@@ -70,4 +85,5 @@ const HomePage = ({ localIp }) => {
 };
 
 export default HomePage;
+
 
