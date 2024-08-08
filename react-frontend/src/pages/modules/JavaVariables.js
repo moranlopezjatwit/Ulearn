@@ -1,19 +1,12 @@
 import React, { useContext, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { UserContext } from '../../context/UserContext';
 import JavaSidenav from '../../Controls/JavaSidenav';
 
 export default function JavaVariables() {
     const { user, setProgress } = useContext(UserContext);
-
-    useEffect(() => {
-        return () => {
-            if (user) {
-                saveProgress();
-            }
-        };
-    }, []);
+    const navigate = useNavigate();
 
     const saveProgress = async () => {
         const moduleScore = 50; // Example score for this module
@@ -34,6 +27,11 @@ export default function JavaVariables() {
         } catch (error) {
             console.error('Error saving progress:', error);
         }
+    };
+
+    const handleNext = async () => {
+        await saveProgress();
+        navigate('/Java-Loops'); // Redirect to the next lesson
     };
 
     return (
@@ -198,7 +196,7 @@ System.out.println(word1 + " " + word2 + "!");`}
                         <div className="Bottom-buttons">
                             <Link to="/Java-Modules"><button className="Lesson-transition">Prev</button></Link>
                             <Link to="/Java-Vars-Test"><button className="Lesson-transition">Exercises</button></Link>
-                            <Link to="/Java-Loops"><button className="Lesson-transition">Next</button></Link>
+                            <button onClick={handleNext} className="Lesson-transition">Next</button>
                         </div>
                     </div>
                 </div>
